@@ -92,9 +92,15 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
   <li> Classify recipes into vegan / vegetarian / non-vegetarian categorizations.</li>
   </ol>
   
-## Team Members
-  * Smayana Pidugu (spidugu@ncsu.edu)
-  * Gokul Krishna Koganti (gkogant@ncsu.edu)
-  * Rachana Kondabala (rkondab@ncsu.edu)
-  * Harikrishna Selvaraj (hselvar2@ncsu.edu)
-  * Kiran Bharadwaj Ganesh (kganesh4@ncsu.edu) 
+
+Contributors
+---
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/ineelshah"><img src="https://avatars.githubusercontent.com/u/40118578?v=4" width="75px;" alt=""/><br /><sub><b>Neel Shah</b></sub></a></td>
+    <td align="center"><a href="https://github.com/PvPatel-1001"><img src="https://avatars.githubusercontent.com/u/69849039?v=4" width="75px;" alt=""/><br /><sub><b>Parth Patel</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/ameyatathavadkar"><img src="https://avatars.githubusercontent.com/u/25223347?v=4" width="75px;" alt=""/><br /><sub><b>Ameya Tathavadkar</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/jayrshah98"><img src="https://avatars.githubusercontent.com/u/41386638?s=400&u=b323434b42507c474829a804556d69da82d48c3f&v=4" width="75px;" alt=""/><br /><sub><b>Jay Shah</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/Harshil-Shah99"><img src="https://avatars.githubusercontent.com/u/38115399?v=4" width="75px;" alt=""/><br /><sub><b>Harshil Shah</b></sub></a><br /></td>
+  </tr>
+</table>
