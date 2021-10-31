@@ -34,16 +34,17 @@ resource "aws_instance" "ec2-webserver" {
     user_data = <<EOF
 #!/bin/sh
 sudo apt-get update
-sudo apt install nodejs
-sudo apt install npm
-cd ~
+sudo apt install nodejs -y
+sudo apt install npm -y
+sudo npm i -g npx
+cd /home/ubuntu
 mkdir project
-cd ~/project
+cd /home/ubuntu/project
 git clone https://github.com/PvPatel-1001/Recipe_Recommender.git
-cd ~/project/Recipe_Recommender/Code/frontend
+cd /home/ubuntu/project/Recipe_Recommender/Code/frontend
 npm install
 nohup npm start &
-cd ~/project/Recipe_Recommender/Code/backend
+cd /home/ubuntu/project/Recipe_Recommender/Code/backend
 npm install
 nohup npx nodemon &
 EOF
