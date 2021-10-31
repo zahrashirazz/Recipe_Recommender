@@ -7,6 +7,7 @@ export default class RecipesController {
 
     let filters = {}
     //Checking the query to find the required results
+
     if (req.query.cuisine) {
       filters.cuisine = req.query.cuisine
     } else if (req.query.CleanedIngredients) {
@@ -18,6 +19,7 @@ export default class RecipesController {
       page,
       recipesPerPage,
     })
+    
     
     let response = {
       recipes:recipesList,
