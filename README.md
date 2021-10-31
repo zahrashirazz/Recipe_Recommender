@@ -4,6 +4,7 @@
 [![Made with](https://img.shields.io/badge/made%20with-javascript-gree)](https://www.javascript.com/)
 [![GitHub issues open](https://img.shields.io/github/issues/gokul-koganti/Recipe_Recommender)](https://github.com/gokul-koganti/Recipe_Recommender/issues)
 [![GitHub stars](https://badgen.net/github/stars/gokul-koganti/Recipe_Recommender)](https://badgen.net/github/stars/gokul-koganti/Recipe_Recommender)
+![Github closes issues](https://img.shields.io/github/issues-closed-raw/PvPatel-1001/Recipe_Recommender)
 
 
   
