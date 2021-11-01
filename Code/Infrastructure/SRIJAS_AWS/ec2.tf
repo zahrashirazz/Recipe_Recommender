@@ -43,7 +43,6 @@ cd /home/ubuntu/project
 git clone https://github.com/PvPatel-1001/Recipe_Recommender.git
 cd /home/ubuntu/project/Recipe_Recommender/Code/frontend
 npm install
-nohup npm start &
 cd /home/ubuntu/project/Recipe_Recommender/Code/backend
 npm install
 nohup npx nodemon &
