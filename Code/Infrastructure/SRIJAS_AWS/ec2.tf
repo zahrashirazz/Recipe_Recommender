@@ -34,18 +34,21 @@ resource "aws_instance" "ec2-webserver" {
     user_data = <<EOF
 #!/bin/sh
 sudo apt-get update
-sudo apt install nodejs -y
+curl -sL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+sudo apt-get install --yes nodejs
 sudo apt install npm -y
+sudo npm install -g n
 sudo npm i -g npx
-cd /home/ubuntu
 mkdir project
-cd /home/ubuntu/project
+cd project
 git clone https://github.com/PvPatel-1001/Recipe_Recommender.git
-cd /home/ubuntu/project/Recipe_Recommender/Code/frontend
+cd ../backend
 npm install
-cd /home/ubuntu/project/Recipe_Recommender/Code/backend
+nohup npx nodemon > /dev/null 2>&1 &
+cd Recipe_Recommender/Code/frontend
+sudo sed -i 's/##serverIp##/54.87.50.91/g' /src/apis/recipeDB.js
 npm install
-nohup npx nodemon &
+npm start
 EOF
 }
 
