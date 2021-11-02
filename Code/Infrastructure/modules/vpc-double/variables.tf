@@ -21,7 +21,7 @@ variable "enable_dns_hostnames" {
 
 variable "vpc_name" {
   type        = string
-  default     = "SRIJAS-vpc"
+  default     = "Recipe_Recommender_VPC"
   description = ""
 }
 

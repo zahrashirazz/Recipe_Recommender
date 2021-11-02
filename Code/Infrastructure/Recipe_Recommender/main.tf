@@ -18,7 +18,7 @@ provider "aws" {
 # creating vpc using module
 module "vpc" {
     source = "../modules/vpc-double"
-    vpc_name = "db-sample"
+    vpc_name = "Recipe_Recommender"
     vpc_cidr = "192.168.0.0/16"
     public_cidr = "192.168.1.0/24"
     private1_cidr = "192.168.2.0/24"
