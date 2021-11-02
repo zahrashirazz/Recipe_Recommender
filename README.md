@@ -10,7 +10,6 @@
   
 
   
- <img width="704" alt="Screen Shot 2021-09-30 at 10 00 44 PM" src="https://user-images.githubusercontent.com/22192754/135554303-f1436345-9b19-4509-abd7-f0d1c1adc24c.png">
 
    <h3>🍔 Making Cooking easy and hassle free 🍔</h3> 
   
