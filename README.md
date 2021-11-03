@@ -1,13 +1,17 @@
+## STA(R) GEN: A STAR RECIPE GENERATOR
+
 
 <a href="https://doi.org/10.5281/zenodo.5534986"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.5534986.svg" alt="DOI"></a>
-<img src="https://img.shields.io/github/license/gokul-koganti/Recipe_Recommender">
+<img src="https://img.shields.io/github/license/PvPatel-1001/Recipe_Recommender">
 [![Made with](https://img.shields.io/badge/made%20with-javascript-gree)](https://www.javascript.com/)
-[![GitHub issues open](https://img.shields.io/github/issues/gokul-koganti/Recipe_Recommender)](https://github.com/gokul-koganti/Recipe_Recommender/issues)
-[![GitHub stars](https://badgen.net/github/stars/gokul-koganti/Recipe_Recommender)](https://badgen.net/github/stars/gokul-koganti/Recipe_Recommender)
+[![GitHub issues open](https://img.shields.io/github/issues/gokul-koganti/Recipe_Recommender)](https://github.com/PvPatel-1001/Recipe_Recommender/issues)
+[![GitHub stars](https://badgen.net/github/stars/gokul-koganti/Recipe_Recommender)](https://badgen.net/github/stars/PvPatel-1001/Recipe_Recommender)
 ![Github closes issues](https://img.shields.io/github/issues-closed-raw/PvPatel-1001/Recipe_Recommender)
 [![Respost - Write comment to new Issue event](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Respost.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Respost.yml)
 
+
 ![RECIPE RECOMMENDER](https://user-images.githubusercontent.com/40118578/139968098-b5744941-343a-4c2c-afcc-fa441528c31f.gif)
+
 
 
   
