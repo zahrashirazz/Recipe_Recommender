@@ -27,7 +27,7 @@ export default class RecipesDAO {
       console.log(filters);
       if ("CleanedIngredients" in filters) {
         query = {
-          $text: { $search: filters["CleanedIngredients"] },
+          $text: { $search: filters["CleanedIngredients"][0] },
           Cuisine: filters["Cuisine"],
         };
       }
