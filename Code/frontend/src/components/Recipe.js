@@ -1,7 +1,7 @@
 import React from 'react';
 import '../video.css';
 import VideoURL from './VideoURL';
-import background from "./componentImages/bg-card.jpg";
+import background from "./componentImages/bg-card2.jpg";
 
 // Recipe component dealing with individial recipe items
 const Recipe = (recipe) =>
@@ -21,7 +21,9 @@ const Recipe = (recipe) =>
 
 
 
-            <div style={{backgroundImage: `url(${background})`}}
+            <div style={{backgroundImage: `url(${background})`,
+                        backgroundRepeat: "no-repeat",
+                      backgroundSize: "cover"}}
               className="col-lg-2 pb-1" id = "resultContainer" >
               <div className="card">
                 <div className="card-body">
