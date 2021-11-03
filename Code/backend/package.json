@@ -6,8 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "lint": "eslint 'code/**.js'",
-    "format": "eslint 'code/**.js'"
+    "lint": "eslint 'dao/**.js'",
+    "format": "eslint 'dao/**.js'"
   },
   "keywords": [],
   "author": "",
