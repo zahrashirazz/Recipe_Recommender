@@ -6,7 +6,9 @@
   "type": "module",
   "scripts": {
     "test": "jest",
-    "lint": "eslint 'code/**.js'"
+    "lint": "eslint 'code/**.js'",
+    "format": "prettier --check ./src",
+    "format:fix": "prettier --write ./src"
   },
   "keywords": [],
   "author": "",
