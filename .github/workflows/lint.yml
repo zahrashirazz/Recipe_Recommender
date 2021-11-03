@@ -13,8 +13,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install packages
-        run: npm ci
+        run: |
+            cd Code/backend
+            npm ci
       - name: Prettier
-        run: npm run format
+        run: |
+            cd Code/backend
+            npm run format
       - name: Lint
-        run: npm run lint
+        run: |
+            cd Code/backend
+            npm run lint
