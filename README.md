@@ -101,3 +101,6 @@ Contributors
     <td align="center"><a href="https://github.com/Harshil-Shah99"><img src="https://avatars.githubusercontent.com/u/38115399?v=4" width="75px;" alt=""/><br /><sub><b>Harshil Shah</b></sub></a><br /></td>
   </tr>
 </table>
+
+
+Made with <3 on GitHub.
