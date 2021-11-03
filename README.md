@@ -1,32 +1,33 @@
-## STA(R) GEN: A STAR RECIPE GENERATOR
+## STA(R) GEN: A STAR RECIPE GENERATOR 🍔
 
 
 <a href="https://doi.org/10.5281/zenodo.5534986"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.5534986.svg" alt="DOI"></a>
 <img src="https://img.shields.io/github/license/PvPatel-1001/Recipe_Recommender">
-[![Made with](https://img.shields.io/badge/made%20with-javascript-gree)](https://www.javascript.com/)
+[![Made With](https://img.shields.io/badge/made%20with-javascript-gree)](https://www.javascript.com/)
 [![GitHub issues open](https://img.shields.io/github/issues/gokul-koganti/Recipe_Recommender)](https://github.com/PvPatel-1001/Recipe_Recommender/issues)
 [![GitHub stars](https://badgen.net/github/stars/gokul-koganti/Recipe_Recommender)](https://badgen.net/github/stars/PvPatel-1001/Recipe_Recommender)
 ![Github closes issues](https://img.shields.io/github/issues-closed-raw/PvPatel-1001/Recipe_Recommender)
 [![Respost - Write comment to new Issue event](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Respost.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Respost.yml)
 
-
-![RECIPE RECOMMENDER](https://user-images.githubusercontent.com/40118578/139968098-b5744941-343a-4c2c-afcc-fa441528c31f.gif)
+![RECIPE RECOMMENDER](https://user-images.githubusercontent.com/40118578/139968487-1150b64e-d8d3-4f2e-a5d3-9a48d19ff64b.gif)
 
 
 
   
-
-   <h3>🍔 Making Cooking easy and hassle free 🍔</h3> 
+   <h3>🍔 Our motto: Eat good, Be Healthy, Stay Happy 🍔</h3> 
   
-  <p> Recipe Recommender is an application that suggests you recipes based on the ingredients which are currently available. One of the most tedious tasks while cooking is figuring out what to cook with the ingredients that you, have rather than how to cook it. Our software aims to ease this dilemma by providing recipes for food items which you can make with your current ingredients.
-</p>
+  <p> 
+    Recipe Recommender is an application that suggests you recipes based on the ingredients which are currently available. 
+    One of the most tedious tasks while cooking is figuring out what to cook with the ingredients that you, have rather than how to cook it. 
+    Our software aims to ease this dilemma by providing recipes for food items which you can make with the ingredients at your home.
+  </p>
   
 ## Documentation
   
-  Recipe Recommender is a website that suggests user simple food recipes based on ingredients provided. 
+  Recipe Recommender is a website that suggests users simple food recipes based on ingredients provided. 
   Currently, 
-  - Only one ingredients is considered
-  - For each recipe, ingredients and instructions are shown
+  [] Only one ingredients is considered
+  [] For each recipe, ingredients and instructions are shown
 
 Source documentation can be found at: [Recipe Recommender Docs] https://github.com/gokul-koganti/Recipe_Recommender/blob/master/docs/Recipe%20Recommender%20Source%20Documentation.pdf
   
