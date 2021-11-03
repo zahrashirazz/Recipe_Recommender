@@ -90,7 +90,6 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
   <li> Classify recipes into vegan / vegetarian / non-vegetarian categorizations.</li>
   </ol>
 
-
 ## Contributors
 
 <table>
