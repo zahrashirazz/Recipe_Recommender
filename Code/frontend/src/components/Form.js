@@ -12,6 +12,7 @@ class Form extends Component {
       //numberIngredients : 0,
       ingredients: new Set(),
       cuisineState: 0,
+      cuisine: ""
     };
   }
 
@@ -93,21 +94,36 @@ class Form extends Component {
   // function to send the data to the parent App component
   // uses the function that is sent through props from the App Component
   handleSubmit = (event) => {
+    // this.setState(
+    //   {
+    //     //cuisine : this.state.cuisine,
+    //     //numberIngredients : this.state.numberIngredients,
+    //
+    //     ingredients: new Set(this.state.ingredients).add(
+    //       document.getElementById("cuisine").value
+    //     ),
+    //   },
+    //   () => console.log(this.state)
+    // );
+
     this.setState(
       {
         //cuisine : this.state.cuisine,
         //numberIngredients : this.state.numberIngredients,
 
-        ingredients: new Set(this.state.ingredients).add(
-          document.getElementById("cuisine").value
-        ),
+        cuisine: document.getElementById("cuisine").value
       },
       () => console.log(this.state)
     );
-    document.getElementById("cuisine").value = "";
+
+
     event.preventDefault();
+    var dict = {};
+    dict["ingredient"] = this.state.ingredients;
+    dict["cuisine"] = document.getElementById("cuisine").value;
     //this.props.sendFormData(this.state.cuisine, this.state.numberIngredients,this.state.ingredients)
-    this.props.sendFormData(this.state.ingredients);
+    this.props.sendFormData(dict);
+    document.getElementById("cuisine").value = "";
   };
 
   // render function dispays the UI content i.e the form content

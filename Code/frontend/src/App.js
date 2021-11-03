@@ -12,7 +12,7 @@ class App extends Component {
     super();
 
     this.state = {
-      cuisine: "Mexican",
+      cuisine: "",
       //NoIngredients : 0,
       ingredients: new Set(),
       recipeList: [],
@@ -20,24 +20,26 @@ class App extends Component {
   }
 
   // Function to get the user input from the Form component on Submit action
-  handleSubmit = async (ingredientsInput) => {
+  handleSubmit = async (formDict) => {
     this.setState({
       // cuisine: cuisineInput,
       //NoIngredients: noIngredientsInput,
-      ingredients: ingredientsInput,
+      ingredients: formDict["ingredient"],
+      cuisine: formDict["cuisine"],
     });
 
-    const items = Array.from(ingredientsInput);
-
-    this.getRecipeDetails(items[0], items[items.length - 1]);
+    const items = Array.from(formDict["ingredient"]);
+    const cuis = formDict["cuisine"];
+    this.getRecipeDetails(items[0], cuis);
+  //  alert(typeof(ingredientsInput["cuisine"]));
   };
 
-  getRecipeDetails = async (ingredient, cuisine) => {
+  getRecipeDetails = async (ingredient, cuis) => {
     try {
       const response = await recipeDB.get("/recipes", {
         params: {
           CleanedIngredients: ingredient,
-          Cuisine: cuisine,
+          Cuisine: cuis,
         },
       });
       this.setState({
