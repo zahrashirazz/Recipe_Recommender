@@ -12,7 +12,7 @@ class Form extends Component {
       //numberIngredients : 0,
       ingredients: new Set(),
       cuisineState: 0,
-      cuisine: ""
+      cuisine: "",
     };
   }
 
@@ -111,11 +111,10 @@ class Form extends Component {
         //cuisine : this.state.cuisine,
         //numberIngredients : this.state.numberIngredients,
 
-        cuisine: document.getElementById("cuisine").value
+        cuisine: document.getElementById("cuisine").value,
       },
       () => console.log(this.state)
     );
-
 
     event.preventDefault();
     var dict = {};
