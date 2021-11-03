@@ -6,6 +6,7 @@
 
 Have you read the code of conduct and looked at the license details?
 If you want to raise an issue, first, please do check out the existing issues to see if we accept contributions for your type of issue.
+There is a good possibility that we already have an issue open for you to solve.
 
 <br></br>
 ### Table of Contents
@@ -23,7 +24,8 @@ S.No. | Section
 ### Welcome! 
 We’re glad to see you are interested in contributing. We hope to build a community around developing this project and helping as many people as possible. 
 
-The following are guidelines that we feel will nudge developers toward correct choices while making contributions. Feel free to point out anything that could be improved/changed in a pull request.
+The following are guidelines that we feel will nudge developers toward correct choices while making contributions. 
+Feel free to point out anything that could be improved/changed in a pull request.
 
 
 <br></br>
@@ -44,11 +46,11 @@ To contribute, please issue a pull request using the following procedure:
 
 <br></br>
 ### Some other things to consider when merging a pull request
-* Be clear with the exact problem that you’re trying to solve/feature you’re trying to add. You can refer to our defined objectives for what we would do ourselves should we have had to carry this project into phase 2/3.
+* Be clear with the exact problem that you’re trying to solve/feature you’re trying to add. You can refer to our defined objectives for what we would do ourselves should we have had to carry this project into phase 3.
 
 * Ensure that it is of good quality. The language should be clear and concise without any spelling or grammar mistakes.
 
-* Make sure that any contribution of any sort follows the code of conduct. Our repository has a [code of conduct](https://github.com/ineelshah/SRIJAS/blob/main/CODE_OF_CONDUCT.md) and any pull request that does not respect these will be appropriately removed.
+* Make sure that any contribution of any sort follows the code of conduct. Our repository has a [code of conduct](https://github.com/PvPatel-1001/Recipe_Recommender/blob/main/CODE_OF_CONDUCT.md) and any pull request that does not respect these will be appropriately removed.
 
 <br></br>
 ### Where to Contribute
@@ -72,27 +74,40 @@ You can contribute in the following ways to our code:
 <br></br>
 ### Setting up a development environment
 You can do this in 2 ways:
-1. Install Xampp and Selenium on your local device
-* Windows:
-  * https://www.apachefriends.org/xampp-files/8.0.10/xampp-windows-x64-8.0.10-0-VS16-installer.exe
-* MacOS:
-  * https://www.apachefriends.org/xampp-files/8.0.10/xampp-osx-8.0.10-0-vm.dmg
-* Linux:
-  * https://www.apachefriends.org/xampp-files/8.0.10/xampp-linux-x64-8.0.10-0-installer.run
-
-Download Selenium: https://www.selenium.dev/downloads/
+1. Install Node JS for your device:
+* Windows/MacOS/Linux:
+  * https://nodejs.org/en/download/
 
 2. Clone the repository to your device.
 
-3. Copy the web_app folder to your local htdocs folder and proceed!
+3. Install required packages in the front end folder by running npm install in the frontend folder.
+
+4. Install required packages in the backend end folder by running npm install in the backend folder.
+
+5. Type in "npm start" in the frontend folder and press enter.
+
+6. Type in "npx nodemon" in the backend folder and press enter.
+
+7. Make sure both are on separate command line interfaces.
 
 ###OR
 
 1. Run an AWS EC2 instance
 
-2. Install Apache, Selenium, and MySql
+2. Install Node JS on the machine
 
-3. Clone the repository to root and copy the web_app folder to /var/www/html/.
+3. Clone the repository to root and run npm start.
+
+## How you can contribute and not break the system:
+
+
+1. Do NOT commit a code that isn't working on your local machine.
+2. Do NOT copy code from proprietary sources that require a license to reuse their code.
+3. Do NOT use someone else's code and credit it to your own name.
+4. Do NOT discourage other contributors. Keep updating the issues section in case you feel something is broken or can be enhanced.
+
+Cheers! We look forward to collaborating with you.
+
 
 **You’re all set!**
 <br></br>
