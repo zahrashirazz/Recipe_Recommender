@@ -15,7 +15,7 @@ jobs:
       - name: Install packages
         run: |
             cd Code/backend
-            npm ci
+            npm install
       - name: Prettier
         run: |
             cd Code/backend
