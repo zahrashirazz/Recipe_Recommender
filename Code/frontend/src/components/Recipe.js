@@ -1,25 +1,29 @@
 import React from 'react';
 import '../video.css';
 import VideoURL from './VideoURL';
+import './recipes.css';
+import background from "./componentImages/bg-card.jpg";
 
 // Recipe component dealing with individial recipe items
-const Recipe = (recipe) => 
+const Recipe = (recipe) =>
 
     {
         // splitting the ingredients with seperator as a comma
         var ingredients_seperated = recipe.recipe['Cleaned-Ingredients'].split(',');
         var translated_instruction = recipe.recipe['TranslatedInstructions'];
         // mapping each ingredient to be displayes as a list item
-        ingredients_seperated = ingredients_seperated.map( (ingredient) => 
+        ingredients_seperated = ingredients_seperated.map( (ingredient) =>
         <li class= "recipe_ingredient_item" > {ingredient}</li> );
        <p>{translated_instruction}</p>
 
-        // returns individual container for each recipe     
+        // returns individual container for each recipe
+
         return (
-               
-              
-                        
-            <div className="col-lg-2 pb-1" id = "resultContainer" >
+
+
+
+            <div style={{backgroundImage: `url(${background})`}}
+              className="col-lg-2 pb-1" id = "resultContainer" >
               <div className="card">
                 <div className="card-body">
                   <h2>{recipe.recipe.TranslatedRecipeName}</h2>
@@ -29,18 +33,17 @@ const Recipe = (recipe) =>
                     <h3>Instructions: </h3><br/>
                     <ol class="result_instructions"> {translated_instruction} </ol>
                     <img  src={recipe.recipe['image-url']} alt={recipe.recipe.TranslatedRecipeName} />
-                        
+
                   </p>
                   <div className="row">
-                  
+
                   </div>
                 </div>
               </div>
             </div>
-                
-            
+
+
         )
     };
 
 export default Recipe;
-
