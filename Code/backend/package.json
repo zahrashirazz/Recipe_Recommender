@@ -7,8 +7,7 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint 'code/**.js'",
-    "format": "prettier --check ./src",
-    "format:fix": "prettier --write ./src"
+    "format": "eslint 'code/**.js'"
   },
   "keywords": [],
   "author": "",
