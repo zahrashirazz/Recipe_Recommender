@@ -1,5 +1,8 @@
 ## STA(R) GEN: A STAR RECIPE GENERATOR 🍔
 
+
+![RECIPE RECOMMENDER](https://user-images.githubusercontent.com/40118578/139968487-1150b64e-d8d3-4f2e-a5d3-9a48d19ff64b.gif)
+
 <a href="https://doi.org/10.5281/zenodo.5534986"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.5534986.svg" alt="DOI"></a>
 <img src="https://img.shields.io/github/license/PvPatel-1001/Recipe_Recommender">
 [![Made With](https://img.shields.io/badge/made%20with-javascript-gree)](https://www.javascript.com/)
@@ -8,23 +11,23 @@
 ![Github closes issues](https://img.shields.io/github/issues-closed-raw/PvPatel-1001/Recipe_Recommender)
 [![Respost - Write comment to new Issue event](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Respost.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Respost.yml)
 
-![RECIPE RECOMMENDER](https://user-images.githubusercontent.com/40118578/139968487-1150b64e-d8d3-4f2e-a5d3-9a48d19ff64b.gif)
 
-   <h3>🍔 Our motto: Eat good, Be Healthy, Stay Happy 🍔</h3> 
-  
-  <p> 
-    Recipe Recommender is an application that suggests you recipes based on the ingredients which are currently available. 
-    One of the most tedious tasks while cooking is figuring out what to cook with the ingredients that you, have rather than how to cook it. 
+
+   <h3>🍔 Our motto: Eat good, Be Healthy, Stay Happy 🍔</h3>
+
+  <p>
+    Recipe Recommender is an application that suggests you recipes based on the ingredients which are currently available.
+    One of the most tedious tasks while cooking is figuring out what to cook with the ingredients that you, have rather than how to cook it.
     Our software aims to ease this dilemma by providing recipes for food items which you can make with the ingredients at your home.
   </p>
-  
+
 ## Documentation
-  
+
   Recipe Recommender is a website that suggests users simple food recipes based on ingredients provided.
 
-[] The interface takes the ingredients from user as an input.
-[] The interface also takes the type o cisine the user wants.
-[] For each recipe, we show the key ingredients, instructions and a sample image.
+- [ ] The interface takes the ingredients from user as an input.
+- [ ] The interface also takes the type of cuisine the user wants.
+- [ ] For each recipe, we show the key ingredients, instructions and a sample image.
 
 Source documentation can be found at: [Recipe Recommender Docs] https://github.com/PvPatel-1001/Recipe_Recommender/blob/master/docs/Recipe%20Recommender%20Source%20Documentation.pdf
 
@@ -39,14 +42,14 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-## Software Requirements
+## Key Software Requirements
 
 - [Node.js v14.7.6](https://nodejs.org/en/download/)
 - [NPM v6.14.15](https://nodejs.org/en/download/)
 
 ## Project Setup Steps
 
-- clone repository using `git clone https://github.com/gokul-koganti/Recipe_Recommender.git`
+- clone repository using `git clone https://github.com/PvPatel-1001/Recipe_Recommender.git`
 - setup for frontend
   open terminal and navigate to the **frontend** folder and execute `npm install`
 - setup for backend
