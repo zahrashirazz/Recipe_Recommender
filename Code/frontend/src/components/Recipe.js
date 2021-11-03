@@ -1,7 +1,6 @@
 import React from 'react';
 import '../video.css';
 import VideoURL from './VideoURL';
-import './recipes.css';
 import background from "./componentImages/bg-card.jpg";
 
 // Recipe component dealing with individial recipe items
