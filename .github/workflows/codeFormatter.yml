@@ -16,11 +16,7 @@ jobs:
         run: |
             cd Code/backend
             npm install
-      - name: Prettier
+      - name: Code Formatter
         run: |
             cd Code/backend
             npm run format
-      - name: Lint
-        run: |
-            cd Code/backend
-            npm run lint
