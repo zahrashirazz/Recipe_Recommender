@@ -70,6 +70,7 @@ body{
     margin : 0px 0;
     margin-left : 5%;
     margin-top : 40px;
+    color: white;
 
   display : inline-block;
 }
@@ -110,10 +111,11 @@ li.addedIngredient,li.recipe_ingredient_item{
   margin-left: 2%;
 
   box-sizing: border-box;
-  background-color: azure;
+  background-color: Transparent;
   border: 2px solid rgb(165, 161, 161);
   border-radius: 4px;
-  
+  color: white;
+  border-color: black;
   font-size: medium;
   display:inline-table;
   
@@ -122,8 +124,9 @@ li.addedIngredient,li.recipe_ingredient_item{
 
 li:hover{
 
-  background-color:#AA0000;
-  color: white;
+  /*background-color:yellow;
+  color: white;*/
+  opacity: 0.8;
 
 }
 
@@ -136,12 +139,16 @@ li:hover{
   margin-top: 10px;
   margin-bottom: 5px;
 
-  border-radius: 2px;
+  border-radius: 8px;
   border-color: black;
   border-style: solid;
-
+   background-color: Transparent;
+  color: white;
   text-align: center;
-
+  border-width: initial;
+}
+#submit:hover{
+  opacity: 0.8;
 }
 
 /* stylings for button in general */
@@ -151,18 +158,20 @@ button{
   height:1cm;
 
   font-size: medium;
-  color:black;
+  color:white;
 
   margin-left: 5pt;
   margin-right: 5pt;
-
-  background-color:azure ;
+  border-radius: 8px;
+  border-width: initial;
+  border-color: black;
+  background-color:Transparent ;
   
 }
 
 button:hover{
 
-  background-color:green;
+  opacity: 0.8;
   
 }
 
@@ -249,13 +258,17 @@ ul.result_ingredients{
 /* Styling for the individial list items in recipe ingredient list*/
 li.recipe_ingredient_item{
 
-  background-color: #AA0000;
-  color: white;
+  /*background-color: #AA0000;
+  color: white;*/
 
   border: 2px solid rgb(165, 161, 161);
   border-radius: 4px;
-
+  border-color: black;
+  background-color: brown;
+  opacity: 0.5;
+  color: white;
   font-size: medium;
+  border-width: initial;
   
 }
 
