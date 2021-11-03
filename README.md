@@ -20,11 +20,11 @@
   
 ## Documentation
   
-  Recipe Recommender is a website that suggests users simple food recipes based on ingredients provided. 
+  Recipe Recommender is a website that suggests users simple food recipes based on ingredients provided.
 
-  [] The interface takes the ingredients from user as an input.
-  [] The interface also takes the type o cisine the user wants.
-  [] For each recipe, we show the key ingredients, instructions and a sample image.
+[] The interface takes the ingredients from user as an input.
+[] The interface also takes the type o cisine the user wants.
+[] For each recipe, we show the key ingredients, instructions and a sample image.
 
 Source documentation can be found at: [Recipe Recommender Docs] https://github.com/PvPatel-1001/Recipe_Recommender/blob/master/docs/Recipe%20Recommender%20Source%20Documentation.pdf
 
@@ -72,30 +72,24 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 ![Screenshot 2021-09-30 at 11 36 37 PM](https://user-images.githubusercontent.com/17452184/135561676-ac4e9381-4988-49f0-b189-7202ac83d801.jpg)
 ![Screenshot 2021-09-30 at 11 36 59 PM](https://user-images.githubusercontent.com/17452184/135561683-67dc56c5-011f-4d6c-b89c-b9fdde076795.jpg)
 
-
-
-
 ## Roadmap
 
-   ### Phase 2: Completed tasks:
+### Phase 2: Completed tasks:
 
-   - [ ] Improved the User Interface using additional CSS scripts and improved the look of the system making it easier for the user.
-   - [ ] Hosted database on MongoDB server. 
-   - [ ] Made changes to the business logic and implemented a much more efficient code.
-   - [ ] Made the webpage publicly available by hosting the website on AWS. We also automated this process on AWS using Terraform.
-   - [ ] Improved buttons on the webpage to make it look better.
-   - [ ] Added filtering for the recipes as based on cuisine along with ingredients.
-   - [ ] Implemented Travis CI and multiple other github workflows.
-   - [ ] Made major improvements to the repository. Added a tagline, created a logo, etc.
-   - [ ] Implemented test cases.
+- [ ] Improved the User Interface using additional CSS scripts and improved the look of the system making it easier for the user.
+- [ ] Hosted database on MongoDB server.
+- [ ] Made changes to the business logic and implemented a much more efficient code.
+- [ ] Made the webpage publicly available by hosting the website on AWS. We also automated this process on AWS using Terraform.
+- [ ] Improved buttons on the webpage to make it look better.
+- [ ] Added filtering for the recipes as based on cuisine along with ingredients.
+- [ ] Implemented Travis CI and multiple other github workflows.
+- [ ] Made major improvements to the repository. Added a tagline, created a logo, etc.
+- [ ] Implemented test cases.
 
-  
-  ### Phase 3: Scope of improvement:
+### Phase 3: Scope of improvement:
 
-   - [ ] Classify recipes into vegan / vegetarian / non-vegetarian categorizations.
-   - [ ] Add more filters and also recommend restaurants to users based on their inputs.
-   
-
+- [ ] Classify recipes into vegan / vegetarian / non-vegetarian categorizations.
+- [ ] Add more filters and also recommend restaurants to users based on their inputs.
 
 ## Contributors
 
