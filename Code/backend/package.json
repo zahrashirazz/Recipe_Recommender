@@ -7,7 +7,9 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint 'dao/**.js'",
-    "format": "eslint 'dao/**.js'"
+    "format": "prettier --check ./dao",
+    "format:fix": "prettier --write ./dao"
+
   },
   "keywords": [],
   "author": "",
