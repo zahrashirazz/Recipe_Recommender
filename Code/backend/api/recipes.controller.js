@@ -8,10 +8,9 @@ export default class RecipesController {
     let filters = {}
     //Checking the query to find the required results
 
-    if (req.query.cuisine) {
-      filters.cuisine = req.query.cuisine
-    } else if (req.query.CleanedIngredients) {
+    if (req.query.CleanedIngredients) {
       filters.CleanedIngredients = req.query.CleanedIngredients
+      filters.Cuisine = req.query.Cuisine
     }
 
     const { recipesList, totalNumRecipes } = await RecipesDAO.getRecipes({
@@ -19,8 +18,8 @@ export default class RecipesController {
       page,
       recipesPerPage,
     })
-    
-    
+
+
     let response = {
       recipes:recipesList,
       page: page,
@@ -40,4 +39,4 @@ export default class RecipesController {
       res.status(500).json({ error: e })
     }
   }
-} 
+}

@@ -14,33 +14,36 @@ class App extends Component{
       super()
 
       this.state={
-          //cuisine : "Any",
+          cuisine : "Mexican",
           //NoIngredients : 0,
           ingredients: new Set(),
-          recipeList: []
+          recipeList: [],
         }
 
       }
-    
+
     // Function to get the user input from the Form component on Submit action
     handleSubmit = async (ingredientsInput) => {
       this.setState({
-        //cuisine: cuisineInput,
+        // cuisine: cuisineInput,
         //NoIngredients: noIngredientsInput,
         ingredients:ingredientsInput
 
       })
-  
+
       const items = Array.from(ingredientsInput)
-      this.getRecipeDetails(items[0]);
+
+      this.getRecipeDetails(items[0], items[items.length-1]);
 
   };
- 
-  getRecipeDetails = async (ingredient) => {
+
+  getRecipeDetails = async (ingredient, cuisine) => {
     try {
       const response = await recipeDB.get('/recipes', {
         params: {
-          'CleanedIngredients' : ingredient
+          'CleanedIngredients' : ingredient,
+          'Cuisine' : cuisine
+
         }
       })
       this.setState({
@@ -48,7 +51,7 @@ class App extends Component{
       });
     } catch (err) {
         console.log(err);
-    }    
+    }
  }
 
   render(){
@@ -60,7 +63,7 @@ class App extends Component{
 
         <Form sendFormData = {this.handleSubmit}/>
 
-        {/* RecipeList is the component where results are displayed. 
+        {/* RecipeList is the component where results are displayed.
         App's recipeList state item is being sent as a prop
         */}
 

@@ -21,7 +21,8 @@ const Recipe = (recipe) =>
 
 
 
-            <div style={{backgroundImage: `url(${background})`,
+            <div
+            style={{backgroundImage: `url(${background})`,
                         backgroundRepeat: "no-repeat",
                       backgroundSize: "cover"}}
               className="col-lg-2 pb-1" id = "resultContainer" >

@@ -2,7 +2,7 @@ import React, {Component} from "react";
 
 // Form component to maintain input form
 class Form extends Component{
-   
+
     // constructor for Form Component
     // We maintain user input as a state object
     constructor(){
@@ -11,9 +11,10 @@ class Form extends Component{
 
         this.state = {
 
-            //cuisine : "Any",
+            // cuisine : "Any",
             //numberIngredients : 0,
-            ingredients : new Set()  
+            ingredients : new Set(),
+            cuisineState: 0
 
         }
 
@@ -27,12 +28,12 @@ class Form extends Component{
                 cuisine : event.target.value,
                 numberIngredients : this.state.numberIngredients,
                 ingredients : this.state.ingredients
-            }, () => console.log( this.state ) 
+            }, () => console.log( this.state )
         )
     }
     */
     // function to update the maximum number of ingredients in the state.
-    /*numberUpdate = (event) => 
+    /*numberUpdate = (event) =>
     {
         this.setState (
             {
@@ -42,9 +43,9 @@ class Form extends Component{
             }, () => console.log( this.state )
         )
     }*/
-    
+
     // function to display the ingredients added by the user upto that point.
-    printHander = () => 
+    printHander = () =>
     {
         // converting the set into an array, to make it iterable
         const items = [...this.state.ingredients]
@@ -58,9 +59,9 @@ class Form extends Component{
 
     // fucntion to add ingredients to the inredients (set datastructure) in App's state
     // triggered by clicking add item button
-    addHandler = (event) => 
+    addHandler = (event) =>
     {
-       
+
         const ingredient = document.getElementById("ingredient").value
 
         this.setState (
@@ -68,21 +69,22 @@ class Form extends Component{
                 //cuisine : this.state.cuisine,
                 //numberIngredients : this.state.numberIngredients,
                 ingredients : new Set( this.state.ingredients ).add( ingredient )
-        
+
             }, () => console.log( this.state )
         )
-        
+
+
         document.getElementById("ingredient").value = ""
 
     }
 
     // fucntion to add ingredients to the inredients (set datastructure) in App's state
     // triggered by clicking item that is displayed ysing printHandler function
-    removeHandler = (event) => 
+    removeHandler = (event) =>
     {
         var discardIngredient = event.target.id
         var ingredientList = this.state.ingredients
-        
+
         ingredientList.delete(discardIngredient)
 
         this.setState (
@@ -90,18 +92,27 @@ class Form extends Component{
                 //cuisine : this.state.cuisine,
                 //numberIngredients : this.state.numberIngredients,
                 ingredients : ingredientList
-        
+
             }, () => console.log( this.state )
         )
 
     }
-    
+
     // function to send the data to the parent App component
     // uses the function that is sent through props from the App Component
-    handleSubmit = (event) => 
-    {
+    handleSubmit = (event) =>
+    {   
+        this.setState (
+            {
+                //cuisine : this.state.cuisine,
+                //numberIngredients : this.state.numberIngredients,
 
-        event.preventDefault();        
+                ingredients : new Set( this.state.ingredients ).add( document.getElementById("cuisine").value )
+
+            }, () => console.log( this.state )
+        )
+        document.getElementById("cuisine").value = ""
+        event.preventDefault();
         //this.props.sendFormData(this.state.cuisine, this.state.numberIngredients,this.state.ingredients)
         this.props.sendFormData(this.state.ingredients)
 
@@ -123,14 +134,23 @@ class Form extends Component{
             <div class="formOutercontainer">
 
                 <form onSubmit={this.handleSubmit}>
-                    
+
                     <div className="row pb-1">
                     <div className="input-group col-lg-4 bg-danger text-white">
                         <label class='sideLabel'> Ingredient: </label> <br/>
                         <div className="input-group-append">
                         <input type = "text" id = "ingredient" />
-                       
+
                         <button onClick = {this.addHandler} type = "button" id = "addButton" > Add item </button>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div className="row pb-1">
+                    <div className="input-group col-lg-4 bg-danger text-white">
+                        <label class='sideLabel'> Cuisine: </label> <br/>
+                        <div className="input-group-append">
+                        <input type = "text" id = "cuisine" />
                         </div>
                     </div>
                     </div>
@@ -145,11 +165,11 @@ class Form extends Component{
                     <div className="input-group col-lg-4">
                         <label class='sideLabel'>Maximum Number of Ingredients: </label><br/>
                         <div className="input-group-append">
-                        <input type = "number" id = "NoIngredient" onChange = {this.numberUpdate} /> 
+                        <input type = "number" id = "NoIngredient" onChange = {this.numberUpdate} />
                         </div>
                     </div>
                     </div>
-                       
+
                     <div className="row pb-1">
                     <div className="input-group col-lg-4">
                         <label class='sideLabel'> Cusine Selection: </label><br/><br/>
@@ -163,8 +183,8 @@ class Form extends Component{
 
                     <div className="row pb-1">
                     <div className="input-group col-lg-4">
-                        <button type = "button" id = 'submit' onClick = {this.handleSubmit}> 
-                            <h4> Search Recipes </h4> 
+                        <button type = "button" id = 'submit' onClick = {this.handleSubmit}>
+                            <h4> Search Recipes </h4>
                         </button>
                     </div>
                     </div>

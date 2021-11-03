@@ -24,15 +24,17 @@ export default class RecipesDAO {
   } = {}) {
     let query
     if (filters) {
+      console.log(filters)
       if ("CleanedIngredients" in filters) {
-        query = { $text: { $search: filters["CleanedIngredients"] } }
-      } else if ("Cuisine" in filters) {
-        query = { "Cuisine": { $eq: filters["Cuisine"] } }
-      } 
+        query = {$text: {$search: filters["CleanedIngredients"]}, 'Cuisine':filters['Cuisine'] }
+      }
+      //   else if ("Cuisine" in filters) {
+      //   query = { "Cuisine": { $eq: filters["Cuisine"] } }
+      // }
     }
 
     let cursor
-    
+
     try {
       cursor = await recipes
         .find(query)
@@ -54,7 +56,7 @@ export default class RecipesDAO {
       return { recipesList: [], totalNumRecipes: 0 }
     }
   }
-  
+
   //Function to get the list of Cuisines
   static async getCuisines() {
     let cuisines = []
@@ -66,8 +68,5 @@ export default class RecipesDAO {
       return cuisines
     }
   }
- 
+
 }
-
-
- 
