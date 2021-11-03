@@ -1,75 +1,69 @@
-import './App.css';
-import  Form from './components/Form.js';
-import Header from './components/Header';
-import recipeDB from './apis/recipeDB';
-import RecipeList from './components/RecipeList';
-import React,{Component} from 'react';
+import "./App.css";
+import Form from "./components/Form.js";
+import Header from "./components/Header";
+import recipeDB from "./apis/recipeDB";
+import RecipeList from "./components/RecipeList";
+import React, { Component } from "react";
 
 // Main component of the project
-class App extends Component{
+class App extends Component {
+  // constructor for the App Component
+  constructor() {
+    super();
 
-    // constructor for the App Component
-    constructor(){
+    this.state = {
+      cuisine: "Mexican",
+      //NoIngredients : 0,
+      ingredients: new Set(),
+      recipeList: [],
+    };
+  }
 
-      super()
+  // Function to get the user input from the Form component on Submit action
+  handleSubmit = async (ingredientsInput) => {
+    this.setState({
+      // cuisine: cuisineInput,
+      //NoIngredients: noIngredientsInput,
+      ingredients: ingredientsInput,
+    });
 
-      this.state={
-          cuisine : "Mexican",
-          //NoIngredients : 0,
-          ingredients: new Set(),
-          recipeList: [],
-        }
+    const items = Array.from(ingredientsInput);
 
-      }
-
-    // Function to get the user input from the Form component on Submit action
-    handleSubmit = async (ingredientsInput) => {
-      this.setState({
-        // cuisine: cuisineInput,
-        //NoIngredients: noIngredientsInput,
-        ingredients:ingredientsInput
-
-      })
-
-      const items = Array.from(ingredientsInput)
-
-      this.getRecipeDetails(items[0], items[items.length-1]);
-
+    this.getRecipeDetails(items[0], items[items.length - 1]);
   };
 
   getRecipeDetails = async (ingredient, cuisine) => {
     try {
-      const response = await recipeDB.get('/recipes', {
+      const response = await recipeDB.get("/recipes", {
         params: {
-          'CleanedIngredients' : ingredient,
-          'Cuisine' : cuisine
-
-        }
-      })
+          CleanedIngredients: ingredient,
+          Cuisine: cuisine,
+        },
+      });
       this.setState({
-        recipeList: response.data.recipes
+        recipeList: response.data.recipes,
       });
     } catch (err) {
-        console.log(err);
+      console.log(err);
     }
- }
+  };
 
-  render(){
-    return(
+  render() {
+    return (
       <div>
-        <Header/>
+        <Header />
 
-         {/* handleSubmit function is being sent as a prop to the form component*/}
+        {/* handleSubmit function is being sent as a prop to the form component*/}
 
-        <Form sendFormData = {this.handleSubmit}/>
+        <Form sendFormData={this.handleSubmit} />
 
         {/* RecipeList is the component where results are displayed.
         App's recipeList state item is being sent as a prop
         */}
 
-        <RecipeList recipes={this.state.recipeList}/>
+        <RecipeList recipes={this.state.recipeList} />
       </div>
-    )
+    );
   }
 }
 
