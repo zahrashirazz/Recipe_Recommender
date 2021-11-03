@@ -39,7 +39,7 @@ export default class RecipesDAO {
     let cursor;
 
     try {
-      cursor = await recipes.find(query);
+      cursor = await recipes.find(query).collation( { locale: 'en', strength: 2 } );
     } catch (e) {
       console.error(`Unable to issue find command, ${e}`);
       return { recipesList: [], totalNumRecipess: 0 };
