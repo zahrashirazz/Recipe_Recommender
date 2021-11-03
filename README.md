@@ -21,11 +21,12 @@
 ## Documentation
   
   Recipe Recommender is a website that suggests users simple food recipes based on ingredients provided. 
-  Currently, 
-  [] Only one ingredients is considered
-  [] For each recipe, ingredients and instructions are shown
 
-Source documentation can be found at: [Recipe Recommender Docs] https://github.com/gokul-koganti/Recipe_Recommender/blob/master/docs/Recipe%20Recommender%20Source%20Documentation.pdf
+  [] The interface takes the ingredients from user as an input.
+  [] The interface also takes the type o cisine the user wants.
+  [] For each recipe, we show the key ingredients, instructions and a sample image.
+
+Source documentation can be found at: [Recipe Recommender Docs] https://github.com/PvPatel-1001/Recipe_Recommender/blob/master/docs/Recipe%20Recommender%20Source%20Documentation.pdf
 
 ## Technology Stack
 
@@ -71,24 +72,30 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 ![Screenshot 2021-09-30 at 11 36 37 PM](https://user-images.githubusercontent.com/17452184/135561676-ac4e9381-4988-49f0-b189-7202ac83d801.jpg)
 ![Screenshot 2021-09-30 at 11 36 59 PM](https://user-images.githubusercontent.com/17452184/135561683-67dc56c5-011f-4d6c-b89c-b9fdde076795.jpg)
 
+
+
+
 ## Roadmap
 
-  <h3> Completed tasks</h3>
-  <ol>
-  <li> Designed a User Interface using React JS library.</li>
-  <li> Hosted the dataset on Mongo Database System. </li>
-  <li> Performed querying and busniess logic implementation as part of backend module using Express JS library.</li>
-  <li> Integration of backend and frontedn is done with the assistance of Axios library.</li>
-  </ol>
+   ### Phase 2: Completed tasks:
+
+   - [ ] Improved the User Interface using additional CSS scripts and improved the look of the system making it easier for the user.
+   - [ ] Hosted database on MongoDB server. 
+   - [ ] Made changes to the business logic and implemented a much more efficient code.
+   - [ ] Made the webpage publicly available by hosting the website on AWS. We also automated this process on AWS using Terraform.
+   - [ ] Improved buttons on the webpage to make it look better.
+   - [ ] Added filtering for the recipes as based on cuisine along with ingredients.
+   - [ ] Implemented Travis CI and multiple other github workflows.
+   - [ ] Made major improvements to the repository. Added a tagline, created a logo, etc.
+   - [ ] Implemented test cases.
+
   
-  <h3> Future tasks</h3>
-  <ol>
-  <li> Add filtering system based on cusine, Number of ingredients and calorie intake.</li>
-  <li> Integrate the current dataset with review dataset(https://www.kaggle.com/sarthak71/food-recipes) and provide users with recipe ratings and reviews.</li>
-  <li> Suggest nearby restaurants based on recipes generated.</li>
-  <li> Provide recipe reccomendations based on multiple ingredients.</li>
-  <li> Classify recipes into vegan / vegetarian / non-vegetarian categorizations.</li>
-  </ol>
+  ### Phase 3: Scope of improvement:
+
+   - [ ] Classify recipes into vegan / vegetarian / non-vegetarian categorizations.
+   - [ ] Add more filters and also recommend restaurants to users based on their inputs.
+   
+
 
 ## Contributors
 
@@ -102,4 +109,4 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
   </tr>
 </table>
 
-Made with <3 on GitHub.
+<p align="center">Made with ❤️ on GitHub.</p>
