@@ -19,9 +19,6 @@ https://user-images.githubusercontent.com/25223347/140403709-a062e7c5-4500-49d4-
 
    <h3>🍔 Our motto: Eat good, Be Healthy, Stay Happy 🍔</h3>
 
-
-
-
   <p>
     Recipe Recommender is an application that suggests you recipes based on the ingredients which are currently available.
     One of the most tedious tasks while cooking is figuring out what to cook with the ingredients that you, have rather than how to cook it.
