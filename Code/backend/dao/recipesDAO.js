@@ -38,14 +38,14 @@ export default class RecipesDAO {
         console.log(str);
         query = { "Cleaned-Ingredients": { $regex: str } };
         query["Cuisine"] = filters["Cuisine"];
-<<<<<<< HEAD
+// <<<<<<< HEAD
         var email = filters["Email"];
         var flagger = filters["Flag"];
         console.log(email);
         console.log(flagger);
 
-=======
->>>>>>> 4bd7a622fe3843494d0ec22de41808bd7d51e301
+// =======
+// >>>>>>> 4bd7a622fe3843494d0ec22de41808bd7d51e301
       }
     }
 
