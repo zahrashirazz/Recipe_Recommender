@@ -5,6 +5,7 @@
 <a href="https://doi.org/10.5281/zenodo.5534986"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.5534986.svg" alt="DOI"></a>
 <img src="https://img.shields.io/github/license/PvPatel-1001/Recipe_Recommender">
 [![Made With](https://img.shields.io/badge/made%20with-javascript-gree)](https://www.javascript.com/)
+[![DOI](https://zenodo.org/badge/422306860.svg)](https://zenodo.org/badge/latestdoi/422306860)
 [![GitHub issues open](https://img.shields.io/github/issues/PvPatel-1001/Recipe_Recommender)](https://github.com/PvPatel-1001/Recipe_Recommender/issues)
 [![GitHub stars](https://badgen.net/github/stars/PvPatel-1001/Recipe_Recommender)](https://badgen.net/github/stars/PvPatel-1001/Recipe_Recommender)
 ![Github closes issues](https://img.shields.io/github/issues-closed-raw/PvPatel-1001/Recipe_Recommender)
