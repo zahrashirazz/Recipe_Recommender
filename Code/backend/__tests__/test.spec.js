@@ -2,8 +2,8 @@ const mongodb = require("mongodb");
 const MongoClient = mongodb.MongoClient;
 const request = require("supertest")("http://localhost:5000/api/v1");
 const expect = require("chai").expect;
-var util= require('util');
-var encoder = new util.TextEncoder('utf-8');
+var util = require("util");
+var encoder = new util.TextEncoder("utf-8");
 
 // describe("GET /recipes", function () {
 //   it("is the API is functional", async function () {
