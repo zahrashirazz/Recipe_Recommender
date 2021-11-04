@@ -153,7 +153,6 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
   </tr>  
  </table>
 
-
 ## Roadmap
 
 ### Phase 2: Completed tasks:
