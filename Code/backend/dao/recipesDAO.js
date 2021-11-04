@@ -26,7 +26,7 @@ export default class RecipesDAO {
     if (filters) {
       if ("CleanedIngredients" in filters) {
         // query = {
-        //   $text: { $search: "filters["CleanedIngredients"][0]" },
+        //   $text: { $search: filters["CleanedIngredients"][0] },
         //   Cuisine: filters["Cuisine"],
         // };
         var str = "";
@@ -38,6 +38,7 @@ export default class RecipesDAO {
           const str1 = filters["CleanedIngredients"][i];
           str += "(?=.*" + str1 + ")";
         }
+        console.log(str);
         query = { "Cleaned-Ingredients": { $regex: str } };
         query["Cuisine"] = filters["Cuisine"];
         // var str = "";

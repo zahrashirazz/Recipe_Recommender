@@ -13,7 +13,6 @@ class App extends Component {
 
     this.state = {
       cuisine: "",
-      email_id: "",
       //NoIngredients : 0,
       ingredients: new Set(),
       recipeList: [],
@@ -27,18 +26,12 @@ class App extends Component {
       //NoIngredients: noIngredientsInput,
       ingredients: formDict["ingredient"],
       cuisine: formDict["cuisine"],
-      email_id: formDict["email_id"],
     });
 
     const items = Array.from(formDict["ingredient"]);
     const cuis = formDict["cuisine"];
-    const flag = formDict["flag"];
-    if (flag) {
-      const eid = formDict["email_id"];
-      //sendEmail(eid);
-    }
-    this.getRecipeDetails(items[0], cuis);
-    //  alert(typeof(ingredientsInput["cuisine"]));
+    this.getRecipeDetails(items, cuis);
+  //  alert(typeof(ingredientsInput["cuisine"]));
   };
 
   getRecipeDetails = async (ingredient, cuis) => {
