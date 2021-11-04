@@ -31,7 +31,7 @@ class App extends Component {
     const items = Array.from(formDict["ingredient"]);
     const cuis = formDict["cuisine"];
     this.getRecipeDetails(items, cuis);
-  //  alert(typeof(ingredientsInput["cuisine"]));
+    //  alert(typeof(ingredientsInput["cuisine"]));
   };
 
   getRecipeDetails = async (ingredient, cuis) => {
