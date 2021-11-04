@@ -24,16 +24,34 @@ export default class RecipesDAO {
   } = {}) {
     let query;
     if (filters) {
-      console.log(filters);
       if ("CleanedIngredients" in filters) {
-        query = {
-          $text: { $search: filters["CleanedIngredients"][0] },
-          Cuisine: filters["Cuisine"],
-        };
-      }
+        // query = {
+        //   $text: { $search: "filters["CleanedIngredients"][0]" },
+        //   Cuisine: filters["Cuisine"],
+        // };
+        var str = "";
+        // const str1 = "milk";
+        // const str2 = "tomato";
+        // str+="(?=.*" + str1 + ")";
+        // str+="(?=.*" + str2 + ")";
+        for(var i=0;i<filters["CleanedIngredients"].length;i++){
+          const str1 = filters["CleanedIngredients"][i];
+          str+="(?=.*" + str1 + ")";
+        }
+        query = {"Cleaned-Ingredients": { $regex: str}};
+        query["Cuisine"] = filters["Cuisine"];
+      // var str = "";
+      // for(var i=0;i<filters["CleanedIngredients"].length;i++){
+      //   str = str + String.raw'(?=.*'+filters["CleanedIngredients"][i]+String.raw')';
+      // }
+      // query = {
+      //   Cuisine: "Mexican",
+      // };
+      // query["Cleaned-Ingredients"] =  $regex":str;
       //   else if ("Cuisine" in filters) {
       //   query = { "Cuisine": { $eq: filters["Cuisine"] } }
       // }
+    }
     }
 
     let cursor;
