@@ -1,4 +1,4 @@
-name: Check the source code
+name: Code Formatter and Syntax Check
 on:
   pull_request:
     branches:
