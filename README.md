@@ -15,7 +15,12 @@
 [![Running Code Coverage](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/coverage.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/coverage.yml)
 [![Style Checker and Prettify Code](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml)
 
+https://user-images.githubusercontent.com/25223347/140403709-a062e7c5-4500-49d4-9758-aea9e5fa5442.mp4
+
    <h3>🍔 Our motto: Eat good, Be Healthy, Stay Happy 🍔</h3>
+
+
+
 
   <p>
     Recipe Recommender is an application that suggests you recipes based on the ingredients which are currently available.
