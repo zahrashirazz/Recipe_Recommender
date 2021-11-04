@@ -26,11 +26,11 @@ The group has made the below mentioned functional changes to the project improvi
 4. **Deployment:** Hosted the website on AWS for making it available to public.
 5. **Continuous Deployment:** Automated the cloud deployment process for shorter release cycles.
 
-
 ## Documentation
-Changes to the documentation were also significant. They are mentioned below.
-1. **README:** The main README has been totally rebuilt, and the organization is now much more straightforward and effective. A large number of badges have been added. In addition, a video demonstrating the demo has been uploaded.
 
+Changes to the documentation were also significant. They are mentioned below.
+
+1. **README:** The main README has been totally rebuilt, and the organization is now much more straightforward and effective. A large number of badges have been added. In addition, a video demonstrating the demo has been uploaded.
 
 ## Testing
 
@@ -38,10 +38,9 @@ There were trivial test cases written in the previous version. This version incl
 
 1. **Style checkers:** Github Actions now includes style and format checks as well. This helps to keep the project's code quality high.
 
-
 ## User Interface
+
 The User Interface has been improved from the previous version.
+
 1. **Colorful visual:** Background images were included in the UI, to make it look for colorful.
 2. **Beautification:** Button were made interactive and each selection of each recipe card made interactive for better visual to the user.
-
-
