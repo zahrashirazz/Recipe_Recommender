@@ -3,8 +3,6 @@ const MongoClient = mongodb.MongoClient;
 const request = require("supertest")("http://localhost:5000/api/v1");
 const expect = require("chai").expect;
 
-
-
 // describe("GET /recipes", function () {
 //   it("is the API is functional", async function () {
 //     const response = await request.get("/recipes?CleanedIngredients=coconut");
@@ -19,25 +17,24 @@ const expect = require("chai").expect;
 //   });
 // });
 
-
 function test_connectivity_func() {
-    /**
-     * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
-     * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
-     */
-    const uri = "mongodb+srv://hselvar2:hselvar2@cluster0.e7zgr.mongodb.net/recipe?retryWrites=true&w=majority";
+  /**
+   * Connection URI. Update <username>, <password>, and <your-cluster-url> to reflect your cluster.
+   * See https://docs.mongodb.com/ecosystem/drivers/node/ for more details
+   */
+  const uri =
+    "mongodb+srv://hselvar2:hselvar2@cluster0.e7zgr.mongodb.net/recipe?retryWrites=true&w=majority";
 
-    try {
-        // Connect to the MongoDB cluster
-         MongoClient.connect(uri, {
-          useNewUrlParser: true
-        });
-        return true;
-
-    } catch (e) {
-    } finally {
-    }
-    return false;
+  try {
+    // Connect to the MongoDB cluster
+    MongoClient.connect(uri, {
+      useNewUrlParser: true,
+    });
+    return true;
+  } catch (e) {
+  } finally {
+  }
+  return false;
 }
 
 describe("GET /recipes", function () {
