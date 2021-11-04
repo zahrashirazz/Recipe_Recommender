@@ -1,15 +1,13 @@
-jobs:
-  include:
-    - language: node_js
-      node_js:
-        - 14
-      # command to install dependencies
-      install:
-        - 
-      # command to run tests
-      script:
-        - cd Code/backend
-        - npm install
-        - cd __tests__
-        - npm test
+language: node_js
+node_js:
+  - 14
+install:
+  - cd Code/backend
+  - echo "installing"
+  - npm install
+script:
+  - echo "running tests"
+  - cd Code/backend/__tests__
+  - npm test
+after_success: npm test -- --coverage
 
