@@ -2,7 +2,6 @@
 
 ![RECIPE RECOMMENDER](https://user-images.githubusercontent.com/40118578/139968487-1150b64e-d8d3-4f2e-a5d3-9a48d19ff64b.gif)
 
-<a href="https://doi.org/10.5281/zenodo.5534986"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.5534986.svg" alt="DOI"></a>
 <img src="https://img.shields.io/github/license/PvPatel-1001/Recipe_Recommender">
 [![Made With](https://img.shields.io/badge/made%20with-javascript-gree)](https://www.javascript.com/)
 [![DOI](https://zenodo.org/badge/422306860.svg)](https://zenodo.org/badge/latestdoi/422306860)
