@@ -1,3 +1,4 @@
-export default {
-  password: "##gmail_password##",
-};
+export default
+{
+  "password" : "SRIJASGMAILPWD",
+}
