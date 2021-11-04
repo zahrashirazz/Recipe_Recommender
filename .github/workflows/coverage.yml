@@ -30,4 +30,4 @@ jobs:
     - name: Run the tests
       run: |
           cd Code/backend
-          npm test -- --coverage
+          npm test
