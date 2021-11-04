@@ -1,6 +1,7 @@
 # variable to get information from terraform.tfvars
 variable "aws_access_key" {}
 variable "aws_secret_key" {}
+variable "email_password" {}
 
 # defining default region
 variable "aws_region" {
