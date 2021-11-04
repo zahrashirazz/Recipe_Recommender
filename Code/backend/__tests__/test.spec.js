@@ -4,31 +4,30 @@ const MongoClient = mongodb.MongoClient;
 const expect = require("chai").expect;
 // var util= require('util');
 // var encoder = new util.TextEncoder('utf-8');
- //
- // describe(GET recipes, function () {
- //   it(is the API is functional, async function () {
- //     const response = await request.get(recipesCleanedIngredients=coconut);
- //
- //     expect(response.status).to.eql(200);
- //   });
- //
- //   it(is the API is fetching the filtered ingredient, async function () {
- //     const response = await request.get(recipesCleanedIngredients=pear);
- //
- //     expect(response.body.filters.CleanedIngredients).to.eql(pear);
- //   });
- // });
+//
+// describe(GET recipes, function () {
+//   it(is the API is functional, async function () {
+//     const response = await request.get(recipesCleanedIngredients=coconut);
+//
+//     expect(response.status).to.eql(200);
+//   });
+//
+//   it(is the API is fetching the filtered ingredient, async function () {
+//     const response = await request.get(recipesCleanedIngredients=pear);
+//
+//     expect(response.body.filters.CleanedIngredients).to.eql(pear);
+//   });
+// });
 
 function test_connectivity_func() {
-
-    // Connection URI. Update username, password, and your-cluster-url to reflect your cluster.
-    // See httpsdocs.mongodb.comecosystemdriversnode for more details
+  // Connection URI. Update username, password, and your-cluster-url to reflect your cluster.
+  // See httpsdocs.mongodb.comecosystemdriversnode for more details
 
   const uri =
     "mongodb+srv://hselvar2:hselvar2@cluster0.e7zgr.mongodb.net/recipe?retryWrites=true&w=majority";
   var result = false;
   try {
-     // Connect to the MongoDB cluster
+    // Connect to the MongoDB cluster
     var mongoClient = MongoClient.connect(uri, {
       useNewUrlParser: true,
       maxPoolSize: 50,
@@ -44,10 +43,8 @@ function test_connectivity_func() {
   } catch (e) {
     result = false;
   } finally {
-
   }
   return result;
-
 }
 
 describe("GET recipes", function () {
@@ -57,9 +54,9 @@ describe("GET recipes", function () {
   });
 });
 
-afterAll(done => {
-   // Closing the DB connection allows Jest to exit successfully.
+afterAll((done) => {
+  // Closing the DB connection allows Jest to exit successfully.
 
-   // MongoClient.disconnect();
+  // MongoClient.disconnect();
   done();
 });
