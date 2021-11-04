@@ -16,6 +16,7 @@
 [![Style Checker and Prettify Code](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml)
 [![Greetings](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/greetings.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/greetings.yml)
 [![Labeler](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/label.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/label.yml)
+[![Mark stale issues and pull requests](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/stale.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/stale.yml)
 
 https://user-images.githubusercontent.com/25223347/140403709-a062e7c5-4500-49d4-9758-aea9e5fa5442.mp4
 
