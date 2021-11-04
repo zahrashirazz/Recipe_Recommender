@@ -13,6 +13,8 @@ export default class RecipesController {
     if (req.query.CleanedIngredients) {
       filters.CleanedIngredients = req.query.CleanedIngredients;
       filters.Cuisine = req.query.Cuisine;
+      filters.Email = req.query.Email;
+      filters.Flag = req.query.Flag;
     }
 
     const { recipesList, totalNumRecipes } = await RecipesDAO.getRecipes({

@@ -125,6 +125,7 @@ class Form extends Component {
     //this.props.sendFormData(this.state.cuisine, this.state.numberIngredients,this.state.ingredients)
     this.props.sendFormData(dict);
     document.getElementById("cuisine").value = "";
+    document.getElementById("email_id").value = "";
   };
 
   // render function dispays the UI content i.e the form content

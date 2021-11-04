@@ -16,6 +16,8 @@ class App extends Component {
       //NoIngredients : 0,
       ingredients: new Set(),
       recipeList: [],
+      email:"",
+      flag:false,
     };
   }
 
@@ -26,20 +28,26 @@ class App extends Component {
       //NoIngredients: noIngredientsInput,
       ingredients: formDict["ingredient"],
       cuisine: formDict["cuisine"],
+      email: formDict["email_id"],
+      flag: formDict["flag"],
     });
 
+    const mail = formDict["email_id"];
+    const flag = formDict["flag"];
     const items = Array.from(formDict["ingredient"]);
     const cuis = formDict["cuisine"];
-    this.getRecipeDetails(items, cuis);
-    //  alert(typeof(ingredientsInput["cuisine"]));
+    this.getRecipeDetails(items, cuis, mail, flag);
+  //  alert(typeof(ingredientsInput["cuisine"]));
   };
 
-  getRecipeDetails = async (ingredient, cuis) => {
+  getRecipeDetails = async (ingredient, cuis, mail, flag) => {
     try {
       const response = await recipeDB.get("/recipes", {
         params: {
           CleanedIngredients: ingredient,
           Cuisine: cuis,
+          Email: mail,
+          Flag: flag,
         },
       });
       this.setState({
