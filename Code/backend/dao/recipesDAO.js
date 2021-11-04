@@ -25,17 +25,15 @@ export default class RecipesDAO {
     let query;
     if (filters) {
       if ("CleanedIngredients" in filters) {
-
-        var str = '(?i)';
+        var str = "(?i)";
 
         for (var i = 0; i < filters["CleanedIngredients"].length; i++) {
           const str1 = filters["CleanedIngredients"][i];
-          str += '(?=.*' + str1 + ')';
+          str += "(?=.*" + str1 + ")";
         }
         console.log(str);
         query = { "Cleaned-Ingredients": { $regex: str } };
         query["Cuisine"] = filters["Cuisine"];
-
       }
     }
 
