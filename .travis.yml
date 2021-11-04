@@ -1,11 +1,12 @@
 language: node_js
 node_js:
   - 14
-addons:
-  chrome: stable
 install:
+  - cd Code/backend
+  - echo "installing"
   - npm install
 script:
-  - echo "Recipe Recommender"
+  - echo "running tests"
   - npm test
 after_success: npm test -- --coverage
+
