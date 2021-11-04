@@ -19,6 +19,9 @@ https://user-images.githubusercontent.com/25223347/140403709-a062e7c5-4500-49d4-
 
    <h3>🍔 Our motto: Eat good, Be Healthy, Stay Happy 🍔</h3>
 
+
+
+
   <p>
     Recipe Recommender is an application that suggests you recipes based on the ingredients which are currently available.
     One of the most tedious tasks while cooking is figuring out what to cook with the ingredients that you, have rather than how to cook it.
@@ -159,18 +162,19 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 
 ### Phase 2: Completed tasks:
 
-- [ ] Improved the User Experience by embedding Dynamic scripts and CSS and made the interface self explanatory and easy from user perspective.
-- [ ] Hosted database on MongoDB server for better availability.
-- [ ] Improved the business logic and implemented parellelism for better efficiency.
-- [ ] Made the webpage publicly available by hosting the website on AWS and reduced the down time to 0.
-- [ ] Automated the continuous Deployment process using AWS providers on Terraform.
-- [ ] Configured and linked the frontend and backend servers dynamically using shell scrips and Terraform output state.
-- [ ] Created a more professional looking navigation buttons.
-- [ ] Added more advanced features for cuisine and improved the business logic for suggesting recipes based on combination of filters.
-- [ ] Implemented Email service for recommended recipes.
-- [ ] Implemented Travis CI and multiple other github workflows for Continuous Integration.
-- [ ] Made major improvements to the repository. Added a tagline, created a logo, etc.
-- [ ] Improved the code test coverage by adding more specialized test cases.
+- [x] Improved the User Experience by embedding Dynamic scripts and CSS and made the interface self explanatory and easy from user perspective.
+- [x] Hosted database on MongoDB server for better availability.
+- [x] Improved the business logic and implemented parellelism for better efficiency.
+- [x] Made the webpage publicly available by hosting the website on AWS and reduced the down time to 0.
+- [x] Automated the continuous Deployment process using AWS providers on Terraform.
+- [x] Configured and linked the frontend and backend servers dynamically using shell scrips and Terraform output state.
+- [x] Created a more professional looking navigation buttons.
+- [x] Added more advanced features for cuisine and improved the business logic for suggesting recipes based on combination of filters.
+- [x] Implemented Email service for recommended recipes.
+- [x] Implemented Travis CI and multiple other github workflows for Continuous Integration.
+- [x] Made major improvements to the repository. Added a tagline, created a logo, etc.
+- [x] Improved the code test coverage by adding more specialized test cases.
+- [x] Added demo video which shows how the user will interact with our software. 
 
 ### Phase 3: Scope of improvement:
 
