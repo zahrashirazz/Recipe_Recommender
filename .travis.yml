@@ -1,6 +1,15 @@
-language: node_js
-node_js:
-  - 14
-script:
-  - echo "Recipe Recommender"
+jobs:
+  include:
+    - language: node_js
+      node_js:
+        - 14
+      # command to install dependencies
+      install:
+        - 
+      # command to run tests
+      script:
+        - cd Code/backend
+        - npm install
+        - cd __tests__
+        - npm test
 
