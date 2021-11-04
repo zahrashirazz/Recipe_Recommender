@@ -14,6 +14,7 @@
 [![Code Formatter and Syntax Check](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml)
 [![Running Code Coverage](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/coverage.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/coverage.yml)
 [![Style Checker and Prettify Code](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml)
+
    <h3>🍔 Our motto: Eat good, Be Healthy, Stay Happy 🍔</h3>
 
   <p>
