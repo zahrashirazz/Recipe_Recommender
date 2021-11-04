@@ -1,6 +1,7 @@
 # variable to get information from terraform.tfvars
 variable "aws_access_key" {}
 variable "aws_secret_key" {}
+
 # defining default region
 variable "aws_region" {
     default = "us-west-1"
@@ -13,7 +14,8 @@ variable "ec2_count" {
 
 # defining the ami info for machine (this changes accoding to regions)
 variable "ami_id" {
-    // Ubuntu Server 18.04 LTS (HVM), SSD Volume Type in us-east-1 
+    // Ubuntu Server 18.04 LTS (HVM), SSD Volume Type in us-east-1
+    // documented default ami for ubuntu 20 machine.
     default = "ami-09e67e426f25ce0d7"
 }
 
