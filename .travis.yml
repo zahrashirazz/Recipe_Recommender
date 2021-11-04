@@ -1,11 +1,6 @@
 language: node_js
 node_js:
   - 14
-addons:
-  chrome: stable
-install:
-  - npm install
 script:
   - echo "Recipe Recommender"
-  - npm test
-after_success: npm test -- --coverage
+
