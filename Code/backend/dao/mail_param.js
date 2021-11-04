@@ -1,4 +1,3 @@
-export default
-{
-  "password" : "SRIJASGMAILPWD",
-}
+export default {
+  password: "SRIJASGMAILPWD",
+};
