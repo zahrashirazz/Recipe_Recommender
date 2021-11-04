@@ -29,9 +29,10 @@ https://user-images.githubusercontent.com/25223347/140403709-a062e7c5-4500-49d4-
 
 Recipe Recommender is a website that suggests users simple food recipes based on ingredients provided.
 
-- [ ] The interface takes the ingredients from user as an input.
-- [ ] The interface also takes the type of cuisine the user wants.
+- [ ] The interface can take multiple ingredients from user as an input.
+- [ ] The interface can also takes the type of cuisine the user wants.
 - [ ] For each recipe, we show the key ingredients, instructions and a sample image.
+- [ ] Upon user request we also send the list of recipes to the user.
 
 Source documentation can be found at: [Recipe Recommender Docs] https://github.com/PvPatel-1001/Recipe_Recommender/blob/master/docs/Recipe%20Recommender%20Source%20Documentation.pdf
 
