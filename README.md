@@ -88,7 +88,8 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 - [ ] Automated the continuous Deployment process using AWS providers on Terraform.
 - [ ] Configured and linked the frontend and backend servers dynamically using shell scrips and Terraform output state.
 - [ ] Created a more professional looking navigation buttons.
-- [ ] Added more advanced features for cuisine and improved the business logic for suggesting recipes based on combination of filters
+- [ ] Added more advanced features for cuisine and improved the business logic for suggesting recipes based on combination of filters.
+- [ ] Implemented Email service for recommended recipes.
 - [ ] Implemented Travis CI and multiple other github workflows for Continuous Integration.
 - [ ] Made major improvements to the repository. Added a tagline, created a logo, etc.
 - [ ] Improved the code test coverage by adding more specialized test cases.
