@@ -37,7 +37,8 @@ function test_connectivity_func() {
       // app.listen(port, () => {
       //   console.log(`listening on port ${port}`);
       // });
-      process.exit(1);
+      client.close();
+      // process.exit(1);
     });
     result = true;
   } catch (e) {
