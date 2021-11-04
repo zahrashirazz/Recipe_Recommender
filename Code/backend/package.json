@@ -30,6 +30,6 @@
     "supertest": "^6.1.6"
   },
   "jest": {
-    "testTimeout": 500
+    "testTimeout": 5000
   }
 }
