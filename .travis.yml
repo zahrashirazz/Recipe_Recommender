@@ -7,7 +7,6 @@ install:
   - npm install
 script:
   - echo "running tests"
-  - cd Code/backend/__tests__
   - npm test
 after_success: npm test -- --coverage
 
