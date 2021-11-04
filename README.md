@@ -10,7 +10,7 @@
 ![Github closes issues](https://img.shields.io/github/issues-closed-raw/PvPatel-1001/Recipe_Recommender)
 [![Respost - Write comment to new Issue event](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Respost.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Respost.yml)
 [![Check the source code](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/codeFormatter.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/codeFormatter.yml)
-
+[![Close as a feature](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/close_as_a_feature.yml)
    <h3>🍔 Our motto: Eat good, Be Healthy, Stay Happy 🍔</h3>
 
   <p>
