@@ -71,11 +71,88 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 
 ## Work Flow
 
-![Screenshot 2021-09-30 at 11 34 49 PM](https://user-images.githubusercontent.com/17452184/135561662-d0099841-a358-4ead-94bb-6b360380921c.jpg)
-![Screenshot 2021-09-30 at 11 35 17 PM](https://user-images.githubusercontent.com/17452184/135561671-7975b434-413f-4088-bd22-89c0219f5d74.jpg)
-![Screenshot 2021-09-30 at 11 35 50 PM](https://user-images.githubusercontent.com/17452184/135561674-6914bf8c-90f1-4f28-a146-f8cdae514654.jpg)
-![Screenshot 2021-09-30 at 11 36 37 PM](https://user-images.githubusercontent.com/17452184/135561676-ac4e9381-4988-49f0-b189-7202ac83d801.jpg)
-![Screenshot 2021-09-30 at 11 36 59 PM](https://user-images.githubusercontent.com/17452184/135561683-67dc56c5-011f-4d6c-b89c-b9fdde076795.jpg)
+<table border="2" bordercolorlight="#b9dcff" bordercolordark="#006fdd">
+
+  <tr style="background: #010203 ">
+    <td valign="left"> 
+      <p style="color: #FF7A59"> Previous work
+      </p>
+      <a href="./images/prev_stage1.jpg"> 
+        <img src="./images/prev_stage1.jpg" >      
+      </a>
+    </td>
+    <td valign="left"> 
+      <p style="color: #FF7A59"> Current work ( Improved UI)
+      </p>
+      <a href="./images/current_stage1.png">
+        <img src="./images/current_stage1.png"> 
+      </a>
+    </td>
+  </tr>
+  
+  <tr style="background: #010203;"> 
+    <td valign="left">
+      <p style="color: #FF7A59"> 
+      </p>  
+      <a href="./images/prev_stage2.jpg">
+        <img src="./images/prev_stage2.jpg">    
+      </a>
+    </td>
+    <td valign="left"> 
+      <p style="color: #FF7A59"> 
+      </p>
+      <a href="./images/current_stage2.png">
+        <img src="./images/current_stage2.png">          
+      </a>
+    </td>
+
+  </tr> 
+  
+  <tr style="background: #010203;"> 
+    <td valign="left">
+     <p style="color: #FF7A59"> 
+      </p>
+     <a href="./images/prev_stage3.jpg">
+        <img src="./images/prev_stage3.jpg"> 
+      </a> 
+    </td> 
+    <td valign="left">
+     <p style="color: #FF7A59"> Added Multiple Ingredient, Cusine Filter and Email Service
+      </p>
+     <a href="./images/current_stage_6.png">
+        <img src="./images/current_stage_6.png"> 
+      </a> 
+    </td> 
+  </tr> 
+  
+   <tr style="background: #010203;"> 
+    <td valign="left">
+     <p style="color: #FF7A59"> 
+      </p>
+     <a href="./images/prev_stage4.jpg">
+        <img src="./images/prev_stage4.jpg"> 
+      </a> 
+    </td> 
+    <td valign="left">
+     <p style="color: #FF7A59"> View Recipes
+      </p>
+     <a href="./images/current_stage4.png">
+        <img src="./images/current_stage4.png"> 
+      </a> 
+    </td> 
+  </tr> 
+
+  <tr style="background: #010203;"> 
+       <td colspan = "2">
+     <p style="color: #FF7A59"> Send Email to User (Added functionality)
+      </p>
+     <a href="./images/current_stage5.png">
+        <img src="./images/current_stage5.png"> 
+      </a> 
+     </td>
+  </tr>  
+ </table>
+   
 
 ## Roadmap
 
