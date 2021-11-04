@@ -22,14 +22,8 @@ resource "aws_instance" "backend-webserver" {
 
     # shell script to be run after initializing the server
     /*
-        This shell script will install mysql client on web server and add the default address of rds db instance to it's dbdomain file.
-        It will install standard LAMP server for PHP, MySQL and Apache services.
-        It will install git to clone the repository from the master branch.
-        Also other required PHP dependencies
-        It will then clone the repository in to /home/ubuntu/project directory
-        Create a dynamic parameters.json file for all the dynamically created resources information.
-        And move all the web files to /var/www/html where Apache points.
-        Finally it will run the sql script stored in Code/Database/Schema directory to initialize the database and populate the default data in it. 
+        This shell script will install required dependencies and on the server.
+        It will run the backend service on this service.
     */
     user_data = <<EOF
 #!/bin/sh
@@ -73,14 +67,9 @@ resource "aws_instance" "frontend-webserver" {
 
     # shell script to be run after initializing the server
     /*
-        This shell script will install mysql client on web server and add the default address of rds db instance to it's dbdomain file.
-        It will install standard LAMP server for PHP, MySQL and Apache services.
-        It will install git to clone the repository from the master branch.
-        Also other required PHP dependencies
-        It will then clone the repository in to /home/ubuntu/project directory
-        Create a dynamic parameters.json file for all the dynamically created resources information.
-        And move all the web files to /var/www/html where Apache points.
-        Finally it will run the sql script stored in Code/Database/Schema directory to initialize the database and populate the default data in it. 
+        This shell script will setup the server for running frontend service.
+        It will dynamically configure the frontend server to connect it to backend server on another server.
+        This will run the frontend server on this server.
     */
     user_data = <<EOF
 #!/bin/sh
