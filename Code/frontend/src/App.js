@@ -16,8 +16,8 @@ class App extends Component {
       //NoIngredients : 0,
       ingredients: new Set(),
       recipeList: [],
-      email:"",
-      flag:false,
+      email: "",
+      flag: false,
     };
   }
 
@@ -37,7 +37,7 @@ class App extends Component {
     const items = Array.from(formDict["ingredient"]);
     const cuis = formDict["cuisine"];
     this.getRecipeDetails(items, cuis, mail, flag);
-  //  alert(typeof(ingredientsInput["cuisine"]));
+    //  alert(typeof(ingredientsInput["cuisine"]));
   };
 
   getRecipeDetails = async (ingredient, cuis, mail, flag) => {
