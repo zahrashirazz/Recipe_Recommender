@@ -19,9 +19,6 @@ https://user-images.githubusercontent.com/25223347/140403709-a062e7c5-4500-49d4-
 
    <h3>🍔 Our motto: Eat good, Be Healthy, Stay Happy 🍔</h3>
 
-
-
-
   <p>
     Recipe Recommender is an application that suggests you recipes based on the ingredients which are currently available.
     One of the most tedious tasks while cooking is figuring out what to cook with the ingredients that you, have rather than how to cook it.
@@ -174,7 +171,7 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 - [x] Implemented Travis CI and multiple other github workflows for Continuous Integration.
 - [x] Made major improvements to the repository. Added a tagline, created a logo, etc.
 - [x] Improved the code test coverage by adding more specialized test cases.
-- [x] Added demo video which shows how the user will interact with our software. 
+- [x] Added demo video which shows how the user will interact with our software.
 
 ### Phase 3: Scope of improvement:
 
