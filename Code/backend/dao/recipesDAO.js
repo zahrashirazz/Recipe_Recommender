@@ -1,6 +1,6 @@
 import mongodb from "mongodb";
 import nodemailer from "nodemailer";
-import password from './mail_param.js';
+import password from "./mail_param.js";
 const pass = password.password;
 
 const ObjectId = mongodb.ObjectId;
@@ -25,7 +25,6 @@ export default class RecipesDAO {
     page = 0,
     recipesPerPage = 10,
   } = {}) {
-
     let query;
     if (filters) {
       if ("CleanedIngredients" in filters) {
@@ -38,14 +37,14 @@ export default class RecipesDAO {
         console.log(str);
         query = { "Cleaned-Ingredients": { $regex: str } };
         query["Cuisine"] = filters["Cuisine"];
-// <<<<<<< HEAD
+        // <<<<<<< HEAD
         var email = filters["Email"];
         var flagger = filters["Flag"];
         console.log(email);
         console.log(flagger);
 
-// =======
-// >>>>>>> 4bd7a622fe3843494d0ec22de41808bd7d51e301
+        // =======
+        // >>>>>>> 4bd7a622fe3843494d0ec22de41808bd7d51e301
       }
     }
 
@@ -66,36 +65,35 @@ export default class RecipesDAO {
       const totalNumRecipes = await recipes.countDocuments(query);
 
       var str_mail = "";
-      for(var j=1;j<=recipesList.length;j++){
-        str_mail+="\nRecipe " + j + ": \n";
-        str_mail+=recipesList[j-1]["TranslatedRecipeName"] + "\n";
+      for (var j = 1; j <= recipesList.length; j++) {
+        str_mail += "\nRecipe " + j + ": \n";
+        str_mail += recipesList[j - 1]["TranslatedRecipeName"] + "\n";
       }
 
-      if (flagger=='true'){
+      if (flagger == "true") {
         var transporter = nodemailer.createTransport({
-          service: 'gmail',
+          service: "gmail",
           auth: {
-            user: 'srijas.alerts@gmail.com',
-            pass: pass
-          }
+            user: "srijas.alerts@gmail.com",
+            pass: pass,
+          },
         });
 
         var mailOptions = {
-          from: 'srijas.alerts@gmail.com',
+          from: "srijas.alerts@gmail.com",
           to: email,
-          subject: 'Your Recommended Recipes!',
-          text: str_mail
+          subject: "Your Recommended Recipes!",
+          text: str_mail,
         };
 
-        transporter.sendMail(mailOptions, function(error, info){
+        transporter.sendMail(mailOptions, function (error, info) {
           if (error) {
             console.log(error);
           } else {
-            console.log('Email sent: ' + info.response);
+            console.log("Email sent: " + info.response);
           }
         });
       }
-
 
       return { recipesList, totalNumRecipes };
     } catch (e) {
