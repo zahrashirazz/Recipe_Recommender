@@ -41,7 +41,7 @@ cd Recipe_Recommender/Code/backend
 sudo sed -i 's/##gmail_password##/${var.email_password}/g' /project/Recipe_Recommender/Code/backend/dao/mail_param.js
 sudo npm install nodemailer
 sudo npm install
-nohup npx nodemon > /dev/null 2>&1 &
+npx nodemon
 EOF
 }
 
