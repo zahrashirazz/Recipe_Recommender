@@ -175,6 +175,14 @@ button:hover{
   
 }
 
+input[type="checkbox"] {
+    display: inline-block;
+    width: 15px;
+    vertical-align: top;
+}
+
+
+
 /* Styling for the cusine selection part */
 select{
 
@@ -271,6 +279,8 @@ li.recipe_ingredient_item{
   border-width: initial;
   
 }
+
+
 
 
 ul.result_instructions{
