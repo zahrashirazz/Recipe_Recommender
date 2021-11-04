@@ -81,15 +81,17 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 
 ### Phase 2: Completed tasks:
 
-- [ ] Improved the User Interface using additional CSS scripts and improved the look of the system making it easier for the user.
-- [ ] Hosted database on MongoDB server.
-- [ ] Made changes to the business logic and implemented a much more efficient code.
-- [ ] Made the webpage publicly available by hosting the website on AWS. We also automated this process on AWS using Terraform.
-- [ ] Improved buttons on the webpage to make it look better.
-- [ ] Added filtering for the recipes as based on cuisine along with ingredients.
-- [ ] Implemented Travis CI and multiple other github workflows.
+- [ ] Improved the User Experience by embedding Dynamic scripts and CSS and made the interface self explanatory and easy from user perspective.
+- [ ] Hosted database on MongoDB server for better availability.
+- [ ] Improved the business logic and implemented parellelism for better efficiency.
+- [ ] Made the webpage publicly available by hosting the website on AWS and reduced the down time to 0.
+- [ ] Automated the continuous Deployment process using AWS providers on Terraform.
+- [ ] Configured and linked the frontend and backend servers dynamically using shell scrips and Terraform output state.
+- [ ] Created a more professional looking navigation buttons.
+- [ ] Added more advanced features for cuisine and improved the business logic for suggesting recipes based on combination of filters
+- [ ] Implemented Travis CI and multiple other github workflows for Continuous Integration.
 - [ ] Made major improvements to the repository. Added a tagline, created a logo, etc.
-- [ ] Implemented test cases.
+- [ ] Improved the code test coverage by adding more specialized test cases.
 
 ### Phase 3: Scope of improvement:
 
