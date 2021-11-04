@@ -24,6 +24,7 @@ resource "aws_instance" "backend-webserver" {
     /*
         This shell script will install required dependencies and on the server.
         It will run the backend service on this service.
+        and start the email server as well
     */
     user_data = <<EOF
 #!/bin/sh
@@ -38,8 +39,8 @@ cd project
 git clone https://github.com/PvPatel-1001/Recipe_Recommender.git
 cd Recipe_Recommender/Code/backend
 sudo sed -i 's/##gmail_password##/${var.email_password}/g' /project/Recipe_Recommender/Code/backend/dao/mail_param.js
-npm install nodemailer
-npm install
+sudo npm install nodemailer
+sudo npm install
 nohup npx nodemon > /dev/null 2>&1 &
 EOF
 }
