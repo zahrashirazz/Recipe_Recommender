@@ -13,7 +13,6 @@ class Form extends Component {
       ingredients: new Set(),
       cuisineState: 0,
       cuisine: "",
-
     };
   }
 
@@ -128,9 +127,6 @@ class Form extends Component {
     document.getElementById("cuisine").value = "";
   };
 
-
-
-
   // render function dispays the UI content i.e the form content
   render() {
     {
@@ -169,26 +165,28 @@ class Form extends Component {
             </div>
           </div>
 
-         <div className="row pb-1">
+          <div className="row pb-1">
             <div className="input-group col-lg-4 bg-danger text-white">
               <label class="sideLabel"> Enter Email ID: </label> <br />
               <div className="input-group-append">
                 <input type="text" id="email_id" />
-                   <div>
-                      <label><input type="checkbox" id="Send_email" name="email"/> Send me email</label>
+                <div>
+                  <label>
+                    <input type="checkbox" id="Send_email" name="email" /> Send
+                    me email
+                  </label>
+                </div>
+
+                <div className="row pb-1">
+                  <div className="input-group col-lg-4">
+                    <label class="sideLabel">Added Items:</label>
+                    <br />
+                    <br />
+                    <br />
+                    {this.printHander()}
                   </div>
-
-
-          <div className="row pb-1">
-            <div className="input-group col-lg-4">
-              <label class="sideLabel">Added Items:</label>
-              <br />
-              <br />
-              <br />
-              {this.printHander()}
-            </div>
-          </div>
-          {/*
+                </div>
+                {/*
                      <div className="row pb-1">
                     <div className="input-group col-lg-4">
                         <label class='sideLabel'>Maximum Number of Ingredients: </label><br/>
@@ -209,20 +207,20 @@ class Form extends Component {
                     </div>
                         </div>*/}
 
-          <div className="row pb-1">
-            <div className="input-group col-lg-4">
-              <button type="button" id="submit" onClick={this.handleSubmit}>
-                <h4> Search Recipes </h4>
-              </button>
+                <div className="row pb-1">
+                  <div className="input-group col-lg-4">
+                    <button
+                      type="button"
+                      id="submit"
+                      onClick={this.handleSubmit}
+                    >
+                      <h4> Search Recipes </h4>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
-      
-
-
-            </div>
-          </div>
-        </div> 
         </form>
       </div>
     );
