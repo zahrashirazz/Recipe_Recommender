@@ -11,7 +11,8 @@
 [![Respost - Write comment to new Issue event](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Respost.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Respost.yml)
 [![Check the source code](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/codeFormatter.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/codeFormatter.yml)
 [![Close as a feature](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/close_as_a_feature.yml)
-
+[![Code Formatter and Syntax Check](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml)
+[![Running Code Coverage](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/coverage.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/coverage.yml)
    <h3>🍔 Our motto: Eat good, Be Healthy, Stay Happy 🍔</h3>
 
   <p>
