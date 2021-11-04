@@ -140,7 +140,7 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
         <img src="./images/current_stage4.png"> 
       </a> 
     </td> 
-  </tr> 
+  </tr>
 
   <tr style="background: #010203;"> 
        <td colspan = "2">
@@ -152,7 +152,7 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
      </td>
   </tr>  
  </table>
-   
+
 
 ## Roadmap
 
