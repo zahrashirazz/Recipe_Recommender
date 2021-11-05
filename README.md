@@ -8,6 +8,7 @@
 [![GitHub stars](https://badgen.net/github/stars/PvPatel-1001/Recipe_Recommender)](https://badgen.net/github/stars/PvPatel-1001/Recipe_Recommender)
 ![Github closes issues](https://img.shields.io/github/issues-closed-raw/PvPatel-1001/Recipe_Recommender)
 [![Build Status](https://app.travis-ci.com/PvPatel-1001/Recipe_Recommender.svg?branch=master)](https://app.travis-ci.com/PvPatel-1001/Recipe_Recommender)
+[![codecov](https://codecov.io/gh/PvPatel-1001/Recipe_Recommender/branch/master/graph/badge.svg?token=2ZYDS70UG8)](https://codecov.io/gh/PvPatel-1001/Recipe_Recommender)
 [![Respost - Write comment to new Issue event](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Respost.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Respost.yml)
 [![Check the source code](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/codeFormatter.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/codeFormatter.yml)
 ![GitHub contributors](https://img.shields.io/github/contributors/PvPatel-1001/Recipe_Recommender)
