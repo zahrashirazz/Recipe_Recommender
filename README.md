@@ -71,10 +71,11 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
   ```
 - setup for backend
   open terminal and navigate to the **backend** folder and execute the following:
+
   ```
   npm install
   ```
-  
+
   ## Execution Steps
 
 1.  start backend server using:
