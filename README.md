@@ -185,6 +185,10 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 
 - [ ] Classify recipes into vegan / vegetarian / non-vegetarian categorizations.
 - [ ] Add more filters and also recommend restaurants to users based on their inputs.
+- [ ] Add a calorie/nutrients tracker.
+- [ ] Add a login/sign up service.
+- [ ] Use additional datasets to enhance results.
+- [ ] Fine tune the existing code and wrap up to produce a finished product.
 
 ## :page_facing_up: License <a name="License"></a>
 
