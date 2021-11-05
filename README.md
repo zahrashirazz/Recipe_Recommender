@@ -59,25 +59,40 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 - [Node.js v14.7.6](https://nodejs.org/en/download/)
 - [NPM v6.14.15](https://nodejs.org/en/download/)
 
-## Project Setup Steps
+## Project Setup Steps:
+
+### Installation:
 
 - clone repository using `git clone https://github.com/PvPatel-1001/Recipe_Recommender.git`
 - setup for frontend
-  open terminal and navigate to the **frontend** folder and execute `npm install`
+  open terminal and navigate to the **frontend** folder and execute the following:
+  ```
+  npm install
+  ```
 - setup for backend
-  open terminal and navigate to the **backend** folder and execute `npm install`
+  open terminal and navigate to the **backend** folder and execute the following:
+
+  ```
+  npm install
+  ```
+
+  ## Execution Steps
+
+1.  start backend server using:
+    ```
+    npx nodemon
+    ```
+2.  start frontend server using:
+    ```
+    npm start
+    ```
+3.  Automatically a browser window is opened which shows frontend.
+4.  run `npm test` for running the tests [Dependencies: Jest, Chai, Supertest]
 
 ### IDE and Code Formatter
 
 - [Visual Studio Code](https://code.visualstudio.com/) IDE
 - [Prettier Formatter for Visual Studio Code](https://github.com/prettier/prettier-vscode/blob/main/README.md)
-
-## Execution Steps
-
-1.  start backend server using `npx nodemon`
-2.  start frontend server using `npm start`
-3.  automatically a browser window is opened
-4.  run`npm test` for running the tests [Dependencies: Jest, Chai, Supertest]
 
 ## Work Flow
 
@@ -185,6 +200,10 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 
 - [ ] Classify recipes into vegan / vegetarian / non-vegetarian categorizations.
 - [ ] Add more filters and also recommend restaurants to users based on their inputs.
+- [ ] Add a calorie/nutrients tracker.
+- [ ] Add a login/sign up service.
+- [ ] Use additional datasets to enhance results.
+- [ ] Fine tune the existing code and wrap up to produce a finished product.
 
 ## :page_facing_up: License <a name="License"></a>
 
