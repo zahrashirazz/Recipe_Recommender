@@ -2,6 +2,8 @@ import app from "./server.js";
 import mongodb from "mongodb";
 import dotenv from "dotenv";
 import recipesDAO from "./dao/recipesDAO.js";
+import userAuthModel from "./dao/userAuthModel.js"
+
 dotenv.config();
 const MongoClient = mongodb.MongoClient;
 //DB port number
@@ -19,6 +21,8 @@ MongoClient.connect(process.env.RECIPES_DB_URI, {
   })
   .then(async (client) => {
     await recipesDAO.injectDB(client);
+    await userAuthModel.injectDB(client)
+
     app.listen(port, () => {
       console.log(`listening on port ${port}`);
     });
