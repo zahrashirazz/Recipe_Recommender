@@ -4,7 +4,8 @@ import Header from "./components/Header";
 import recipeDB from "./apis/recipeDB";
 import RecipeList from "./components/RecipeList";
 import React, { Component } from "react";
-
+import { Route, BrowserRouter as Router, Routes, Switch } from 'react-router-dom';
+import login from "./components/login";
 // Main component of the project
 class App extends Component {
   // constructor for the App Component
@@ -60,19 +61,30 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+
+<Router>
+<div>
         <Header />
 
         {/* handleSubmit function is being sent as a prop to the form component*/}
 
-        <Form sendFormData={this.handleSubmit} />
+        <Switch>
+                <Route exact path='/login' component={login}/>
+                   
+                <Route path='/home'>
+                <Form sendFormData={this.handleSubmit} />
 
-        {/* RecipeList is the component where results are displayed.
-        App's recipeList state item is being sent as a prop
-        */}
+                  {/* RecipeList is the component where results are displayed.
+                  App's recipeList state item is being sent as a prop
+                  */}
 
-        <RecipeList recipes={this.state.recipeList} />
+                <RecipeList recipes={this.state.recipeList} />
+                </Route>
+        </Switch>
+
+       
       </div>
+</Router>
     );
   }
 }
