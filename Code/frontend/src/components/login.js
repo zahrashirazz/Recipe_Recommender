@@ -1,14 +1,15 @@
 import React, {useState, useContext} from 'react';
 import recipeDB from "../apis/recipeDB";
-import { withRouter } from "react-router";
+import { Redirect, withRouter } from "react-router";
 import './login.css'
 // import '../../node_modules/bootstrap/dist/css/bootstrap.css'
 
-function loginForm(){
+function loginForm(props){
     const [state, setState]= useState({
         username : "",
         password: "",
-        loginMessage: null
+        successMessage: null,
+        failMessage: null
     })
     
     const changeValue = (event) => {
@@ -31,9 +32,18 @@ function loginForm(){
         if(response){
             setState(prevState => ({
                 ...prevState,
-                'loginMessage' : 'Login successful. Redirecting to home page..'
+                'successMessage' : 'Login successful. Redirecting to home page..',
+                'failMessage' : null
             }));
-            localStorage.setItem("login",response.data['_id']);
+            sessionStorage.setItem("login_recipe_recommender",response.data['_id']);
+            props.history.push('/home')
+        }
+        else{
+            setState(prevState => ({
+                ...prevState,
+                'failMessage' : 'Login unsuccessful. Please try again.',
+                'successMessage' : null
+            }));
         }
     }
 
@@ -50,6 +60,10 @@ function loginForm(){
                 </div>
                 <br/>
                 <button className="login-btn" type="button" id="submit-btn" onClick={submitLogin}>Submit</button>
+                <br/>
+                <br/>
+                {state.successMessage ? <div style={{color:'green'}}>{state.successMessage}</div> : null}
+                {state.failMessage ? <div style={{color:'red'}}>{state.failMessage}</div> : null}
             </form>
         </div>
     )
