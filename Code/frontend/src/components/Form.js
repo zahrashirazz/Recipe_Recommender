@@ -176,6 +176,9 @@ class Form extends Component {
                     <input type="checkbox" id="Send_email" name="email" /> Send
                     me email
                   </label>
+                  <label>
+                    <input type="checkbox" id="food_preference" name="food_option" /> Vegetarian
+                  </label>
                 </div>
 
                 <div className="row pb-1">

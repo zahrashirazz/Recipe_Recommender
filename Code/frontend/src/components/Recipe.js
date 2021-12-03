@@ -8,6 +8,7 @@ const Recipe = (recipe) => {
   // splitting the ingredients with seperator as a comma
   var ingredients_seperated = recipe.recipe["Cleaned-Ingredients"].split(",");
   var translated_instruction = recipe.recipe["TranslatedInstructions"];
+  var time_to_cook = recipe.recipe["TotalTimeInMins"]
   // mapping each ingredient to be displayes as a list item
   ingredients_seperated = ingredients_seperated.map((ingredient) => (
     <li class="recipe_ingredient_item"> {ingredient}</li>
@@ -29,6 +30,7 @@ const Recipe = (recipe) => {
       <div className="card">
         <div className="card-body">
           <h2>{recipe.recipe.TranslatedRecipeName}</h2>
+          <h3>Time to cook: {time_to_cook} minutes</h3>
           <p className="card.text">
             <h3>Ingredients: </h3>
             <br />
