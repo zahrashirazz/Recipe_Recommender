@@ -35,7 +35,7 @@ export default class RecipesDAO {
           str += "(?=.*" + str1 + ")";
         }
         console.log(str);
-        query = { "Cleaned-Ingredients": { $regex: str } };
+        query = { "Cleaned-Ingredients": { $regex: str }};
         query["Cuisine"] = filters["Cuisine"];
         // <<<<<<< HEAD
         var email = filters["Email"];
