@@ -116,7 +116,6 @@ class App extends Component {
     return (
       <Router>
         {/* handleSubmit function is being sent as a prop to the form component*/}
-        <AddRecipeForm sendRecipeFormData={this.handleRecipeSubmit} />
 
         <Switch>
           <Route
@@ -129,6 +128,7 @@ class App extends Component {
           <Route path="/home">
             <Header loginFlag={this.state.loginFlag} />
             <Form sendFormData={this.handleSubmit} />
+            <AddRecipeForm sendRecipeFormData={this.handleRecipeSubmit} />
 
             {/* RecipeList is the component where results are displayed.
                   App's recipeList state item is being sent as a prop
