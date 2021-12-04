@@ -6,5 +6,5 @@ const router = express.Router();
 router.route("/").get(RecipesCtrl.apiGetRecipes);
 
 router.route("/cuisines").get(RecipesCtrl.apiGetRecipeCuisines);
-
+router.route("/Addrecipes").post(RecipesCtrl.apiPostRecipes);
 export default router;

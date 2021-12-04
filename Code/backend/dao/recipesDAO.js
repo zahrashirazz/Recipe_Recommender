@@ -23,6 +23,19 @@ export default class RecipesDAO {
       );
     }
   }
+
+  static async postRecipes(addRecipeDetails) {
+    console.log("inside dao");
+
+    return recipes.insertOne(addRecipeDetails, function (err, res) {
+      if (err) throw err;
+
+      console.log("1 document inserted");
+      console.log(res);
+      return res;
+    });
+  }
+
   //Function to get the Recipe List
   static async getRecipes({
     filters = null,
@@ -30,25 +43,34 @@ export default class RecipesDAO {
     recipesPerPage = 10,
   } = {}) {
     let query;
-    // let str
+    console.log("heeere", filters);
     if (filters) {
       if ("CleanedIngredients" in filters) {
         var str = "(?i)";
-        var new_str=""
+        var time = parseInt(filters["totalTime"]);
+
         for (var i = 0; i < filters["CleanedIngredients"].length; i++) {
           const str1 = filters["CleanedIngredients"][i];
           str += "(?=.*" + str1 + ")";
           // new_str+=
         }
-        // console.log(str);
-        query = { "Cleaned-Ingredients": { $regex: str } };
+        console.log(str);
+        if (time) {
+          query = {
+            "Cleaned-Ingredients": { $regex: str },
+            TotalTimeInMins: { $lte: time },
+          };
+        } else {
+          query = {
+            "Cleaned-Ingredients": { $regex: str },
+          };
+        }
         query["Cuisine"] = filters["Cuisine"];
-
         var email = filters["Email"];
         var flagger = filters["Flag"];
-        // console.log(email);
-        // console.log(flagger);
-
+        console.log(email);
+        console.log(flagger);
+        console.log(query);
       }
     }
 
