@@ -1,16 +1,14 @@
 import RecipesDAO from "../dao/recipesDAO.js";
 
 export default class RecipesController {
-
-  static async apiPostRecipes(req, res, next){
-    try{
-      console.log("inside controller")
-        let obj = await RecipesDAO.postRecipes(req.body);
-        res.json(obj)
+  static async apiPostRecipes(req, res, next) {
+    try {
+      console.log("inside controller");
+      let obj = await RecipesDAO.postRecipes(req.body);
+      res.json(obj);
+    } catch (err) {
+      console.log("Error in Post Recipes", err);
     }
-    catch(err){
-      console.log("Error in Post Recipes",err);
-    } 
   }
 
   static async apiGetRecipes(req, res, next) {

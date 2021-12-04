@@ -22,23 +22,22 @@ class Form extends Component {
     var dict = {};
     dict["recipe_name"] = document.getElementById("recipe_name").value;
     dict["recipe_cuisine"] = document.getElementById("recipe_cuisine").value;
-    dict["recipe_ingredients"] = document.getElementById("recipe_ingredients").value;
-    dict["recipe_instructions"] = document.getElementById("recipe_instructions").value;
+    dict["recipe_ingredients"] =
+      document.getElementById("recipe_ingredients").value;
+    dict["recipe_instructions"] = document.getElementById(
+      "recipe_instructions"
+    ).value;
     this.props.sendRecipeFormData(dict);
   };
 
-  
   // render function dispays the UI content i.e the form content
   render() {
     {
-  
     }
 
     // returns jsx element
     return (
-
-  
-       <div class="formOutercontainer">
+      <div class="formOutercontainer">
         <form onSubmit={this.handleRecipeSubmit}>
           <div className="row pb-1">
             <div className="input-group col-lg-4 bg-danger text-white">
@@ -77,7 +76,6 @@ class Form extends Component {
           <div className="row pb-1">
             <div className="input-group col-lg-4 bg-danger text-white">
               <div className="input-group-append">
-    
                 <div className="row pb-1">
                   <div className="input-group col-lg-4">
                     <button
