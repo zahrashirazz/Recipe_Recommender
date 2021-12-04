@@ -141,92 +141,96 @@ describe("/ checking api status", () => {
   //             });
   //     });
 
-      it("is the API is functional test 1", async function () {
-        const response = await request.get("/recipes?CleanedIngredients=coconut");
-    
-        expect(response.status).to.eql(200);
-      });
-    
-      it("is the API is functional test 2", async function () {
-        const response = await request.get("/recipes?CleanedIngredients=COCONUT");
-    
-        expect(response.status).to.eql(200);
-      });
-    
-      it("is the API is functional test 3", async function () {
-        const response = await request.get("/recipes?CleanedIngredients=mango");
-    
-        expect(response.status).to.eql(200);
-      });
-    
-      it("is the API is functional test 4", async function () {
-        const response = await request.get("/recipes?CleanedIngredients=MANGO");
-    
-        expect(response.status).to.eql(200);
-      });
-    
-      it("is the API is functional test 5", async function () {
-        const response = await request.get("/recipes?CleanedIngredients=Mango");
-    
-        expect(response.status).to.eql(200);
-      });
-    
-      it("is the API is functional test 6", async function () {
-        const response = await request.get("/recipes?CleanedIngredients=mANGO");
-    
-        expect(response.status).to.eql(200);
-      });
-    
-      it("is the API is functional test 7", async function () {
-        const response = await request.get(
-          "/recipes?CleanedIngredients={mango, salt}"
-        );
-    
-        expect(response.status).to.eql(200);
-      });
-    
-      it("is the API is functional test 8", async function () {
-        const response = await request.get(
-          "/recipes?CleanedIngredients={salt, mango}"
-        );
-    
-        expect(response.status).to.eql(200);
-      });
-    
-      it("is the API is functional test 8", async function () {
-        const response = await request.get("/recipes?CleanedIngredients={}");
-    
-        expect(response.status).to.eql(200);
-      });
-    
-      it("is the API is fetching the filtered ingredient", async function () {
-        const response = await request.get("/recipes?CleanedIngredients=pear");
-    
-        expect(response.body.filters.CleanedIngredients).to.eql("pear");
-      });
-      it("is the API is fetching users", async function () {
-        const response = await request.get("/users/getAllUsers");
-    
-        expect(response.status).to.eql(200);
-      });
-      it("is the API is authorizing users", async function () {
-        const response = await request.post("/users/authorizeUser").send({'username':'hello', 'password':'world'});
-    
-        expect(response.status).to.eql(200);
-      });
-      it("invalid username", async function () {
-        const response = await request.post("/users/authorizeUser").send({'username':'hello1', 'password':'world'});
+  it("is the API is functional test 1", async function () {
+    const response = await request.get("/recipes?CleanedIngredients=coconut");
 
-        expect(response.status).to.eql(404);
-      });
-      it("invalid password", async function () {
-        const response = await request.post("/users/authorizeUser").send({'username':'hello', 'password':'world1'});
+    expect(response.status).to.eql(200);
+  });
 
-        expect(response.status).to.eql(500);
-      });
+  it("is the API is functional test 2", async function () {
+    const response = await request.get("/recipes?CleanedIngredients=COCONUT");
+
+    expect(response.status).to.eql(200);
+  });
+
+  it("is the API is functional test 3", async function () {
+    const response = await request.get("/recipes?CleanedIngredients=mango");
+
+    expect(response.status).to.eql(200);
+  });
+
+  it("is the API is functional test 4", async function () {
+    const response = await request.get("/recipes?CleanedIngredients=MANGO");
+
+    expect(response.status).to.eql(200);
+  });
+
+  it("is the API is functional test 5", async function () {
+    const response = await request.get("/recipes?CleanedIngredients=Mango");
+
+    expect(response.status).to.eql(200);
+  });
+
+  it("is the API is functional test 6", async function () {
+    const response = await request.get("/recipes?CleanedIngredients=mANGO");
+
+    expect(response.status).to.eql(200);
+  });
+
+  it("is the API is functional test 7", async function () {
+    const response = await request.get(
+      "/recipes?CleanedIngredients={mango, salt}"
+    );
+
+    expect(response.status).to.eql(200);
+  });
+
+  it("is the API is functional test 8", async function () {
+    const response = await request.get(
+      "/recipes?CleanedIngredients={salt, mango}"
+    );
+
+    expect(response.status).to.eql(200);
+  });
+
+  it("is the API is functional test 8", async function () {
+    const response = await request.get("/recipes?CleanedIngredients={}");
+
+    expect(response.status).to.eql(200);
+  });
+
+  it("is the API is fetching the filtered ingredient", async function () {
+    const response = await request.get("/recipes?CleanedIngredients=pear");
+
+    expect(response.body.filters.CleanedIngredients).to.eql("pear");
+  });
+  it("is the API is fetching users", async function () {
+    const response = await request.get("/users/getAllUsers");
+
+    expect(response.status).to.eql(200);
+  });
+  it("is the API is authorizing users", async function () {
+    const response = await request
+      .post("/users/authorizeUser")
+      .send({ username: "hello", password: "world" });
+
+    expect(response.status).to.eql(200);
+  });
+  it("invalid username", async function () {
+    const response = await request
+      .post("/users/authorizeUser")
+      .send({ username: "hello1", password: "world" });
+
+    expect(response.status).to.eql(404);
+  });
+  it("invalid password", async function () {
+    const response = await request
+      .post("/users/authorizeUser")
+      .send({ username: "hello", password: "world1" });
+
+    expect(response.status).to.eql(500);
+  });
 });
-
-
 
 // afterAll((done) => {
 //   // Closing the DB connection allows Jest to exit successfully.
