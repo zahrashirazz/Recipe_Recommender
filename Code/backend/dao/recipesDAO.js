@@ -79,7 +79,7 @@ class RecipesDAO {
     }
 
     let cursor;
-  
+
     try {
       cursor = await recipes
         .find(query)
@@ -105,7 +105,7 @@ class RecipesDAO {
           /,/g,
           " and "
         );
-        // console.log(new_str);        
+        // console.log(new_str);
         var total_cal = 0;
         await axios
           .get("https://api.calorieninjas.com/v1/nutrition?query=" + new_str, {
@@ -123,7 +123,7 @@ class RecipesDAO {
           })
           .catch(function (error) {
             // handle error
-            console.log("error:"+error);
+            console.log("error:" + error);
           })
           .then(function () {
             // always executed
@@ -165,18 +165,18 @@ class RecipesDAO {
           text: str_mail,
         };
 
-        var mail_test_code
+        var mail_test_code;
         transporter.sendMail(mailOptions, function (error, info) {
           if (error) {
             console.log(error);
           } else {
-            mail_test_code=info.response
+            mail_test_code = info.response;
             console.log("Email sent: " + info.response);
           }
         });
       }
 
-      return { recipesList, totalNumRecipes,  mail_test_code};
+      return { recipesList, totalNumRecipes, mail_test_code };
     } catch (e) {
       console.error(
         `Unable to convert cursor to array or problem counting documents, ${e}`

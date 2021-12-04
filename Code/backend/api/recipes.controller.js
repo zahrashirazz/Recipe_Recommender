@@ -29,11 +29,12 @@ class RecipesController {
       filters.totalTime = req.query.totalTime;
     }
 
-    const { recipesList, totalNumRecipes, mail_test_code } = await RecipesDAO.getRecipes({
-      filters,
-      page,
-      recipesPerPage,
-    });
+    const { recipesList, totalNumRecipes, mail_test_code } =
+      await RecipesDAO.getRecipes({
+        filters,
+        page,
+        recipesPerPage,
+      });
 
     let response = {
       recipes: recipesList,
