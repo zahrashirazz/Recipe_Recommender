@@ -27,8 +27,8 @@ class Form extends Component {
     dict["recipe_instructions"] = document.getElementById(
       "recipe_instructions"
     ).value;
-    dict["recipe_time"]=document.getElementById("recipe_time").value;
-    dict["recipe_url"]=document.getElementById("recipe_url").value;
+    dict["recipe_time"] = document.getElementById("recipe_time").value;
+    dict["recipe_url"] = document.getElementById("recipe_url").value;
     this.props.sendRecipeFormData(dict);
   };
 
