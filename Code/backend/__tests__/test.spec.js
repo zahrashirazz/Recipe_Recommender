@@ -206,6 +206,7 @@ describe("/ checking api status", () => {
   });
 
   it("is the API is fetching calories", async function () {
+    this.timeout(7000);
     const response = await request.get(
       "/recipes?Cleaned-Ingredients=salt,mint,peanuts"
     );
