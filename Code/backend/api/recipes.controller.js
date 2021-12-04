@@ -1,6 +1,18 @@
 import RecipesDAO from "../dao/recipesDAO.js";
 
 export default class RecipesController {
+
+  static async apiPostRecipes(req, res, next){
+    try{
+      console.log("inside controller")
+        let obj = await RecipesDAO.postRecipes(req.body);
+        res.json(obj)
+    }
+    catch(err){
+      console.log("Error in Post Recipes",err);
+    } 
+  }
+
   static async apiGetRecipes(req, res, next) {
     const recipesPerPage = req.query.recipesPerPage
       ? parseInt(req.query.recipesPerPage, 10)
