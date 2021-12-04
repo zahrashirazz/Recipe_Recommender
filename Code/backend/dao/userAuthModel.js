@@ -8,9 +8,8 @@ class userAuthModel {
       usersCollection = await conn
         .db(process.env.RECIPES_NS)
         .collection("users");
-        // console.log(usersCollection);
-        return true
-
+      // console.log(usersCollection);
+      return true;
     } catch (e) {
       console.error(
         `Unable to establish a collection handle in userAuthModel: ${e}`

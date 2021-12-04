@@ -2,9 +2,9 @@
 // import nodemailer from "nodemailer";
 // import password from "./mail_param.js";
 
-const mongodb  =require('mongodb');
-const nodemailer = require('nodemailer');
-const password = require('./mail_param');
+const mongodb = require("mongodb");
+const nodemailer = require("nodemailer");
+const password = require("./mail_param");
 const pass = password.password;
 // import 'requests' from requests;
 // import axios from "axios";
@@ -205,6 +205,5 @@ class RecipesDAO {
 
   // code
 }
-
 
 module.exports = RecipesDAO;

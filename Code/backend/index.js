@@ -4,7 +4,7 @@
 // import recipesDAO from "./dao/recipesDAO.js";
 // import userAuthModel from "./dao/userAuthModel.js";
 
-const express = require('express');
+const express = require("express");
 const cors = require("cors");
 const recipes = require("./api/recipes.route");
 const users = require("./api/userauth.route");
@@ -27,8 +27,8 @@ app.use("/api/v1/recipes", recipes);
 //Error thrown when page is not found
 app.use("*", (req, res) => res.status(404).json({ error: "not found" }));
 
-const mongodb = require('mongodb');
-const dotenv = require('dotenv');
+const mongodb = require("mongodb");
+const dotenv = require("dotenv");
 const recipesDAO = require("./dao/recipesDAO");
 const userAuthModel = require("./dao/userAuthModel");
 
@@ -55,7 +55,5 @@ MongoClient.connect(process.env.RECIPES_DB_URI, {
       console.log(`listening on port ${port}`);
     });
   });
-
-  
 
 module.exports = app;

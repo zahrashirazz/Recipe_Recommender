@@ -1,4 +1,4 @@
-const pwd =  {
+const pwd = {
   password: "##gmail_password##",
 };
 
