@@ -104,7 +104,7 @@ class RecipesDAO {
           /,/g,
           " and "
         );
-        console.log(new_str);
+        // console.log(new_str);
 
         var total_cal = 0;
         await axios
@@ -117,11 +117,11 @@ class RecipesDAO {
             // handle success
             for (let i = 0; i < response.data.items.length; i++) {
               var temp = response.data.items[i].calories;
-              console.log(temp);
+              // console.log(temp);
               total_cal += temp;
             }
             // // console.log(response.data.items[0]['calories'])
-            console.log("Total Calories ------- " + total_cal);
+            // console.log("Total Calories ------- " + total_cal);
 
             // console.log(response.data);
           })
