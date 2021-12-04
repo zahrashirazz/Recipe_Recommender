@@ -3,7 +3,7 @@
 ![RECIPE RECOMMENDER](https://user-images.githubusercontent.com/40118578/139968487-1150b64e-d8d3-4f2e-a5d3-9a48d19ff64b.gif)
 
 [![Made With](https://img.shields.io/badge/made%20with-javascript-gree)](https://www.javascript.com/)
-[![DOI](https://zenodo.org/badge/422306860.svg)](https://zenodo.org/badge/latestdoi/422306860)
+[![DOI](https://zenodo.org/badge/429944963.svg)](https://zenodo.org/badge/latestdoi/429944963)
 [![GitHub issues open](https://img.shields.io/github/issues/thosaniparth/Recipe_Recommender)](https://github.com/thosaniparth/Recipe_Recommender/issues)
 [![GitHub stars](https://badgen.net/github/stars/thosaniparth/Recipe_Recommender)](https://badgen.net/github/stars/thosaniparth/Recipe_Recommender)
 ![Github closes issues](https://img.shields.io/github/issues-closed-raw/thosaniparth/Recipe_Recommender)
@@ -219,7 +219,7 @@ Please see our [CONTRIBUTING.md](https://github.com/PvPatel-1001/Recipe_Recommen
 <table>
   <tr>
     <td align="center"><a href="https://github.com/BosamiyaSimran"><img src="https://avatars.githubusercontent.com/BosamiyaSimran" width="75px;" alt=""/><br /><sub><b>Simran Bosamiya</b></sub></a></td>
-    <td align="center"><a href="https://github.com/PvPatel-1001"><img src="https://avatars.githubusercontent.com/u/69849039?v=4" width="75px;" alt=""/><br /><sub><b>Parth Patel</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/thosaniparth"><img src="https://avatars.githubusercontent.com/thosaniparth" width="75px;" alt=""/><br /><sub><b>Parth Thosani</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/ameyatathavadkar"><img src="https://avatars.githubusercontent.com/u/25223347?v=4" width="75px;" alt=""/><br /><sub><b>Ameya Tathavadkar</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/jayrshah98"><img src="https://avatars.githubusercontent.com/u/41386638?s=400&u=b323434b42507c474829a804556d69da82d48c3f&v=4" width="75px;" alt=""/><br /><sub><b>Jay Shah</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/Harshil-Shah99"><img src="https://avatars.githubusercontent.com/u/38115399?v=4" width="75px;" alt=""/><br /><sub><b>Harshil Shah</b></sub></a><br /></td>
