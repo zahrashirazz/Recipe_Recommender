@@ -185,6 +185,25 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
       </a>
     </td>
   </tr>
+   <tr style="background: #010203 ">
+    <td valign="left"> 
+      <p style="color: #FF7A59"> Screenshot of users collection created in mongo
+      </p>
+      <a href="./images/user-collection-db.png"> 
+        <img src="./images/user-collection-db.png" >      
+      </a>
+    </td>
+  </tr>
+   </tr>
+   <tr style="background: #010203 ">
+    <td valign="left"> 
+      <p style="color: #FF7A59"> Screenshot of recipe collections in mongo
+      </p>
+      <a href="./images/db-screenshot.jpeg"> 
+        <img src="./images/db-screenshot.jpeg" >      
+      </a>
+    </td>
+  </tr>
  
  </table>
 
@@ -211,18 +230,19 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 
 - [x] Added users collection in the database for user accounts.
 - [x] Developed User Interface and APIs for user authorization.
-- [x] Implemented backend for saving recipe under user account (UI ongoing).
+- [x] Implemented backend for saving recipe under user account.
 - [x] Implemented application testing and code coverage.
-
-### Scope of improvement:
-
-- [x] Add option to choose total cooking time
+- [x] Add option to choose total cooking time.
 - [x] Classify recipes into vegan / vegetarian / non-vegetarian categorizations.
-- [x] Add login functionality
-- [x] Add feature to submit recipes
-- [x] Show diet type of recipe results
+- [x] Add login functionality.
+- [x] Add feature to submit recipes.
+- [x] Show diet type of recipe results.
 - [x] Add a calorie/nutrients tracker.
+- [x] Updated email format of the recipe results.
 - [x] Fine tune the existing code and wrap up to produce a finished product.
+- [x] Demo video showing deltas from phase-2 to phase-3.
+
+## Scope of improvement:
 - [ ] Add more filters and also recommend restaurants to users based on their inputs.
 - [ ] Use additional datasets to enhance results.
 
