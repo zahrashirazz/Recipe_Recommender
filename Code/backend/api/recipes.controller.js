@@ -1,6 +1,7 @@
-import RecipesDAO from "../dao/recipesDAO.js";
+// import RecipesDAO from "../dao/recipesDAO.js";
+const RecipesDAO = require("../dao/recipesDAO");
 
-export default class RecipesController {
+class RecipesController {
   static async apiPostRecipes(req, res, next) {
     try {
       console.log("inside controller");
@@ -54,3 +55,5 @@ export default class RecipesController {
     }
   }
 }
+
+module.exports = RecipesController;

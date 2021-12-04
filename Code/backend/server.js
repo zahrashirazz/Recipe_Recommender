@@ -1,8 +1,14 @@
-import express from "express";
-import cors from "cors";
-import recipes from "./api/recipes.route.js";
-import users from "./api/userauth.route.js";
-import bodyParser from "body-parser";
+// import express from "express";
+// import cors from "cors";
+// import recipes from "./api/recipes.route.js";
+// import users from "./api/userauth.route.js";
+// import bodyParser from "body-parser";
+
+const express = require('express');
+const cors = require("cors");
+const recipes = require("./api/recipes.route");
+const users = require("./api/userauth.route");
+const bodyParser = require("body-parser");
 
 const app = express();
 
@@ -21,4 +27,4 @@ app.use("/api/v1/users", users);
 //Error thrown when page is not found
 app.use("*", (req, res) => res.status(404).json({ error: "not found" }));
 
-export default app;
+module.exports = app;
