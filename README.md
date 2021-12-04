@@ -222,8 +222,7 @@ Please see our [CONTRIBUTING.md](https://github.com/PvPatel-1001/Recipe_Recommen
     <td align="center"><a href="https://github.com/thosaniparth"><img src="https://avatars.githubusercontent.com/thosaniparth" width="75px;" alt=""/><br /><sub><b>Parth Thosani</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/freakNewton"><img src="https://avatars.githubusercontent.com/freakNewton" width="75px;" alt=""/><br /><sub><b>Nisarg Shah</b></sub></a><br /></td>
      <td align="center"><a href="https://github.com/sharathKV"><img src="https://avatars.githubusercontent.com/sharathKV" width="75px;" alt=""/><br /><sub><b>SharathKV</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/jayrshah98"><img src="https://avatars.githubusercontent.com/u/41386638?s=400&u=b323434b42507c474829a804556d69da82d48c3f&v=4" width="75px;" alt=""/><br /><sub><b>Jay Shah</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/Harshil-Shah99"><img src="https://avatars.githubusercontent.com/u/38115399?v=4" width="75px;" alt=""/><br /><sub><b>Harshil Shah</b></sub></a><br /></td>
+   
   </tr>
 </table>
 
