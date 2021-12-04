@@ -224,6 +224,12 @@ describe("/ checking api status", () => {
 
         expect(response.status).to.eql(500);
       });
+      it("save recipe not working", async function () {
+        const response = await request.post("/users/saveRecipe").send({"username":"hello", "recipeID":"614f8fcc0f571ff03e10ba65"});
+
+        expect(response.status).to.eql(404);
+      });
+      
 });
 
 
