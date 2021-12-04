@@ -20,7 +20,8 @@ class App extends Component {
       email: "",
       flag: false,
       loginFlag: sessionStorage.getItem('login_recipe_recommender') ? true : false,
-      loginId: sessionStorage.getItem('login_recipe_recommender')
+      loginId: sessionStorage.getItem('login_recipe_recommender'),
+      cooking_time: ""
     };
     this.setLoginFlag.bind(this);
   }
@@ -34,17 +35,19 @@ class App extends Component {
       cuisine: formDict["cuisine"],
       email: formDict["email_id"],
       flag: formDict["flag"],
+      cooking_time: formDict["time_to_cook"]
     });
 
     const mail = formDict["email_id"];
     const flag = formDict["flag"];
     const items = Array.from(formDict["ingredient"]);
     const cuis = formDict["cuisine"];
-    this.getRecipeDetails(items, cuis, mail, flag);
+    const cook_time = formDict["time_to_cook"]
+    this.getRecipeDetails(items, cuis, mail, flag, cook_time);
     //  alert(typeof(ingredientsInput["cuisine"]));
   };
 
-  getRecipeDetails = async (ingredient, cuis, mail, flag) => {
+  getRecipeDetails = async (ingredient, cuis, mail, flag, cook_time) => {
     try {
       const response = await recipeDB.get("/recipes", {
         params: {
@@ -52,6 +55,7 @@ class App extends Component {
           Cuisine: cuis,
           Email: mail,
           Flag: flag,
+          totalTime: cook_time,
         },
       });
       this.setState({

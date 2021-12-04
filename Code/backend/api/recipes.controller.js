@@ -15,6 +15,7 @@ export default class RecipesController {
       filters.Cuisine = req.query.Cuisine;
       filters.Email = req.query.Email;
       filters.Flag = req.query.Flag;
+      filters.totalTime = req.query.totalTime
     }
 
     const { recipesList, totalNumRecipes } = await RecipesDAO.getRecipes({
