@@ -51,10 +51,18 @@ export default class RecipesDAO {
           str += "(?=.*" + str1 + ")";
         }
         console.log(str);
+        if (time)
+        {
         query = {
           "Cleaned-Ingredients": { $regex: str },
           TotalTimeInMins: { $lte: time },
         };
+      }
+      else{
+        query = {
+          "Cleaned-Ingredients": { $regex: str },
+        };
+      }
         query["Cuisine"] = filters["Cuisine"];
         var email = filters["Email"];
         var flagger = filters["Flag"];
