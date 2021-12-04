@@ -20,7 +20,7 @@ class App extends Component {
 
     this.state = {
       cuisine: "",
-      //NoIngredients : 0, 
+      //NoIngredients : 0,
       ingredients: new Set(),
       recipeList: [],
       email: "",
@@ -116,7 +116,6 @@ class App extends Component {
     return (
       <Router>
         {/* handleSubmit function is being sent as a prop to the form component*/}
-        
 
         <Switch>
           <Route
@@ -135,7 +134,7 @@ class App extends Component {
             {/* RecipeList is the component where results are displayed.
                   App's recipeList state item is being sent as a prop
                   */}
-            
+
             <RecipeList recipes={this.state.recipeList} />
           </Route>
         </Switch>

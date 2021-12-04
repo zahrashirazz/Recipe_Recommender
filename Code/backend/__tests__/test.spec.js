@@ -2,13 +2,13 @@ const mongodb = require("mongodb");
 const MongoClient = mongodb.MongoClient;
 // const request = require("supertest")(httplocalhost5000apiv1);
 const expect = require("chai").expect;
-let chai = require('chai');
-let chaiHttp = require('chai-http');
+let chai = require("chai");
+let chaiHttp = require("chai-http");
 // let index = require('../index');
-let server = require('../index');
+let server = require("../index");
 let should = chai.should();
-const userAuthModel = require('../dao/userAuthModel');
-const recipesDAO = require('../dao/recipesDAO');
+const userAuthModel = require("../dao/userAuthModel");
+const recipesDAO = require("../dao/recipesDAO");
 const request = require("supertest")("http://localhost:5000/api/v1");
 // var util= require('util');
 // var encoder = new util.TextEncoder('utf-8');
@@ -27,7 +27,7 @@ const request = require("supertest")("http://localhost:5000/api/v1");
 //   });
 // });
 
- function test_connectivity_func() {
+function test_connectivity_func() {
   // Connection URI. Update username, password, and your-cluster-url to reflect your cluster.
   // See httpsdocs.mongodb.comecosystemdriversnode for more details
 
@@ -49,15 +49,13 @@ const request = require("supertest")("http://localhost:5000/api/v1");
       // client.close();
       // process.exit(1);
       console.log("model--", model);
-      return true      
+      return true;
     });
-    
   } catch (e) {
-    console.log("test conn funct", e)
+    console.log("test conn funct", e);
     return false;
   } finally {
   }
-
 }
 
 // describe("DB run", function () {
@@ -74,46 +72,44 @@ chai.use(chaiHttp);
 //     done();
 //   })
 // })
-describe('/ checking api status', () => {
-  it('it should give 404 not found error', (done) => {
-  let promise = new Promise ( (resolve,reject) => {
-    const uri =
-    "mongodb+srv://hselvar2:hselvar2@cluster0.e7zgr.mongodb.net/recipe?retryWrites=true&w=majority";
-  var result = false;
-  try {
-    // Connect to the MongoDB cluster
-    var mongoClient = MongoClient.connect(uri, {
-      useNewUrlParser: true,
-      maxPoolSize: 50,
-      wtimeoutMS: 2500,
-    }).then(async (client) => {
-      await recipesDAO.injectDB(client);
-      let model = await userAuthModel.injectDB(client);
-      // app.listen(port, () => {
-      //   console.log(`listening on port ${port}`);
-      // });
-      // client.close();
-      // process.exit(1);
-  resolve();    
+describe("/ checking api status", () => {
+  it("it should give 404 not found error", (done) => {
+    let promise = new Promise((resolve, reject) => {
+      const uri =
+        "mongodb+srv://hselvar2:hselvar2@cluster0.e7zgr.mongodb.net/recipe?retryWrites=true&w=majority";
+      var result = false;
+      try {
+        // Connect to the MongoDB cluster
+        var mongoClient = MongoClient.connect(uri, {
+          useNewUrlParser: true,
+          maxPoolSize: 50,
+          wtimeoutMS: 2500,
+        }).then(async (client) => {
+          await recipesDAO.injectDB(client);
+          let model = await userAuthModel.injectDB(client);
+          // app.listen(port, () => {
+          //   console.log(`listening on port ${port}`);
+          // });
+          // client.close();
+          // process.exit(1);
+          resolve();
+        });
+      } catch (e) {
+        console.log("test conn funct", e);
+        reject();
+      }
     });
-    
-  } catch (e) {
-    console.log("test conn funct", e)
-    reject();
-  }
- });
- promise.then(() => {
-   console.log("second then");
-  chai.request(server)
-        .get('/')
+    promise.then(() => {
+      console.log("second then");
+      chai
+        .request(server)
+        .get("/")
         .end((err, res) => {
           expect(res).to.have.status(404);
           done();
         });
- });
-  
+    });
   });
-
 
   // it('it should give 200 statuscode', (done) => {
   //   chai.request(server)
@@ -125,7 +121,7 @@ describe('/ checking api status', () => {
   //   });
 
   //     it('it should give 200 statuscode', (done) => {
-        
+
   //       chai.request(server)
   //             .get('/api/v1/recipes/cuisines')
   //             .end((err, res) => {
@@ -135,7 +131,7 @@ describe('/ checking api status', () => {
   //     });
 
   //     it('it should give 200 statuscode', (done) => {
-        
+
   //       chai.request(server)
   //             .get('/api/v1/users/getAllUsers')
   //             .end((err, res) => {
@@ -145,82 +141,82 @@ describe('/ checking api status', () => {
   //             });
   //     });
 
-      it("is the API is functional test 1", async function () {
-        const response = await request.get("/recipes?CleanedIngredients=coconut");
-    
-        expect(response.status).to.eql(200);
-      });
-    
-      it("is the API is functional test 2", async function () {
-        const response = await request.get("/recipes?CleanedIngredients=COCONUT");
-    
-        expect(response.status).to.eql(200);
-      });
-    
-      it("is the API is functional test 3", async function () {
-        const response = await request.get("/recipes?CleanedIngredients=mango");
-    
-        expect(response.status).to.eql(200);
-      });
-    
-      it("is the API is functional test 4", async function () {
-        const response = await request.get("/recipes?CleanedIngredients=MANGO");
-    
-        expect(response.status).to.eql(200);
-      });
-    
-      it("is the API is functional test 5", async function () {
-        const response = await request.get("/recipes?CleanedIngredients=Mango");
-    
-        expect(response.status).to.eql(200);
-      });
-    
-      it("is the API is functional test 6", async function () {
-        const response = await request.get("/recipes?CleanedIngredients=mANGO");
-    
-        expect(response.status).to.eql(200);
-      });
-    
-      it("is the API is functional test 7", async function () {
-        const response = await request.get(
-          "/recipes?CleanedIngredients={mango, salt}"
-        );
-    
-        expect(response.status).to.eql(200);
-      });
-    
-      it("is the API is functional test 8", async function () {
-        const response = await request.get(
-          "/recipes?CleanedIngredients={salt, mango}"
-        );
-    
-        expect(response.status).to.eql(200);
-      });
-    
-      it("is the API is functional test 8", async function () {
-        const response = await request.get("/recipes?CleanedIngredients={}");
-    
-        expect(response.status).to.eql(200);
-      });
-    
-      it("is the API is fetching the filtered ingredient", async function () {
-        const response = await request.get("/recipes?CleanedIngredients=pear");
-    
-        expect(response.body.filters.CleanedIngredients).to.eql("pear");
-      });
-      it("is the API is fetching users", async function () {
-        const response = await request.get("/users/getAllUsers");
-    
-        expect(response.status).to.eql(200);
-      });
-      it("is the API is authorizing users", async function () {
-        const response = await request.post("/users/authorizeUser").send({'username':'hello', 'password':'world'});
-    
-        expect(response.status).to.eql(200);
-      });
+  it("is the API is functional test 1", async function () {
+    const response = await request.get("/recipes?CleanedIngredients=coconut");
 
+    expect(response.status).to.eql(200);
+  });
+
+  it("is the API is functional test 2", async function () {
+    const response = await request.get("/recipes?CleanedIngredients=COCONUT");
+
+    expect(response.status).to.eql(200);
+  });
+
+  it("is the API is functional test 3", async function () {
+    const response = await request.get("/recipes?CleanedIngredients=mango");
+
+    expect(response.status).to.eql(200);
+  });
+
+  it("is the API is functional test 4", async function () {
+    const response = await request.get("/recipes?CleanedIngredients=MANGO");
+
+    expect(response.status).to.eql(200);
+  });
+
+  it("is the API is functional test 5", async function () {
+    const response = await request.get("/recipes?CleanedIngredients=Mango");
+
+    expect(response.status).to.eql(200);
+  });
+
+  it("is the API is functional test 6", async function () {
+    const response = await request.get("/recipes?CleanedIngredients=mANGO");
+
+    expect(response.status).to.eql(200);
+  });
+
+  it("is the API is functional test 7", async function () {
+    const response = await request.get(
+      "/recipes?CleanedIngredients={mango, salt}"
+    );
+
+    expect(response.status).to.eql(200);
+  });
+
+  it("is the API is functional test 8", async function () {
+    const response = await request.get(
+      "/recipes?CleanedIngredients={salt, mango}"
+    );
+
+    expect(response.status).to.eql(200);
+  });
+
+  it("is the API is functional test 8", async function () {
+    const response = await request.get("/recipes?CleanedIngredients={}");
+
+    expect(response.status).to.eql(200);
+  });
+
+  it("is the API is fetching the filtered ingredient", async function () {
+    const response = await request.get("/recipes?CleanedIngredients=pear");
+
+    expect(response.body.filters.CleanedIngredients).to.eql("pear");
+  });
+  it("is the API is fetching users", async function () {
+    const response = await request.get("/users/getAllUsers");
+
+    expect(response.status).to.eql(200);
+  });
+  it("is the API is authorizing users", async function () {
+    const response = await request
+      .post("/users/authorizeUser")
+      .send({ username: "hello", password: "world" });
+
+    expect(response.status).to.eql(200);
+  });
 });
-
 
 // afterAll((done) => {
 //   // Closing the DB connection allows Jest to exit successfully.
