@@ -29,4 +29,16 @@ export default class userAuthService{
             // res.status(500).send("Error")
         }
     }
+
+    static async saveRecipe(req,res,next){
+        try{
+            console.log(req.body);
+            let obj = await userAuthModel.saveRecipe(req.body);
+            console.log("output----",obj)
+            res.json(obj)
+        }
+        catch(err){
+            console.log("error in user auth service save recipe--", err);
+        }
+    }
 }

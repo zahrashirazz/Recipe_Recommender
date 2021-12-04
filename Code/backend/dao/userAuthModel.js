@@ -36,4 +36,19 @@ export default class userAuthModel{
             console.log("error in userauthmodel---", err)
         }
     }
+
+    static saveRecipe(user){
+        try{
+            console.log("model---",user);
+            // return usersCollection.findOne({username: user.username});
+
+            return usersCollection.updateOne({"credentials.username": user.username}, {$push: {"savedRecipes": user['recipeId']}});
+            // if(temp.modifiedCount == 1){
+            //     return 
+            // }
+        }
+        catch(err){
+            console.log("error n userauthmodel save recipe--", err);
+        }
+    }
 }
