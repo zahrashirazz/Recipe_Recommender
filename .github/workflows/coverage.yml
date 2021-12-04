@@ -29,7 +29,6 @@ jobs:
 
     - name: Run the tests
       run: |
-          cd Code/backend
           npm run coverage
           
     - name: Upload coverage to Codecov
