@@ -179,7 +179,8 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
  </table>
 
 ## Roadmap
-<!-- 
+
+<!--
 ### Phase 2: Completed tasks:
 
 - [x] Improved the User Experience by embedding Dynamic scripts and CSS and made the interface self explanatory and easy from user perspective.
@@ -197,6 +198,7 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 - [x] Added demo video which shows how the user will interact with our software. -->
 
 ### Phase 3:
+
 - [x] Added users collection in the database for user accounts.
 - [x] Developed User Interface and APIs for user authorization.
 - [x] Implemented backend for saving recipe under user account (UI ongoing).
