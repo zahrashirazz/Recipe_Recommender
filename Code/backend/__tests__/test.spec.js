@@ -65,7 +65,6 @@ let mongoClient;
 //   });
 // });
 
-
 chai.use(chaiHttp);
 
 // before(done => {
@@ -218,7 +217,6 @@ describe("/ checking api status", () => {
     // }
     expect(response.body.calories).to.not.eql(0);
   });
-
 
   it("is the API is fetching users", async function () {
     const response = await request.get("/users/getAllUsers");
