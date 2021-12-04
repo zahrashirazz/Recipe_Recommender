@@ -243,6 +243,7 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 - [x] Demo video showing deltas from phase-2 to phase-3.
 
 ## Scope of improvement:
+
 - [ ] Add more filters and also recommend restaurants to users based on their inputs.
 - [ ] Use additional datasets to enhance results.
 
