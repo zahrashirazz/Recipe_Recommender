@@ -223,7 +223,11 @@ describe('/ checking api status', () => {
 
         expect(response.status).to.eql(404);
       });
-      
+      it("invalid password", async function () {
+        const response = await request.post("/users/authorizeUser").send({'username':'hello', 'password':'world1'});
+
+        expect(response.status).to.eql(500);
+      });
 });
 
 
