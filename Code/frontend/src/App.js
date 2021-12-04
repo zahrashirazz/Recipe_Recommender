@@ -42,6 +42,7 @@ class App extends Component {
       TranslatedRecipeName: formDict["recipe_name"],
       TranslatedInstructions: formDict["recipe_instructions"],
       TotalTimeInMins: Number(formDict["recipe_time"]),
+      "image-url": formDict["recipe_url"],
     };
     this.postRecipeDetails(addRecipeDetails);
   };
