@@ -84,7 +84,14 @@ class App extends Component {
     //  alert(typeof(ingredientsInput["cuisine"]));
   };
 
-  getRecipeDetails = async (ingredient, cuis, mail, flag, cook_time,calories) => {
+  getRecipeDetails = async (
+    ingredient,
+    cuis,
+    mail,
+    flag,
+    cook_time,
+    calories
+  ) => {
     try {
       const response = await recipeDB.get("/recipes", {
         params: {
@@ -132,7 +139,7 @@ class App extends Component {
             <Header loginFlag={this.state.loginFlag} />
             <AddRecipeForm sendRecipeFormData={this.handleRecipeSubmit} />
             <Form sendFormData={this.handleSubmit} />
-            <AddRecipeForm sendRecipeFormData={this.handleRecipeSubmit} />
+            {/* <AddRecipeForm sendRecipeFormData={this.handleRecipeSubmit} /> */}
 
             {/* RecipeList is the component where results are displayed.
                   App's recipeList state item is being sent as a prop
@@ -140,7 +147,7 @@ class App extends Component {
 
             <RecipeList recipes={this.state.recipeList} />
           </Route>
-          <Redirect exact from="/" to="home" />
+          <Redirect exact from="/" to="login" />
         </Switch>
       </Router>
     );

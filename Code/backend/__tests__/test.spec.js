@@ -26,37 +26,37 @@ const request = require("supertest")("http://localhost:5000/api/v1");
 //     expect(response.body.filters.CleanedIngredients).to.eql(pear);
 //   });
 // });
+let mongoClient;
+// function test_connectivity_func() {
+//   // Connection URI. Update username, password, and your-cluster-url to reflect your cluster.
+//   // See httpsdocs.mongodb.comecosystemdriversnode for more details
 
-function test_connectivity_func() {
-  // Connection URI. Update username, password, and your-cluster-url to reflect your cluster.
-  // See httpsdocs.mongodb.comecosystemdriversnode for more details
-
-  const uri =
-    "mongodb+srv://hselvar2:hselvar2@cluster0.e7zgr.mongodb.net/recipe?retryWrites=true&w=majority";
-  var result = false;
-  try {
-    // Connect to the MongoDB cluster
-    var mongoClient = MongoClient.connect(uri, {
-      useNewUrlParser: true,
-      maxPoolSize: 50,
-      wtimeoutMS: 2500,
-    }).then(async (client) => {
-      await recipesDAO.injectDB(client);
-      let model = await userAuthModel.injectDB(client);
-      // app.listen(port, () => {
-      //   console.log(`listening on port ${port}`);
-      // });
-      // client.close();
-      // process.exit(1);
-      console.log("model--", model);
-      return true;
-    });
-  } catch (e) {
-    console.log("test conn funct", e);
-    return false;
-  } finally {
-  }
-}
+//   const uri =
+//     "mongodb+srv://hselvar2:hselvar2@cluster0.e7zgr.mongodb.net/recipe?retryWrites=true&w=majority";
+//   var result = false;
+//   try {
+//     // Connect to the MongoDB cluster
+//     mongoClient = MongoClient.connect(uri, {
+//       useNewUrlParser: true,
+//       maxPoolSize: 50,
+//       wtimeoutMS: 2500,
+//     }).then(async (client) => {
+//       await recipesDAO.injectDB(client);
+//       let model = await userAuthModel.injectDB(client);
+//       // app.listen(port, () => {
+//       //   console.log(`listening on port ${port}`);
+//       // });
+//       // client.close();
+//       // process.exit(1);
+//       console.log("model--", model);
+//       return true;
+//     });
+//   } catch (e) {
+//     console.log("test conn funct", e);
+//     return false;
+//   } finally {
+//   }
+// }
 
 // describe("DB run", function () {
 //   it("is Db up and running", async function () {
@@ -80,13 +80,14 @@ describe("/ checking api status", () => {
       var result = false;
       try {
         // Connect to the MongoDB cluster
-        var mongoClient = MongoClient.connect(uri, {
+        MongoClient.connect(uri, {
           useNewUrlParser: true,
           maxPoolSize: 50,
           wtimeoutMS: 2500,
         }).then(async (client) => {
+          mongoClient = client;
           await recipesDAO.injectDB(client);
-          let model = await userAuthModel.injectDB(client);
+          await userAuthModel.injectDB(client);
           // app.listen(port, () => {
           //   console.log(`listening on port ${port}`);
           // });
@@ -100,7 +101,6 @@ describe("/ checking api status", () => {
       }
     });
     promise.then(() => {
-      console.log("second then");
       chai
         .request(server)
         .get("/")
@@ -258,10 +258,8 @@ describe("/ checking api status", () => {
     expect(response.status).to.eql(500);
   });
 });
-
-// afterAll((done) => {
-//   // Closing the DB connection allows Jest to exit successfully.
-
-//   // MongoClient.disconnect();
-//   done();
-// });
+afterAll((done) => {
+  // Closing the DB connection allows Jest to exit successfully.
+  mongoClient.close();
+  done();
+});
