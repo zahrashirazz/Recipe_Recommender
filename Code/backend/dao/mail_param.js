@@ -1,5 +1,5 @@
 const pwd = {
-  password: "##gmail_password##",
+  password: "Simran@3571",
 };
 
 module.exports = pwd;
