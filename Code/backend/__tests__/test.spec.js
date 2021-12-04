@@ -232,8 +232,7 @@ describe("/ checking api status", () => {
       
 });
 
-
-
+   
 // afterAll((done) => {
 //   // Closing the DB connection allows Jest to exit successfully.
 
