@@ -128,9 +128,6 @@ class RecipesDAO {
           .then(function () {
             // always executed
           });
-<<<<<<< HEAD
-        recipesList[j - 1]["calories"] = total_cal.toFixed(2);
-=======
 
         // console.log(total_cal)
         // 6c6cd52f12d5f99f0bf67d14e8c3547d
@@ -148,7 +145,6 @@ class RecipesDAO {
         // );
 
         // console.log(recipesList[j-1])
->>>>>>> eb29d5da4307e30cba3ea29f73fc37e53d36b72b
       }
 
       if (flagger == "true") {
