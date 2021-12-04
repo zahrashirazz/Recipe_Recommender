@@ -84,7 +84,14 @@ class App extends Component {
     //  alert(typeof(ingredientsInput["cuisine"]));
   };
 
-  getRecipeDetails = async (ingredient, cuis, mail, flag, cook_time,calories) => {
+  getRecipeDetails = async (
+    ingredient,
+    cuis,
+    mail,
+    flag,
+    cook_time,
+    calories
+  ) => {
     try {
       const response = await recipeDB.get("/recipes", {
         params: {
