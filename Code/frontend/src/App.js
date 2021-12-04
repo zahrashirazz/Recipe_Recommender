@@ -19,7 +19,10 @@ class App extends Component {
       recipeList: [],
       email: "",
       flag: false,
+      loginFlag: sessionStorage.getItem('login_recipe_recommender') ? true : false,
+      loginId: sessionStorage.getItem('login_recipe_recommender')
     };
+    this.setLoginFlag.bind(this);
   }
 
   // Function to get the user input from the Form component on Submit action
@@ -59,19 +62,27 @@ class App extends Component {
     }
   };
 
+  setLoginFlag(){
+    console.log("set login flag");
+    this.setState({
+      loginFlag: sessionStorage.getItem('login_recipe_recommender') ? true : false,
+      loginId: sessionStorage.getItem('login_recipe_recommender'),
+      recipeList: []
+    })
+  }
+
   render() {
     return (
 
 <Router>
-<div>
-        <Header />
 
         {/* handleSubmit function is being sent as a prop to the form component*/}
 
         <Switch>
-                <Route exact path='/login' component={login}/>
+                <Route exact path='/login' component={login} setLoginFlag={this.setLoginFlag}/>
                    
                 <Route path='/home'>
+                  <Header loginFlag={this.state.loginFlag}/>
                 <Form sendFormData={this.handleSubmit} />
 
                   {/* RecipeList is the component where results are displayed.
@@ -83,7 +94,6 @@ class App extends Component {
         </Switch>
 
        
-      </div>
 </Router>
     );
   }
