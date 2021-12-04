@@ -10,6 +10,7 @@ const Recipe = (recipe) => {
   var ingredients_seperated = recipe.recipe["Cleaned-Ingredients"].split(",");
   var translated_instruction = recipe.recipe["TranslatedInstructions"];
   var time_to_cook = recipe.recipe["TotalTimeInMins"];
+  var calories = recipe.recipe["calories"];
   console.log("time_to_cook", time_to_cook);
   // mapping each ingredient to be displayes as a list item
   ingredients_seperated = ingredients_seperated.map((ingredient) => (
@@ -44,6 +45,7 @@ const Recipe = (recipe) => {
             <h3>Instructions: </h3>
             <br />
             <ol class="result_instructions"> {translated_instruction} </ol>
+            <h3>Calories: {calories}</h3>
             <img
               src={recipe.recipe["image-url"]}
               alt={recipe.recipe.TranslatedRecipeName}
