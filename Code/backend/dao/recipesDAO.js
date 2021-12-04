@@ -57,7 +57,6 @@ class RecipesDAO {
         for (var i = 0; i < filters["CleanedIngredients"].length; i++) {
           const str1 = filters["CleanedIngredients"][i];
           str += "(?=.*" + str1 + ")";
-          // new_str+=
         }
         console.log(str);
         if (time) {
@@ -80,7 +79,7 @@ class RecipesDAO {
     }
 
     let cursor;
-
+  
     try {
       cursor = await recipes
         .find(query)
@@ -104,8 +103,7 @@ class RecipesDAO {
           /,/g,
           " and "
         );
-        // console.log(new_str);
-
+        // console.log(new_str);        
         var total_cal = 0;
         await axios
           .get("https://api.calorieninjas.com/v1/nutrition?query=" + new_str, {
@@ -120,24 +118,15 @@ class RecipesDAO {
               // console.log(temp);
               total_cal += temp;
             }
-            // // console.log(response.data.items[0]['calories'])
-            // console.log("Total Calories ------- " + total_cal);
-
-            // console.log(response.data);
           })
           .catch(function (error) {
             // handle error
-            console.log("error");
+            console.log("error:"+error);
           })
           .then(function () {
             // always executed
           });
-
-        // console.log(total_cal)
-        // 6c6cd52f12d5f99f0bf67d14e8c3547d
-
         recipesList[j - 1]["calories"] = total_cal.toFixed(2);
-        // console.log(recipesList[j-1])
       }
 
       if (flagger == "true") {
@@ -158,21 +147,23 @@ class RecipesDAO {
           text: str_mail,
         };
 
+        var mail_test_code
         transporter.sendMail(mailOptions, function (error, info) {
           if (error) {
             console.log(error);
           } else {
+            mail_test_code=info.response
             console.log("Email sent: " + info.response);
           }
         });
       }
 
-      return { recipesList, totalNumRecipes };
+      return { recipesList, totalNumRecipes,  mail_test_code};
     } catch (e) {
       console.error(
         `Unable to convert cursor to array or problem counting documents, ${e}`
       );
-      return { recipesList: [], totalNumRecipes: 0 };
+      return { recipesList: [], totalNumRecipes: 0, mail_test_code: 420 };
     }
   }
 

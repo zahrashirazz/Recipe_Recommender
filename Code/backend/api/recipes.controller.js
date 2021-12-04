@@ -29,7 +29,7 @@ class RecipesController {
       filters.totalTime = req.query.totalTime;
     }
 
-    const { recipesList, totalNumRecipes } = await RecipesDAO.getRecipes({
+    const { recipesList, totalNumRecipes, mail_test_code } = await RecipesDAO.getRecipes({
       filters,
       page,
       recipesPerPage,
@@ -41,6 +41,7 @@ class RecipesController {
       filters: filters,
       entries_per_page: recipesPerPage,
       total_results: totalNumRecipes,
+      mail_test_code: mail_test_code,
     };
     res.json(response);
   }
