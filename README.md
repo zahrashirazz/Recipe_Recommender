@@ -179,7 +179,7 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
  </table>
 
 ## Roadmap
-
+<!-- 
 ### Phase 2: Completed tasks:
 
 - [x] Improved the User Experience by embedding Dynamic scripts and CSS and made the interface self explanatory and easy from user perspective.
@@ -194,15 +194,20 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 - [x] Implemented Travis CI and multiple other github workflows for Continuous Integration.
 - [x] Made major improvements to the repository. Added a tagline, created a logo, etc.
 - [x] Improved the code test coverage by adding more specialized test cases.
-- [x] Added demo video which shows how the user will interact with our software.
+- [x] Added demo video which shows how the user will interact with our software. -->
 
-### Phase 3: Scope of improvement:
+### Phase 3:
+- [x] Added users collection in the database for user accounts.
+- [x] Developed User Interface and APIs for user authorization.
+- [x] Implemented backend for saving recipe under user account (UI ongoing).
+- [x] Implemented application testing and code coverage.
+
+### Scope of improvement:
 
 - [x] Add option to choose total cooking time
 - [ ] Classify recipes into vegan / vegetarian / non-vegetarian categorizations.
 - [ ] Add more filters and also recommend restaurants to users based on their inputs.
 - [ ] Add a calorie/nutrients tracker.
-- [ ] Add a login/sign up service.
 - [ ] Use additional datasets to enhance results.
 - [ ] Fine tune the existing code and wrap up to produce a finished product.
 
