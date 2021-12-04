@@ -41,7 +41,7 @@ Recipe Recommender is a website that suggests users simple food recipes based on
 - [ ] For each recipe, we show the key ingredients, instructions and a sample image.
 - [ ] Upon user request we also send the list of recipes to the user.
 
-Source documentation can be found at: [Recipe Recommender Docs] https://github.com/PvPatel-1001/Recipe_Recommender/blob/master/docs/Recipe%20Recommender%20Source%20Documentation.pdf
+Source documentation can be found at: [Recipe Recommender Docs] https://github.com/thosaniparth/Recipe_Recommender/blob/master/docs/Recipe%20Recommender%20Source%20Documentation.pdf
 
 ## Technology Stack
 
@@ -100,14 +100,14 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 
   <tr style="background: #010203 ">
     <td valign="left"> 
-      <p style="color: #FF7A59"> Previous work
+      <p style="color: #FF7A59"> Login Page
       </p>
       <a href="./images/prev_stage1.jpg"> 
-        <img src="./images/prev_stage1.jpg" >      
+        <img src="./images/Screen Shot 2021-12-04 at 5.12.44 PM.png" >      
       </a>
     </td>
     <td valign="left"> 
-      <p style="color: #FF7A59"> Current work ( Improved UI)
+      <p style="color: #FF7A59"> Search Recipe
       </p>
       <a href="./images/current_stage1.png">
         <img src="./images/current_stage1.png"> 
@@ -117,14 +117,14 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
   
   <tr style="background: #010203;"> 
     <td valign="left">
-      <p style="color: #FF7A59"> 
+      <p style="color: #FF7A59"> Added time to cook and vegeterian filter
       </p>  
-      <a href="./images/prev_stage2.jpg">
-        <img src="./images/prev_stage2.jpg">    
+      <a href="./images/Screen Shot 2021-12-04 at 5.13.08 PM.png">
+        <img src="./images/Screen Shot 2021-12-04 at 5.13.08 PM.png">    
       </a>
     </td>
     <td valign="left"> 
-      <p style="color: #FF7A59"> 
+      <p style="color: #FF7A59"> Search by ingredients
       </p>
       <a href="./images/current_stage2.png">
         <img src="./images/current_stage2.png">          
@@ -135,27 +135,10 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
   
   <tr style="background: #010203;"> 
     <td valign="left">
-     <p style="color: #FF7A59"> 
+     <p style="color: #FF7A59"> Add new recipe form
       </p>
-     <a href="./images/prev_stage3.jpg">
-        <img src="./images/prev_stage3.jpg"> 
-      </a> 
-    </td> 
-    <td valign="left">
-     <p style="color: #FF7A59"> Added Multiple Ingredient, Cusine Filter and Email Service
-      </p>
-     <a href="./images/current_stage_6.png">
-        <img src="./images/current_stage_6.png"> 
-      </a> 
-    </td> 
-  </tr> 
-  
-   <tr style="background: #010203;"> 
-    <td valign="left">
-     <p style="color: #FF7A59"> 
-      </p>
-     <a href="./images/prev_stage4.jpg">
-        <img src="./images/prev_stage4.jpg"> 
+     <a href="./images/Screen Shot 2021-12-04 at 5.12.59 PM.png">
+        <img src="./images/Screen Shot 2021-12-04 at 5.12.59 PM.png"> 
       </a> 
     </td> 
     <td valign="left">
@@ -165,21 +148,40 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
         <img src="./images/current_stage4.png"> 
       </a> 
     </td> 
-  </tr>
-
-  <tr style="background: #010203;"> 
-       <td colspan = "2">
-     <p style="color: #FF7A59"> Send Email to User (Added functionality)
+  </tr> 
+  
+   <tr style="background: #010203;"> 
+    <td valign="left">
+     <p style="color: #FF7A59"> View recipes with time to cook
       </p>
-     <a href="./images/current_stage5.png">
-        <img src="./images/current_stage5.png"> 
+     <a href="./images/Screen Shot 2021-12-04 at 5.17.18 PM.png">
+        <img src="./images/Screen Shot 2021-12-04 at 5.17.18 PM.png"> 
       </a> 
-     </td>
-  </tr>  
+    </td> 
+    <td valign="left">
+     <p style="color: #FF7A59"> View Recipes with calorie information
+      </p>
+     <a href="./images/Screen Shot 2021-12-04 at 5.17.18 PM.png">
+        <img src="./images/Screen Shot 2021-12-04 at 5.17.18 PM.png"> 
+      </a> 
+    </td> 
+  </tr>
+   
+   <tr style="background: #010203 ">
+    <td valign="left"> 
+      <p style="color: #FF7A59"> View Recipes with diet-type information
+      </p>
+      <a href="./images/diet_type.png"> 
+        <img src="./images/diet_type.png" >      
+      </a>
+    </td>
+  </tr>
+ 
  </table>
 
 ## Roadmap
 
+<!--
 ### Phase 2: Completed tasks:
 
 - [x] Improved the User Experience by embedding Dynamic scripts and CSS and made the interface self explanatory and easy from user perspective.
@@ -194,15 +196,21 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 - [x] Implemented Travis CI and multiple other github workflows for Continuous Integration.
 - [x] Made major improvements to the repository. Added a tagline, created a logo, etc.
 - [x] Improved the code test coverage by adding more specialized test cases.
-- [x] Added demo video which shows how the user will interact with our software.
+- [x] Added demo video which shows how the user will interact with our software. -->
 
-### Phase 3: Scope of improvement:
+### Phase 3:
+
+- [x] Added users collection in the database for user accounts.
+- [x] Developed User Interface and APIs for user authorization.
+- [x] Implemented backend for saving recipe under user account (UI ongoing).
+- [x] Implemented application testing and code coverage.
+
+### Scope of improvement:
 
 - [x] Add option to choose total cooking time
 - [ ] Classify recipes into vegan / vegetarian / non-vegetarian categorizations.
 - [ ] Add more filters and also recommend restaurants to users based on their inputs.
 - [ ] Add a calorie/nutrients tracker.
-- [ ] Add a login/sign up service.
 - [ ] Use additional datasets to enhance results.
 - [ ] Fine tune the existing code and wrap up to produce a finished product.
 

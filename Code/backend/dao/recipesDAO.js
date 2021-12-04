@@ -96,8 +96,10 @@ class RecipesDAO {
 
       var str_mail = "";
       for (var j = 1; j <= recipesList.length; j++) {
-        str_mail += "\nRecipe " + j + ": \n";
-        str_mail += recipesList[j - 1]["TranslatedRecipeName"] + "\n";
+        // str_mail += "\nRecipe " + j + ": \n";
+        // str_mail += recipesList[j - 1]["TranslatedRecipeName"] + "\n";
+        // str_mail += "Time taken to prepare the recipe: \n" ;
+        // str_mail += recipesList[j - 1]["TotalTimeInMins"] + " mins \n";
         // console.log(str_mail);
         var new_str = recipesList[j - 1]["Cleaned-Ingredients"].replace(
           /,/g,
@@ -126,7 +128,27 @@ class RecipesDAO {
           .then(function () {
             // always executed
           });
+<<<<<<< HEAD
         recipesList[j - 1]["calories"] = total_cal.toFixed(2);
+=======
+
+        // console.log(total_cal)
+        // 6c6cd52f12d5f99f0bf67d14e8c3547d
+        recipesList[j - 1]["calories"] = total_cal.toFixed(2);
+        str_mail += "\nRecipe " + j + ": \n";
+        str_mail += recipesList[j - 1]["TranslatedRecipeName"] + "\n";
+        str_mail += "Time taken to prepare the recipe: \n";
+        str_mail += recipesList[j - 1]["TotalTimeInMins"] + " mins \n";
+        str_mail += "Total Calories in the food item: \n";
+        str_mail += recipesList[j - 1]["calories"] + " calories \n";
+        // console.log(str_mail);
+        // var new_str = recipesList[j - 1]["Cleaned-Ingredients"].replace(
+        //   /,/g,
+        //   " and "
+        // );
+
+        // console.log(recipesList[j-1])
+>>>>>>> eb29d5da4307e30cba3ea29f73fc37e53d36b72b
       }
 
       if (flagger == "true") {
@@ -135,13 +157,13 @@ class RecipesDAO {
           port: 465,
           secure: true,
           auth: {
-            user: "srijas.alerts@gmail.com",
+            user: "simran.walmart@gmail.com",
             pass: pass,
           },
         });
 
         var mailOptions = {
-          from: "srijas.alerts@gmail.com",
+          from: "simran.walmart@gmail.com",
           to: email,
           subject: "Your Recommended Recipes!",
           text: str_mail,
