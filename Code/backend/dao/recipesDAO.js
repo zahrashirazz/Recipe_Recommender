@@ -5,7 +5,7 @@ const pass = password.password;
 // import 'requests' from requests;
 import axios from "axios";
 
-import request from 'request';
+import request from "request";
 
 const ObjectId = mongodb.ObjectId;
 let recipes;
@@ -95,44 +95,47 @@ export default class RecipesDAO {
         str_mail += "\nRecipe " + j + ": \n";
         str_mail += recipesList[j - 1]["TranslatedRecipeName"] + "\n";
         // console.log(str_mail);
-        var new_str=recipesList[j - 1]["Cleaned-Ingredients"].replace(/,/g," and ")
-        console.log(new_str)
-       
-        var total_cal=0
-        await axios.get('https://api.calorieninjas.com/v1/nutrition?query='+new_str,{
-          headers: {
-              "X-Api-Key": "XSCESI7dxnCa7WydS0dZdQ==2nqZmMFF8hXOwdkE"
-          }
-        })
-        .then(function (response) {
-          // handle success
-          // console.log(typeof response.data.items[0].calories)
-          // for (var property in response.data.items) {
+        var new_str = recipesList[j - 1]["Cleaned-Ingredients"].replace(
+          /,/g,
+          " and "
+        );
+        console.log(new_str);
+
+        var total_cal = 0;
+        await axios
+          .get("https://api.calorieninjas.com/v1/nutrition?query=" + new_str, {
+            headers: {
+              "X-Api-Key": "XSCESI7dxnCa7WydS0dZdQ==2nqZmMFF8hXOwdkE",
+            },
+          })
+          .then(function (response) {
+            // handle success
+            // console.log(typeof response.data.items[0].calories)
+            // for (var property in response.data.items) {
             // console.log(`${property}: ${response['data']['items']['calories']}`);
-          // }
+            // }
 
-          for(let i=0; i<response.data.items.length;i++){
-            var temp=response.data.items[i].calories
-            console.log(temp)
-            total_cal+=temp
-          }
-          // // console.log(response.data.items[0]['calories'])
-          console.log("Total Calories ------- "+total_cal)
+            for (let i = 0; i < response.data.items.length; i++) {
+              var temp = response.data.items[i].calories;
+              console.log(temp);
+              total_cal += temp;
+            }
+            // // console.log(response.data.items[0]['calories'])
+            console.log("Total Calories ------- " + total_cal);
 
-          // console.log(response.data);
-        })
-        .catch(function (error) {
-          // handle error
-          console.log("error");
-        })
-        .then(function () {
-          // always executed
-        });
+            // console.log(response.data);
+          })
+          .catch(function (error) {
+            // handle error
+            console.log("error");
+          })
+          .then(function () {
+            // always executed
+          });
 
         // console.log(total_cal)
         // 6c6cd52f12d5f99f0bf67d14e8c3547d
 
-      
         // function(error, response, body) {
         //   if(error) return console.error('Request failed:', error);
         //   else if(response.statusCode != 200) return console.error('Error:', response.statusCode, body.toString('utf8'));
@@ -142,8 +145,8 @@ export default class RecipesDAO {
         // for (var cal in items) {
         //    total_cal+=cal[calories];
         // }
-        
-        recipesList[j-1]["calories"]=total_cal;
+
+        recipesList[j - 1]["calories"] = total_cal;
         // console.log(recipesList[j-1])
       }
 
