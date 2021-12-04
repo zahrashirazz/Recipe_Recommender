@@ -1,8 +1,10 @@
-import userAuthModel from "../dao/userAuthModel.js";
 
-export default class userAuthService {
+const userAuthModel = require('../dao/userAuthModel');
+
+class userAuthService {
   static async getAllUsers(req, res, next) {
     try {
+      console.log("user req");
       let obj = await userAuthModel.getAllUsers();
 
       res.json(obj);
@@ -38,3 +40,4 @@ export default class userAuthService {
     }
   }
 }
+module.exports = userAuthService;

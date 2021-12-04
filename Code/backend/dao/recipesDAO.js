@@ -1,12 +1,16 @@
-import mongodb from "mongodb";
-import nodemailer from "nodemailer";
-import password from "./mail_param.js";
+// import mongodb from "mongodb";
+// import nodemailer from "nodemailer";
+// import password from "./mail_param.js";
+
+const mongodb  =require('mongodb');
+const nodemailer = require('nodemailer');
+const password = require('./mail_param');
 const pass = password.password;
 
 const ObjectId = mongodb.ObjectId;
 let recipes;
 //Function to connect to DB
-export default class RecipesDAO {
+class RecipesDAO {
   static async injectDB(conn) {
     if (recipes) {
       return;
@@ -135,3 +139,6 @@ export default class RecipesDAO {
 
   // code
 }
+
+
+module.exports = RecipesDAO;
