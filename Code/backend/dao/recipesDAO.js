@@ -146,13 +146,13 @@ class RecipesDAO {
           port: 465,
           secure: true,
           auth: {
-            user: "srijas.alerts@gmail.com",
+            user: "simran.walmart@gmail.com",
             pass: pass,
           },
         });
 
         var mailOptions = {
-          from: "srijas.alerts@gmail.com",
+          from: "simran.walmart@gmail.com",
           to: email,
           subject: "Your Recommended Recipes!",
           text: str_mail,
