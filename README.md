@@ -176,6 +176,15 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
       </a>
     </td>
   </tr>
+   <tr style="background: #010203 ">
+    <td valign="left"> 
+      <p style="color: #FF7A59"> Screenshot of recipe results receieved on email
+      </p>
+      <a href="./images/recipes-email.jpeg"> 
+        <img src="./images/recipes-email.jpeg" >      
+      </a>
+    </td>
+  </tr>
  
  </table>
 
@@ -208,11 +217,14 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 ### Scope of improvement:
 
 - [x] Add option to choose total cooking time
-- [ ] Classify recipes into vegan / vegetarian / non-vegetarian categorizations.
+- [x] Classify recipes into vegan / vegetarian / non-vegetarian categorizations.
+- [x] Add login functionality
+- [x] Add feature to submit recipes
+- [x] Show diet type of recipe results
+- [x] Add a calorie/nutrients tracker.
+- [x] Fine tune the existing code and wrap up to produce a finished product.
 - [ ] Add more filters and also recommend restaurants to users based on their inputs.
-- [ ] Add a calorie/nutrients tracker.
 - [ ] Use additional datasets to enhance results.
-- [ ] Fine tune the existing code and wrap up to produce a finished product.
 
 ## :page_facing_up: License <a name="License"></a>
 
@@ -233,5 +245,8 @@ Please see our [CONTRIBUTING.md](https://github.com/PvPatel-1001/Recipe_Recommen
    
   </tr>
 </table>
+
+## Acknowlegements
+We would like to thank Professor Dr. Timothy Menzies for helping us understand the process of building a good Software Engineering project. We would also like to thank the teaching assistants Xiao Ling, Andre Lustosa, Kewen Peng and Weichen Shi for their support throughout the project. We would also like to extend our gratitude to previous group: (https://github.com/PvPatel-1001/Recipe_Recommender)
 
 <p align="center">Made with ❤️ on GitHub.</p>
