@@ -232,11 +232,12 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 - [x] Developed User Interface and APIs for user authorization.
 - [x] Implemented backend for saving recipe under user account.
 - [x] Implemented application testing and code coverage.
-- [x] Add option to choose total cooking time.
+- [x] Add option to choose total cooking time and display recipes which take less time than selected time.
 - [x] Classify recipes into vegan / vegetarian / non-vegetarian categorizations.
 - [x] Add login functionality.
-- [x] Add feature to submit recipes.
-- [x] Show diet type of recipe results.
+- [x] Add feature to submit recipes so other people can view recipes.
+- [x] Shown the time taken to prepare the recipe.
+- [x] Shown diet type of recipe results.
 - [x] Add a calorie/nutrients tracker.
 - [x] Updated email format of the recipe results.
 - [x] Fine tune the existing code and wrap up to produce a finished product.
