@@ -7,9 +7,10 @@ const nodemailer = require('nodemailer');
 const password = require('./mail_param');
 const pass = password.password;
 // import 'requests' from requests;
-import axios from "axios";
-
-import request from "request";
+// import axios from "axios";
+const axios = require('axios');
+const request = require('request');
+// import request from "request";
 
 const ObjectId = mongodb.ObjectId;
 let recipes;
