@@ -20,18 +20,17 @@ export default class RecipesDAO {
     }
   }
 
-  static async postRecipes(addRecipeDetails){
-    console.log("inside dao")
+  static async postRecipes(addRecipeDetails) {
+    console.log("inside dao");
 
-    return recipes.insertOne(addRecipeDetails, function(err, res) {
+    return recipes.insertOne(addRecipeDetails, function (err, res) {
       if (err) throw err;
-  
+
       console.log("1 document inserted");
       console.log(res);
       return res;
-    })
+    });
   }
-
 
   //Function to get the Recipe List
   static async getRecipes({

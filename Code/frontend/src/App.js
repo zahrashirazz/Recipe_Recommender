@@ -1,6 +1,6 @@
 import "./App.css";
 import Form from "./components/Form.js";
-import AddRecipeForm from './components/AddRecipeForm.js';
+import AddRecipeForm from "./components/AddRecipeForm.js";
 import Header from "./components/Header";
 import recipeDB from "./apis/recipeDB";
 import RecipeList from "./components/RecipeList";
@@ -35,22 +35,23 @@ class App extends Component {
   }
   // Function to get the user input from the Form component on Submit action
 
-  
   handleRecipeSubmit = async (formDict) => {
-
-    const addRecipeDetails= {
-      "Cleaned-Ingredients":formDict["recipe_ingredients"],
-      "Cuisine":formDict["recipe_cuisine"],
-      "TranslatedRecipeName":formDict["recipe_name"],
-      "TranslatedInstructions":formDict["recipe_instructions"]
-    }
+    const addRecipeDetails = {
+      "Cleaned-Ingredients": formDict["recipe_ingredients"],
+      Cuisine: formDict["recipe_cuisine"],
+      TranslatedRecipeName: formDict["recipe_name"],
+      TranslatedInstructions: formDict["recipe_instructions"],
+    };
     this.postRecipeDetails(addRecipeDetails);
   };
 
   postRecipeDetails = async (addRecipeDetails) => {
     try {
-      console.log("inside app.js",addRecipeDetails)
-      const response = await recipeDB.post("recipes/Addrecipes", addRecipeDetails);
+      console.log("inside app.js", addRecipeDetails);
+      const response = await recipeDB.post(
+        "recipes/Addrecipes",
+        addRecipeDetails
+      );
       // this.setState({
       //   recipeList: response.data.recipes,
       // });
@@ -113,7 +114,7 @@ class App extends Component {
     return (
       <Router>
         {/* handleSubmit function is being sent as a prop to the form component*/}
-        <AddRecipeForm sendRecipeFormData = {this.handleRecipeSubmit}/>
+        <AddRecipeForm sendRecipeFormData={this.handleRecipeSubmit} />
 
         <Switch>
           <Route
