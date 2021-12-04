@@ -170,16 +170,15 @@ class Form extends Component {
           </div>
 
           <div className="row pb-1">
-          <div className="input-group col-lg-4 bg-danger text-white">
-            <label class="sideLabel">Time to cook:</label>           < br />
-
-            <select name="time_to_cook" id="time_to_cook">
-              <option value="15">15</option>
-              <option value="30">30</option>
-              <option value="45">45</option>
-              <option value="60">60</option>
-            </select>
-            </div>  
+            <div className="input-group col-lg-4 bg-danger text-white">
+              <label class="sideLabel">Time to cook:</label> <br />
+              <select name="time_to_cook" id="time_to_cook">
+                <option value="15">15</option>
+                <option value="30">30</option>
+                <option value="45">45</option>
+                <option value="60">60</option>
+              </select>
+            </div>
           </div>
           <div className="row pb-1">
             <div className="input-group col-lg-4 bg-danger text-white">
