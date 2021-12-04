@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="4" failures="4" errors="0" time="0.681">
+  <testsuite name="undefined" errors="0" failures="4" skipped="0" timestamp="2021-12-04T17:21:24" time="0.651" tests="4">
+    <testcase classname=" renders learn react link" name=" renders learn react link" time="0.001">
+      <failure>ReferenceError: document is not defined
+    at render (/Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/node_modules/@testing-library/react/dist/pure.js:83:5)
+    at Object.&lt;anonymous&gt; (/Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/src/App.test.js:5:21)
+    at Object.asyncFn (/Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
+    at /Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/node_modules/jest-jasmine2/build/queueRunner.js:38:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/node_modules/jest-jasmine2/build/queueRunner.js:31:21)
+    at /Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/node_modules/p-map/index.js:46:16
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)</failure>
+    </testcase>
+    <testcase classname=" renders learn react link" name=" renders learn react link" time="0">
+      <failure>ReferenceError: document is not defined
+    at render (/Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/node_modules/@testing-library/react/dist/pure.js:83:5)
+    at Object.&lt;anonymous&gt; (/Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/src/App.test.js:11:21)
+    at Object.asyncFn (/Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
+    at /Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/node_modules/jest-jasmine2/build/queueRunner.js:38:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/node_modules/jest-jasmine2/build/queueRunner.js:31:21)
+    at /Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/node_modules/p-map/index.js:46:16
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)</failure>
+    </testcase>
+    <testcase classname=" renders learn react link" name=" renders learn react link" time="0">
+      <failure>ReferenceError: document is not defined
+    at render (/Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/node_modules/@testing-library/react/dist/pure.js:83:5)
+    at Object.&lt;anonymous&gt; (/Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/src/App.test.js:17:21)
+    at Object.asyncFn (/Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
+    at /Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/node_modules/jest-jasmine2/build/queueRunner.js:38:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/node_modules/jest-jasmine2/build/queueRunner.js:31:21)
+    at /Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/node_modules/p-map/index.js:46:16
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)</failure>
+    </testcase>
+    <testcase classname=" renders learn react link" name=" renders learn react link" time="0.001">
+      <failure>ReferenceError: document is not defined
+    at render (/Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/node_modules/@testing-library/react/dist/pure.js:83:5)
+    at Object.&lt;anonymous&gt; (/Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/src/App.test.js:23:21)
+    at Object.asyncFn (/Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/node_modules/jest-jasmine2/build/jasmine-async.js:68:30)
+    at /Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/node_modules/jest-jasmine2/build/queueRunner.js:38:12
+    at new Promise (&lt;anonymous&gt;)
+    at mapper (/Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/node_modules/jest-jasmine2/build/queueRunner.js:31:21)
+    at /Users/simranbosmiya/Desktop/SE/Project/Recipe_Recommender/Code/frontend/node_modules/p-map/index.js:46:16
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>
