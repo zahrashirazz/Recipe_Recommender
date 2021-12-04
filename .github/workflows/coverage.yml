@@ -26,11 +26,20 @@ jobs:
       run: |
           cd Code/backend
           npm install
+          pip install pytest-cov
+          pip install -r requirements.txt
+          echo requirements installed
+          cd Code/backend
+          npm install nodemailer
+          npm install
+          npx nodemon &
 
     - name: Run the tests
       run: |
           cd Code/backend
           npm test -- --coverage
+          cd test
+          pytest --cov=./  
           
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
