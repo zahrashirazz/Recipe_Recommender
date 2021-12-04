@@ -122,10 +122,13 @@ class Form extends Component {
     dict["cuisine"] = document.getElementById("cuisine").value;
     dict["email_id"] = document.getElementById("email_id").value;
     dict["flag"] = document.getElementById("Send_email").checked;
+    dict["time_to_cook"] = document.getElementById("time_to_cook").value;
+    console.log("dict value", dict["time_to_cook"]);
     //this.props.sendFormData(this.state.cuisine, this.state.numberIngredients,this.state.ingredients)
     this.props.sendFormData(dict);
     document.getElementById("cuisine").value = "";
     document.getElementById("email_id").value = "";
+    document.getElementById("time_to_cook").value = "";
   };
 
   // render function dispays the UI content i.e the form content
@@ -167,6 +170,16 @@ class Form extends Component {
           </div>
 
           <div className="row pb-1">
+            <label for="time_to_cook">Time to cook:</label>
+            <select name="time_to_cook" id="time_to_cook">
+              <option value="15">15</option>
+              <option value="30">30</option>
+              <option value="45">45</option>
+              <option value="60">60</option>
+            </select>
+          </div>
+
+          <div className="row pb-1">
             <div className="input-group col-lg-4 bg-danger text-white">
               <label class="sideLabel"> Enter Email ID: </label> <br />
               <div className="input-group-append">
@@ -175,6 +188,14 @@ class Form extends Component {
                   <label>
                     <input type="checkbox" id="Send_email" name="email" /> Send
                     me email
+                  </label>
+                  <label>
+                    <input
+                      type="checkbox"
+                      id="food_preference"
+                      name="food_option"
+                    />{" "}
+                    Vegetarian
                   </label>
                 </div>
 

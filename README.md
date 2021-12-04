@@ -4,23 +4,23 @@
 
 [![Made With](https://img.shields.io/badge/made%20with-javascript-gree)](https://www.javascript.com/)
 [![DOI](https://zenodo.org/badge/422306860.svg)](https://zenodo.org/badge/latestdoi/422306860)
-[![GitHub issues open](https://img.shields.io/github/issues/PvPatel-1001/Recipe_Recommender)](https://github.com/PvPatel-1001/Recipe_Recommender/issues)
-[![GitHub stars](https://badgen.net/github/stars/PvPatel-1001/Recipe_Recommender)](https://badgen.net/github/stars/PvPatel-1001/Recipe_Recommender)
-![Github closes issues](https://img.shields.io/github/issues-closed-raw/PvPatel-1001/Recipe_Recommender)
+[![GitHub issues open](https://img.shields.io/github/issues/thosaniparth/Recipe_Recommender)](https://github.com/thosaniparth/Recipe_Recommender/issues)
+[![GitHub stars](https://badgen.net/github/stars/thosaniparth/Recipe_Recommender)](https://badgen.net/github/stars/thosaniparth/Recipe_Recommender)
+![Github closes issues](https://img.shields.io/github/issues-closed-raw/thosaniparth/Recipe_Recommender)
 [![Build Status](https://app.travis-ci.com/PvPatel-1001/Recipe_Recommender.svg?branch=master)](https://app.travis-ci.com/PvPatel-1001/Recipe_Recommender)
 [![codecov](https://codecov.io/gh/PvPatel-1001/Recipe_Recommender/branch/master/graph/badge.svg?token=2ZYDS70UG8)](https://codecov.io/gh/PvPatel-1001/Recipe_Recommender)
 [![Respost - Write comment to new Issue event](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Respost.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Respost.yml)
 [![Check the source code](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/codeFormatter.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/codeFormatter.yml)
-![GitHub contributors](https://img.shields.io/github/contributors/PvPatel-1001/Recipe_Recommender)
+![GitHub contributors](https://img.shields.io/github/contributors/thosaniparth/Recipe_Recommender)
 [![Close as a feature](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/close_as_a_feature.yml)
 [![Code Formatter and Syntax Check](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml)
 [![Running Code Coverage](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/coverage.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/coverage.yml)
 [![Style Checker and Prettify Code](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml)
 [![Greetings](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/greetings.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/greetings.yml)
-![Lines of code](https://img.shields.io/tokei/lines/github/PvPatel-1001/Recipe_Recommender)
+![Lines of code](https://img.shields.io/tokei/lines/github/thosaniparth/Recipe_Recommender)
 [![Labeler](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/label.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/label.yml)
 [![Mark stale issues and pull requests](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/stale.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/stale.yml)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/PvPatel-1001/Recipe_Recommender)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/thosaniparth/Recipe_Recommender)
 
 https://user-images.githubusercontent.com/25223347/140403709-a062e7c5-4500-49d4-9758-aea9e5fa5442.mp4
 
@@ -198,6 +198,7 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 
 ### Phase 3: Scope of improvement:
 
+- [x] Add option to choose total cooking time
 - [ ] Classify recipes into vegan / vegetarian / non-vegetarian categorizations.
 - [ ] Add more filters and also recommend restaurants to users based on their inputs.
 - [ ] Add a calorie/nutrients tracker.
