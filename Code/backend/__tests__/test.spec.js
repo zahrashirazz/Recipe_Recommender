@@ -80,12 +80,12 @@ describe("/ checking api status", () => {
       var result = false;
       try {
         // Connect to the MongoDB cluster
-       MongoClient.connect(uri, {
+        MongoClient.connect(uri, {
           useNewUrlParser: true,
           maxPoolSize: 50,
           wtimeoutMS: 2500,
         }).then(async (client) => {
-          mongoClient = client
+          mongoClient = client;
           await recipesDAO.injectDB(client);
           await userAuthModel.injectDB(client);
           // app.listen(port, () => {
@@ -245,8 +245,6 @@ describe("/ checking api status", () => {
 
     expect(response.status).to.eql(500);
   });
-  
-  
 });
 afterAll((done) => {
   // Closing the DB connection allows Jest to exit successfully.
