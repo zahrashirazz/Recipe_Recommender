@@ -27,6 +27,8 @@ class Form extends Component {
     dict["recipe_instructions"] = document.getElementById(
       "recipe_instructions"
     ).value;
+    dict["recipe_time"] = document.getElementById("recipe_time").value;
+    dict["recipe_url"] = document.getElementById("recipe_url").value;
     this.props.sendRecipeFormData(dict);
   };
 
@@ -72,7 +74,22 @@ class Form extends Component {
               </div>
             </div>
           </div>
-
+          <div className="row pb-1">
+            <div className="input-group col-lg-4 bg-danger text-white">
+              <label class="sideLabel"> Recipe Time Taken: </label> <br />
+              <div className="input-group-append">
+                <input type="text" id="recipe_time" />
+              </div>
+            </div>
+          </div>
+          <div className="row pb-1">
+            <div className="input-group col-lg-4 bg-danger text-white">
+              <label class="sideLabel"> Recipe Image URL: </label> <br />
+              <div className="input-group-append">
+                <input type="text" id="recipe_url" />
+              </div>
+            </div>
+          </div>
           <div className="row pb-1">
             <div className="input-group col-lg-4 bg-danger text-white">
               <div className="input-group-append">

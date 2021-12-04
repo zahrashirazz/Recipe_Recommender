@@ -41,6 +41,8 @@ class App extends Component {
       Cuisine: formDict["recipe_cuisine"],
       TranslatedRecipeName: formDict["recipe_name"],
       TranslatedInstructions: formDict["recipe_instructions"],
+      TotalTimeInMins: Number(formDict["recipe_time"]),
+      "image-url": formDict["recipe_url"],
     };
     this.postRecipeDetails(addRecipeDetails);
   };
@@ -128,6 +130,7 @@ class App extends Component {
             <Header loginFlag={this.state.loginFlag} />
             <AddRecipeForm sendRecipeFormData={this.handleRecipeSubmit} />
             <Form sendFormData={this.handleSubmit} />
+            <AddRecipeForm sendRecipeFormData={this.handleRecipeSubmit} />
 
             {/* RecipeList is the component where results are displayed.
                   App's recipeList state item is being sent as a prop
