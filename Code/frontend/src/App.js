@@ -7,6 +7,7 @@ import RecipeList from "./components/RecipeList";
 import React, { Component } from "react";
 import {
   Route,
+  Redirect,
   BrowserRouter as Router,
   Routes,
   Switch,
@@ -137,6 +138,7 @@ class App extends Component {
 
             <RecipeList recipes={this.state.recipeList} />
           </Route>
+          <Redirect exact from="/" to="home" />
         </Switch>
       </Router>
     );
