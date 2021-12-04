@@ -1,13 +1,16 @@
-import mongodb from "mongodb";
+// import mongodb from "mongodb";
 
 let usersCollection;
-export default class userAuthModel {
+class userAuthModel {
   static async injectDB(conn) {
-    if (usersCollection) return;
+    if (usersCollection) return true;
     try {
       usersCollection = await conn
         .db(process.env.RECIPES_NS)
         .collection("users");
+        // console.log(usersCollection);
+        return true
+
     } catch (e) {
       console.error(
         `Unable to establish a collection handle in userAuthModel: ${e}`
@@ -49,3 +52,5 @@ export default class userAuthModel {
     }
   }
 }
+
+module.exports = userAuthModel;
