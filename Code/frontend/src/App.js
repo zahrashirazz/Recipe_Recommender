@@ -41,6 +41,7 @@ class App extends Component {
       Cuisine: formDict["recipe_cuisine"],
       TranslatedRecipeName: formDict["recipe_name"],
       TranslatedInstructions: formDict["recipe_instructions"],
+      TotalTimeInMins: Number(formDict["recipe_time"]),
     };
     this.postRecipeDetails(addRecipeDetails);
   };
