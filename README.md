@@ -166,6 +166,16 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
       </a> 
     </td> 
   </tr>
+   
+   <tr style="background: #010203 ">
+    <td valign="left"> 
+      <p style="color: #FF7A59"> View Recipes with diet-type information
+      </p>
+      <a href="./images/diet_type.png"> 
+        <img src="./images/diet_type.png" >      
+      </a>
+    </td>
+  </tr>
  
  </table>
 
