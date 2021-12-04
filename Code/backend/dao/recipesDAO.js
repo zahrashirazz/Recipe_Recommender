@@ -140,16 +140,16 @@ class RecipesDAO {
         recipesList[j - 1]["calories"] = total_cal.toFixed(2);
         str_mail += "\nRecipe " + j + ": \n";
         str_mail += recipesList[j - 1]["TranslatedRecipeName"] + "\n";
-        str_mail += "Time taken to prepare the recipe: \n" ;
+        str_mail += "Time taken to prepare the recipe: \n";
         str_mail += recipesList[j - 1]["TotalTimeInMins"] + " mins \n";
         str_mail += "Total Calories in the food item: \n";
-        str_mail += recipesList[j-1]["calories"]+ " calories \n";
+        str_mail += recipesList[j - 1]["calories"] + " calories \n";
         // console.log(str_mail);
         // var new_str = recipesList[j - 1]["Cleaned-Ingredients"].replace(
         //   /,/g,
         //   " and "
         // );
-       
+
         // console.log(recipesList[j-1])
       }
 
