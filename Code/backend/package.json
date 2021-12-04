@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "test": "jest",
+    "test": "jest --detectOpenHandles --forceExit",
     "lint": "eslint 'dao/**.js'",
     "format": "prettier --check ./dao",
     "format:fix": "prettier --write ./dao"

@@ -7,19 +7,19 @@
 [![GitHub issues open](https://img.shields.io/github/issues/thosaniparth/Recipe_Recommender)](https://github.com/thosaniparth/Recipe_Recommender/issues)
 [![GitHub stars](https://badgen.net/github/stars/thosaniparth/Recipe_Recommender)](https://badgen.net/github/stars/thosaniparth/Recipe_Recommender)
 ![Github closes issues](https://img.shields.io/github/issues-closed-raw/thosaniparth/Recipe_Recommender)
-[![Build Status](https://app.travis-ci.com/PvPatel-1001/Recipe_Recommender.svg?branch=master)](https://app.travis-ci.com/PvPatel-1001/Recipe_Recommender)
-[![codecov](https://codecov.io/gh/PvPatel-1001/Recipe_Recommender/branch/master/graph/badge.svg?token=2ZYDS70UG8)](https://codecov.io/gh/PvPatel-1001/Recipe_Recommender)
-[![Respost - Write comment to new Issue event](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Respost.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Respost.yml)
-[![Check the source code](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/codeFormatter.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/codeFormatter.yml)
+[![Build Status](https://app.travis-ci.com/thosaniparth/Recipe_Recommender.svg?branch=master)](https://app.travis-ci.com/thosaniparth/Recipe_Recommender)
+[![codecov](https://codecov.io/gh/thosaniparth/Recipe_Recommender/branch/master/graph/badge.svg?token=M48I2E3PLL)](https://codecov.io/gh/thosaniparth/Recipe_Recommender)
+[![Respost - Write comment to new Issue event](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Respost.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Respost.yml)
+[![Check the source code](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/codeFormatter.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/codeFormatter.yml)
 ![GitHub contributors](https://img.shields.io/github/contributors/thosaniparth/Recipe_Recommender)
-[![Close as a feature](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/close_as_a_feature.yml)
-[![Code Formatter and Syntax Check](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml)
-[![Running Code Coverage](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/coverage.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/coverage.yml)
-[![Style Checker and Prettify Code](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml)
-[![Greetings](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/greetings.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/greetings.yml)
+[![Close as a feature](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/close_as_a_feature.yml)
+[![Code Formatter and Syntax Check](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml)
+[![Running Code Coverage](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/coverage.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/coverage.yml)
+[![Style Checker and Prettify Code](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml)
+[![Greetings](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/greetings.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/greetings.yml)
 ![Lines of code](https://img.shields.io/tokei/lines/github/thosaniparth/Recipe_Recommender)
-[![Labeler](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/label.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/label.yml)
-[![Mark stale issues and pull requests](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/stale.yml/badge.svg)](https://github.com/PvPatel-1001/Recipe_Recommender/actions/workflows/stale.yml)
+[![Labeler](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/label.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/label.yml)
+[![Mark stale issues and pull requests](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/stale.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/stale.yml)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/thosaniparth/Recipe_Recommender)
 
 https://user-images.githubusercontent.com/25223347/140403709-a062e7c5-4500-49d4-9758-aea9e5fa5442.mp4
@@ -220,9 +220,9 @@ Please see our [CONTRIBUTING.md](https://github.com/PvPatel-1001/Recipe_Recommen
   <tr>
     <td align="center"><a href="https://github.com/BosamiyaSimran"><img src="https://avatars.githubusercontent.com/BosamiyaSimran" width="75px;" alt=""/><br /><sub><b>Simran Bosamiya</b></sub></a></td>
     <td align="center"><a href="https://github.com/thosaniparth"><img src="https://avatars.githubusercontent.com/thosaniparth" width="75px;" alt=""/><br /><sub><b>Parth Thosani</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/ameyatathavadkar"><img src="https://avatars.githubusercontent.com/u/25223347?v=4" width="75px;" alt=""/><br /><sub><b>Ameya Tathavadkar</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/jayrshah98"><img src="https://avatars.githubusercontent.com/u/41386638?s=400&u=b323434b42507c474829a804556d69da82d48c3f&v=4" width="75px;" alt=""/><br /><sub><b>Jay Shah</b></sub></a><br /></td>
-    <td align="center"><a href="https://github.com/Harshil-Shah99"><img src="https://avatars.githubusercontent.com/u/38115399?v=4" width="75px;" alt=""/><br /><sub><b>Harshil Shah</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/freakNewton"><img src="https://avatars.githubusercontent.com/freakNewton" width="75px;" alt=""/><br /><sub><b>Nisarg Shah</b></sub></a><br /></td>
+     <td align="center"><a href="https://github.com/sharathKV"><img src="https://avatars.githubusercontent.com/sharathKV" width="75px;" alt=""/><br /><sub><b>SharathKV</b></sub></a><br /></td>
+   
   </tr>
 </table>
 
