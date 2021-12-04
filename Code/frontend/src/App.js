@@ -147,7 +147,7 @@ class App extends Component {
 
             <RecipeList recipes={this.state.recipeList} />
           </Route>
-          <Redirect exact from="/" to="home" />
+          <Redirect exact from="/" to="login" />
         </Switch>
       </Router>
     );
