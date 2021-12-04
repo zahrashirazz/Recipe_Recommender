@@ -190,7 +190,12 @@ class Form extends Component {
                     me email
                   </label>
                   <label>
-                    <input type="checkbox" id="food_preference" name="food_option" /> Vegetarian
+                    <input
+                      type="checkbox"
+                      id="food_preference"
+                      name="food_option"
+                    />{" "}
+                    Vegetarian
                   </label>
                 </div>
 

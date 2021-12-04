@@ -26,24 +26,27 @@ export default class RecipesDAO {
     recipesPerPage = 10,
   } = {}) {
     let query;
-    console.log("heeere", filters)
+    console.log("heeere", filters);
     if (filters) {
       if ("CleanedIngredients" in filters) {
         var str = "(?i)";
-        var time = parseInt(filters["totalTime"])
+        var time = parseInt(filters["totalTime"]);
 
         for (var i = 0; i < filters["CleanedIngredients"].length; i++) {
           const str1 = filters["CleanedIngredients"][i];
           str += "(?=.*" + str1 + ")";
         }
         console.log(str);
-        query = { "Cleaned-Ingredients": { $regex: str } , "TotalTimeInMins": { $lte: time}};
+        query = {
+          "Cleaned-Ingredients": { $regex: str },
+          TotalTimeInMins: { $lte: time },
+        };
         query["Cuisine"] = filters["Cuisine"];
         var email = filters["Email"];
         var flagger = filters["Flag"];
         console.log(email);
         console.log(flagger);
-        console.log(query)
+        console.log(query);
       }
     }
 

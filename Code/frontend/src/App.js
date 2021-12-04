@@ -4,7 +4,12 @@ import Header from "./components/Header";
 import recipeDB from "./apis/recipeDB";
 import RecipeList from "./components/RecipeList";
 import React, { Component } from "react";
-import { Route, BrowserRouter as Router, Routes, Switch } from 'react-router-dom';
+import {
+  Route,
+  BrowserRouter as Router,
+  Routes,
+  Switch,
+} from "react-router-dom";
 import login from "./components/login";
 // Main component of the project
 class App extends Component {
@@ -19,9 +24,11 @@ class App extends Component {
       recipeList: [],
       email: "",
       flag: false,
-      loginFlag: sessionStorage.getItem('login_recipe_recommender') ? true : false,
-      loginId: sessionStorage.getItem('login_recipe_recommender'),
-      cooking_time: ""
+      loginFlag: sessionStorage.getItem("login_recipe_recommender")
+        ? true
+        : false,
+      loginId: sessionStorage.getItem("login_recipe_recommender"),
+      cooking_time: "",
     };
     this.setLoginFlag.bind(this);
   }
@@ -35,14 +42,14 @@ class App extends Component {
       cuisine: formDict["cuisine"],
       email: formDict["email_id"],
       flag: formDict["flag"],
-      cooking_time: formDict["time_to_cook"]
+      cooking_time: formDict["time_to_cook"],
     });
 
     const mail = formDict["email_id"];
     const flag = formDict["flag"];
     const items = Array.from(formDict["ingredient"]);
     const cuis = formDict["cuisine"];
-    const cook_time = formDict["time_to_cook"]
+    const cook_time = formDict["time_to_cook"];
     this.getRecipeDetails(items, cuis, mail, flag, cook_time);
     //  alert(typeof(ingredientsInput["cuisine"]));
   };
@@ -66,39 +73,42 @@ class App extends Component {
     }
   };
 
-  setLoginFlag(){
+  setLoginFlag() {
     console.log("set login flag");
     this.setState({
-      loginFlag: sessionStorage.getItem('login_recipe_recommender') ? true : false,
-      loginId: sessionStorage.getItem('login_recipe_recommender'),
-      recipeList: []
-    })
+      loginFlag: sessionStorage.getItem("login_recipe_recommender")
+        ? true
+        : false,
+      loginId: sessionStorage.getItem("login_recipe_recommender"),
+      recipeList: [],
+    });
   }
 
   render() {
     return (
-
-<Router>
-
+      <Router>
         {/* handleSubmit function is being sent as a prop to the form component*/}
 
         <Switch>
-                <Route exact path='/login' component={login} setLoginFlag={this.setLoginFlag}/>
-                   
-                <Route path='/home'>
-                  <Header loginFlag={this.state.loginFlag}/>
-                <Form sendFormData={this.handleSubmit} />
+          <Route
+            exact
+            path="/login"
+            component={login}
+            setLoginFlag={this.setLoginFlag}
+          />
 
-                  {/* RecipeList is the component where results are displayed.
+          <Route path="/home">
+            <Header loginFlag={this.state.loginFlag} />
+            <Form sendFormData={this.handleSubmit} />
+
+            {/* RecipeList is the component where results are displayed.
                   App's recipeList state item is being sent as a prop
                   */}
 
-                <RecipeList recipes={this.state.recipeList} />
-                </Route>
+            <RecipeList recipes={this.state.recipeList} />
+          </Route>
         </Switch>
-
-       
-</Router>
+      </Router>
     );
   }
 }
