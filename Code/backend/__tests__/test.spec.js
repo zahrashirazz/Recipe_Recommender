@@ -193,7 +193,7 @@ describe("/ checking api status", () => {
     expect(response.status).to.eql(200);
   });
 
-  it("is the API is functional test 8", async function () {
+  it("is the API is functional test 9", async function () {
     const response = await request.get("/recipes?CleanedIngredients={}");
 
     expect(response.status).to.eql(200);
@@ -204,6 +204,20 @@ describe("/ checking api status", () => {
 
     expect(response.body.filters.CleanedIngredients).to.eql("pear");
   });
+
+  it("is the API is fetching calories", async function () {
+    const response = await request.get(
+      "/recipes?Cleaned-Ingredients=salt,mint,peanuts"
+    );
+    // var cal = 0;
+    // // console.log(response.body)
+    // for (let i = 0; i < response.body.recepies.length; i++) {
+    //   var temp = response.body.recepies[i].calories;
+    //   cal += temp;
+    // }
+    expect(response.body.calories).to.not.eql(0);
+  });
+
   it("is the API is fetching users", async function () {
     const response = await request.get("/users/getAllUsers");
 
