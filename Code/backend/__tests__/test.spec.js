@@ -218,7 +218,12 @@ describe('/ checking api status', () => {
     
         expect(response.status).to.eql(200);
       });
+      it("invalid username", async function () {
+        const response = await request.post("/users/authorizeUser").send({'username':'hello1', 'password':'world'});
 
+        expect(response.status).to.eql(404);
+      });
+      
 });
 
 
