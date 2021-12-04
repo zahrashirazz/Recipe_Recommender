@@ -42,6 +42,7 @@ class App extends Component {
       TranslatedRecipeName: formDict["recipe_name"],
       TranslatedInstructions: formDict["recipe_instructions"],
       TotalTimeInMins: Number(formDict["recipe_time"]),
+
       "image-url": formDict["recipe_url"],
     };
     this.postRecipeDetails(addRecipeDetails);
@@ -82,7 +83,7 @@ class App extends Component {
     //  alert(typeof(ingredientsInput["cuisine"]));
   };
 
-  getRecipeDetails = async (ingredient, cuis, mail, flag, cook_time) => {
+  getRecipeDetails = async (ingredient, cuis, mail, flag, cook_time,calories) => {
     try {
       const response = await recipeDB.get("/recipes", {
         params: {
@@ -91,6 +92,7 @@ class App extends Component {
           Email: mail,
           Flag: flag,
           totalTime: cook_time,
+          calories: calories,
         },
       });
       this.setState({

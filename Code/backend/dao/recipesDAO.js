@@ -115,11 +115,6 @@ class RecipesDAO {
           })
           .then(function (response) {
             // handle success
-            // console.log(typeof response.data.items[0].calories)
-            // for (var property in response.data.items) {
-            // console.log(`${property}: ${response['data']['items']['calories']}`);
-            // }
-
             for (let i = 0; i < response.data.items.length; i++) {
               var temp = response.data.items[i].calories;
               console.log(temp);
@@ -141,17 +136,7 @@ class RecipesDAO {
         // console.log(total_cal)
         // 6c6cd52f12d5f99f0bf67d14e8c3547d
 
-        // function(error, response, body) {
-        //   if(error) return console.error('Request failed:', error);
-        //   else if(response.statusCode != 200) return console.error('Error:', response.statusCode, body.toString('utf8'));
-        //   else console.log(body);
-        // });
-
-        // for (var cal in items) {
-        //    total_cal+=cal[calories];
-        // }
-
-        recipesList[j - 1]["calories"] = total_cal;
+        recipesList[j - 1]["calories"] = total_cal.toFixed(2);
         // console.log(recipesList[j-1])
       }
 
