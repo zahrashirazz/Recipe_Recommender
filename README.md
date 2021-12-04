@@ -100,14 +100,14 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 
   <tr style="background: #010203 ">
     <td valign="left"> 
-      <p style="color: #FF7A59"> Previous work
+      <p style="color: #FF7A59"> Login Page
       </p>
       <a href="./images/prev_stage1.jpg"> 
-        <img src="./images/prev_stage1.jpg" >      
+        <img src="./images/Screen Shot 2021-12-04 at 5.12.44 PM.png" >      
       </a>
     </td>
     <td valign="left"> 
-      <p style="color: #FF7A59"> Current work ( Improved UI)
+      <p style="color: #FF7A59"> Search Recipe
       </p>
       <a href="./images/current_stage1.png">
         <img src="./images/current_stage1.png"> 
@@ -117,14 +117,14 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
   
   <tr style="background: #010203;"> 
     <td valign="left">
-      <p style="color: #FF7A59"> 
+      <p style="color: #FF7A59"> Added time to cook and vegeterian filter
       </p>  
-      <a href="./images/prev_stage2.jpg">
-        <img src="./images/prev_stage2.jpg">    
+      <a href="./images/Screen Shot 2021-12-04 at 5.13.08 PM.png">
+        <img src="./images/Screen Shot 2021-12-04 at 5.13.08 PM.png">    
       </a>
     </td>
     <td valign="left"> 
-      <p style="color: #FF7A59"> 
+      <p style="color: #FF7A59"> Search by ingredients
       </p>
       <a href="./images/current_stage2.png">
         <img src="./images/current_stage2.png">          
@@ -135,27 +135,10 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
   
   <tr style="background: #010203;"> 
     <td valign="left">
-     <p style="color: #FF7A59"> 
+     <p style="color: #FF7A59"> Add new recipe form
       </p>
-     <a href="./images/prev_stage3.jpg">
-        <img src="./images/prev_stage3.jpg"> 
-      </a> 
-    </td> 
-    <td valign="left">
-     <p style="color: #FF7A59"> Added Multiple Ingredient, Cusine Filter and Email Service
-      </p>
-     <a href="./images/current_stage_6.png">
-        <img src="./images/current_stage_6.png"> 
-      </a> 
-    </td> 
-  </tr> 
-  
-   <tr style="background: #010203;"> 
-    <td valign="left">
-     <p style="color: #FF7A59"> 
-      </p>
-     <a href="./images/prev_stage4.jpg">
-        <img src="./images/prev_stage4.jpg"> 
+     <a href="./images/Screen Shot 2021-12-04 at 5.12.59 PM.png">
+        <img src="./images/Screen Shot 2021-12-04 at 5.12.59 PM.png"> 
       </a> 
     </td> 
     <td valign="left">
@@ -165,17 +148,25 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
         <img src="./images/current_stage4.png"> 
       </a> 
     </td> 
-  </tr>
-
-  <tr style="background: #010203;"> 
-       <td colspan = "2">
-     <p style="color: #FF7A59"> Send Email to User (Added functionality)
+  </tr> 
+  
+   <tr style="background: #010203;"> 
+    <td valign="left">
+     <p style="color: #FF7A59"> View recipes with time to cook
       </p>
-     <a href="./images/current_stage5.png">
-        <img src="./images/current_stage5.png"> 
+     <a href="./images/Screen Shot 2021-12-04 at 5.17.18 PM.png">
+        <img src="./images/Screen Shot 2021-12-04 at 5.17.18 PM.png"> 
       </a> 
-     </td>
-  </tr>  
+    </td> 
+    <td valign="left">
+     <p style="color: #FF7A59"> View Recipes with calorie information
+      </p>
+     <a href="./images/Screen Shot 2021-12-04 at 5.17.18 PM.png">
+        <img src="./images/Screen Shot 2021-12-04 at 5.17.18 PM.png"> 
+      </a> 
+    </td> 
+  </tr>
+ 
  </table>
 
 ## Roadmap
