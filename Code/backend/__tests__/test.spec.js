@@ -207,7 +207,7 @@ describe("/ checking api status", () => {
 
   it("is the API is fetching calories", async function () {
     const response = await request.get(
-      "/recipes?Cleaned-Ingredients=salt,cumin seeds powder,mint and peanuts"
+      "/recipes?Cleaned-Ingredients=salt,mint,peanuts"
     );
     var cal = 0;
     for (let i = 0; i < response.body.items.length; i++) {
