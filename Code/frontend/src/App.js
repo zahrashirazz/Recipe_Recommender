@@ -139,7 +139,7 @@ class App extends Component {
             <Header loginFlag={this.state.loginFlag} />
             <AddRecipeForm sendRecipeFormData={this.handleRecipeSubmit} />
             <Form sendFormData={this.handleSubmit} />
-            <AddRecipeForm sendRecipeFormData={this.handleRecipeSubmit} />
+            {/* <AddRecipeForm sendRecipeFormData={this.handleRecipeSubmit} /> */}
 
             {/* RecipeList is the component where results are displayed.
                   App's recipeList state item is being sent as a prop
