@@ -14,7 +14,9 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/thosaniparth/Recipe_Recommender)
 [![Close as a feature](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/close_as_a_feature.yml)
 [![Code Formatter and Syntax Check](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Code_Formatter_and_Syntax_Check.yml)
+
 <!-- [![Running Code Coverage](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/coverage.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/coverage.yml) -->
+
 [![Style Checker and Prettify Code](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml)
 [![Greetings](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/greetings.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/greetings.yml)
 ![Lines of code](https://img.shields.io/tokei/lines/github/thosaniparth/Recipe_Recommender)
