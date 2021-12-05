@@ -178,9 +178,9 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
       <a href="./images/diet_type.png"> 
         <img src="./images/diet_type.png" >      
       </a>
-    </td>
+<!--     </td>
   </tr>
-   <tr style="background: #010203 ">
+   <tr style="background: #010203 "> -->
     <td valign="left"> 
       <p style="color: #FF7A59"> Screenshot of recipe results receieved on email
       </p>
@@ -197,9 +197,9 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
         <img src="./images/user-collection-db.png" >      
       </a>
     </td>
-  </tr>
+<!--   </tr>
    </tr>
-   <tr style="background: #010203 ">
+   <tr style="background: #010203 "> -->
     <td valign="left"> 
       <p style="color: #FF7A59"> Screenshot of recipe collections in mongo
       </p>
