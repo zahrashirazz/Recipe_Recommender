@@ -8,6 +8,9 @@
 [![GitHub stars](https://badgen.net/github/stars/thosaniparth/Recipe_Recommender)](https://badgen.net/github/stars/thosaniparth/Recipe_Recommender)
 ![Github closes issues](https://img.shields.io/github/issues-closed-raw/thosaniparth/Recipe_Recommender)
 [![Build Status](https://app.travis-ci.com/thosaniparth/Recipe_Recommender.svg?branch=master)](https://app.travis-ci.com/thosaniparth/Recipe_Recommender)
+
+[![Build Status](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/coverage/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender)
+
 [![codecov](https://codecov.io/gh/thosaniparth/Recipe_Recommender/branch/master/graph/badge.svg?token=M48I2E3PLL)](https://codecov.io/gh/thosaniparth/Recipe_Recommender)
 [![Respost - Write comment to new Issue event](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Respost.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Respost.yml)
 [![Check the source code](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/codeFormatter.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/codeFormatter.yml)
