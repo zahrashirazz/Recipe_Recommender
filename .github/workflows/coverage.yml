@@ -26,6 +26,7 @@ jobs:
       run: |
           cd Code/backend
           npm install
+          cd ../..
           pip install pytest-cov
           pip install -r requirements.txt
           echo requirements installed
@@ -34,7 +35,7 @@ jobs:
       run: |
           cd Code/backend
           npm test -- --coverage
-          cd test
+          cd ../../test
           pytest --cov=./  
           
     - name: Upload coverage to Codecov
