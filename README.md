@@ -18,8 +18,6 @@
 [![Style Checker and Prettify Code](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Style_Checker_and_Prettify_Code.yml)
 [![Greetings](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/greetings.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/greetings.yml)
 ![Lines of code](https://img.shields.io/tokei/lines/github/thosaniparth/Recipe_Recommender)
-[![Labeler](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/label.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/label.yml)
-[![Mark stale issues and pull requests](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/stale.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/stale.yml)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/thosaniparth/Recipe_Recommender)
 
 https://user-images.githubusercontent.com/25223347/140403709-a062e7c5-4500-49d4-9758-aea9e5fa5442.mp4
