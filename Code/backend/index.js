@@ -9,6 +9,7 @@ const cors = require("cors");
 const recipes = require("./api/recipes.route");
 const users = require("./api/userauth.route");
 const bodyParser = require("body-parser");
+const router = require('./handler/router');
 
 const app = express();
 
@@ -20,17 +21,18 @@ app.use(
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.json());
+app.use(router);
 //Result URL
-app.use("/api/v1/users", users);
-app.use("/api/v1/recipes", recipes);
+// app.use("/api/v1/users", users);
+// app.use("/api/v1/recipes", recipes);
 
 //Error thrown when page is not found
 app.use("*", (req, res) => res.status(404).json({ error: "not found" }));
 
 const mongodb = require("mongodb");
 const dotenv = require("dotenv");
-const recipesDAO = require("./dao/recipesDAO");
-const userAuthModel = require("./dao/userAuthModel");
+const recipesDAO = require("./dao/recipes/recipesDAO");
+const userAuthModel = require("./dao/users/userAuthModel");
 
 dotenv.config();
 const MongoClient = mongodb.MongoClient;

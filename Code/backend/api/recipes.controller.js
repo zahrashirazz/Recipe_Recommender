@@ -1,5 +1,5 @@
 // import RecipesDAO from "../dao/recipesDAO.js";
-const RecipesDAO = require("../dao/recipesDAO");
+const RecipesDAO = require("../dao/recipes/recipesDAO");
 
 class RecipesController {
   static async apiPostRecipes(req, res, next) {
