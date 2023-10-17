@@ -1,4 +1,4 @@
-const { Recipe } = require('../../dto/receipe');
+const { Recipe } = require('../../dto/recipe');
 const mongoose = require('mongoose');
 const logger = require('../../helpers/logger')(module);
 
