@@ -5,6 +5,8 @@ const router = require('./handler/router');
 const logger = require('./helpers/logger')(module);
 const mongoose = require('mongoose');
 const dotenv = require("dotenv");
+const swaggerUi = require('swagger-ui-express');
+const swaggerJSDoc = require('swagger-jsdoc');
 
 
 dotenv.config();
@@ -21,6 +23,22 @@ app.use(
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.json());
+const swaggerOptions = {
+  swaggerDefinition: {
+    info: {
+      version: "v1",
+      title: 'Recipe Recommender API',
+      description: 'This is a Software Engineering project',
+      contact: {
+        name: "SE Project Team 14 2023"
+      },
+    },
+  },
+  apis: ["./handler/**/*.js"]
+}
+
+const swaggerDocs = swaggerJSDoc(swaggerOptions);
+app.use('/api-doc', swaggerUi.serve, swaggerUi.setup(swaggerDocs, { explorer: false, customSiteTitle: "Recipe Recommender + Api", customCss: '.swagger-ui .topbar {display:none}' }));
 app.use('/api', router);
 
 

@@ -1,3 +1,5 @@
+const { completeChatMessage } = require('../../adapter/chatgpt');
+const { getPhotoForResource } = require('../../adapter/pexel');
 const { AddNewRecipe, GetAllRecipes, GetTotalRecipeCount, getRecipeNameAutoComplete, UpdateRecipe } = require('../../dao/recipes');
 const logger = require('../../helpers/logger')(module);
 
@@ -14,7 +16,20 @@ module.exports.createNewRecipe = async (recipeData) => {
 
 module.exports.getAllRecipe = async (filters, page, limit) => {
     try {
-        return await GetAllRecipes(filters, page, limit);
+        let recipes = await GetAllRecipes(filters, page, limit);
+        console.log("RESP : ", recipes);
+        if (Object.keys(filters).length > 0 && recipes.length == 0) {
+            let gptResponse = await completeChatMessage(filters.ingredients, filters.cuisine, filters.name);
+            if (gptResponse.choices.length > 0) {
+                gptResponse = JSON.parse(gptResponse.choices[0]?.message?.content);
+                let imageUrl = await getPhotoForResource(gptResponse.TranslatedRecipeName);
+                gptResponse['imageUrl'] = imageUrl;
+                recipes.push(gptResponse);
+                // await AddNewRecipe(gptResponse);
+            }
+        }
+        console.log("RECIPES ", recipes);
+        return recipes;
 
     } catch (error) {
         logger.log('error', `Getting Recipe, error: ${error}`);
