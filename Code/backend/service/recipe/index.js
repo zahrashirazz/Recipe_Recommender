@@ -1,4 +1,4 @@
-const { AddNewRecipe, GetAllRecipes, GetTotalRecipeCount } = require('../../dao/recipes');
+const { AddNewRecipe, GetAllRecipes, GetTotalRecipeCount, UpdateRecipe } = require('../../dao/recipes');
 const logger = require('../../helpers/logger')(module);
 
 module.exports.createNewRecipe = async (recipeData) => {
@@ -25,6 +25,17 @@ module.exports.getAllRecipe = async (page, limit) => {
 module.exports.getTotalRecipeCount = async () => {
     try {
         return await GetTotalRecipeCount();
+
+    } catch (error) {
+        logger.log('error', `Adding Order, error: ${error}`);
+        throw (error);
+    }
+}
+
+module.exports.updateRecipe = async (updateData) => {
+    try {
+        const recipe = await UpdateRecipe(updateData);
+        return recipe;
 
     } catch (error) {
         logger.log('error', `Adding Order, error: ${error}`);
