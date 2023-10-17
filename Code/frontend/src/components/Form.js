@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./login.css";
 
 // Form component to maintain input form
 class Form extends Component {
@@ -144,34 +145,27 @@ class Form extends Component {
 
     // returns jsx element
     return (
-      <div class="formOutercontainer">
+      <div class="container p-5 gradient-custom-2 border">
         <form onSubmit={this.handleSubmit}>
-          <div className="row pb-1">
-            <div className="input-group col-lg-4 bg-danger text-white">
-              <label class="sideLabel"> Ingredient: </label> <br />
-              <div className="input-group-append">
-                <input type="text" id="ingredient" />
-
-                <button onClick={this.addHandler} type="button" id="addButton">
-                  {" "}
-                  Add item{" "}
+          
+          <div class='row'>
+            <div className="col-sm-12 align-items-center  mb-4">
+              <label class="form-label d-flex flex-column align-items-center" style={{ color: 'white', fontWeight: 'bold' }}>Ingredient</label>
+                <div class='row'><input type="text" id="ingredient" class='col-md-6'/>
+                <button onClick={this.addHandler} type="button" class='col-md-6' id="addButton" 
+                style={{color: 'white',fontWeight: 'bold',border:'1px solid white'}}>
+                  {" "}Add item{" "}
                 </button>
-              </div>
+                </div>
             </div>
-          </div>
 
-          <div className="row pb-1">
-            <div className="input-group col-lg-4 bg-danger text-white">
-              <label class="sideLabel"> Cuisine: </label> <br />
-              <div className="input-group-append">
+            <div className="col-lg-6 d-flex flex-column align-items-center  mb-4">
+              <label class="form-label" style={{ color: 'white', fontWeight: 'bold' }}>Cuisine</label>
                 <input type="text" id="cuisine" />
-              </div>
             </div>
-          </div>
 
-          <div className="row pb-1">
-            <div className="input-group col-lg-4 bg-danger text-white">
-              <label class="sideLabel">Time to cook:</label> <br />
+            <div className="col-lg-6 align-items-center  mb-4">
+              <label class="form-label" style={{ color: 'white', fontWeight: 'bold' }}>Time to cook</label><br></br>
               <select name="time_to_cook" id="time_to_cook">
                 <option value="15">15</option>
                 <option value="30">30</option>
@@ -180,27 +174,22 @@ class Form extends Component {
               </select>
             </div>
           </div>
-          <div className="row pb-1">
-            <div className="input-group col-lg-4 bg-danger text-white">
-              <label class="sideLabel"> Enter Email ID: </label> <br />
-              <div className="input-group-append">
-                <input type="text" id="email_id" />
-                <div>
-                  <label>
-                    <input type="checkbox" id="Send_email" name="email" /> Send
-                    me email
-                  </label>
-                </div>
 
-                <div className="row pb-1">
-                  <div className="input-group col-lg-4">
-                    <label class="sideLabel">Added Items:</label>
-                    <br />
-                    <br />
-                    <br />
-                    {this.printHander()}
-                  </div>
-                </div>
+<div>
+            <div className="col-lg-12 d-flex flex-column align-items-center row">
+                <div class='col-md-6'>
+                <label class="form-label d-flex flex-column align-items-center" style={{ color: 'white', fontWeight: 'bold' }}>Enter Email ID</label></div>
+                <input type="text" id="email_id" />
+                <div class='col-md-6'>
+                
+                <label class="form-label d-flex flex-column align-items-center" style={{ color: 'white', fontWeight: 'bold' }}><input type="checkbox" id="Send_email" name="email" /> Send me email</label></div>
+                
+            </div>
+
+            <div className="col-lg-6 d-flex flex-column align-items-center">
+                <label class="">Added Items:</label>
+                {this.printHander()}
+            </div>
                 {/*
                      <div className="row pb-1">
                     <div className="input-group col-lg-4">
@@ -222,19 +211,24 @@ class Form extends Component {
                     </div>
                         </div>*/}
 
-                <div className="row pb-1">
-                  <div className="input-group col-lg-4">
+                <div className="col-lg-12 d-flex flex-column align-items-center pb-10">
                     <button
                       type="button"
                       id="submit"
+                      className='btn'
                       onClick={this.handleSubmit}
+                      style={{
+                        color: 'white',
+                        fontWeight: 'bold',
+                        border:'1px solid white'
+                      }}
                     >
-                      <h4> Search Recipes </h4>
+                     Search Recipe 
                     </button>
-                  </div>
-                </div>
               </div>
-            </div>
+
+
+                          
           </div>
         </form>
       </div>

@@ -65,16 +65,16 @@ function loginForm(props) {
       
     {/* lhs */}
       <div className='col-lg-6 d-flex align-items-center'>
-        <form className='form-control  row'>
+        <form className='form-control row'>
           
           <div className='form-outline mb-4 col-md-12'>
           <label class="form-label">Username</label><br></br>
-            <input type="text" className='form-control'value={state.username} onChange={changeValue}/>
+            <input type="text"  id="username" className='form-control'value={state.username} onChange={changeValue}/>
           </div>
 
           <div className='form-outline mb-4 col-md-12'>
           <label class="form-label">Password</label><br></br>
-            <input type="password" className='form-control'value={state.password} onChange={changeValue}/>
+            <input type="password" id="password"className='form-control' value={state.password} onChange={changeValue}/>
           </div>
 
           <div class="text-center pt-1 mb-5 pb-1 col-md-12">

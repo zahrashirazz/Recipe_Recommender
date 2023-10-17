@@ -1,7 +1,10 @@
-import React from "react";
 import "../video.css";
+import React, { useState } from 'react';
 import VideoURL from "./VideoURL";
 import background from "./componentImages/bg-card2.jpg";
+import "./login.css";
+
+
 
 // Recipe component dealing with individial recipe items
 const Recipe = (recipe) => {
@@ -35,20 +38,14 @@ const Recipe = (recipe) => {
     console.log(recipe);
   }
 
+
+
   // returns individual container for each recipe
 
   return (
-    <div
-      style={{
-        backgroundImage: `url(${background})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
-      className="col-lg-2 pb-1"
-      id="resultContainer"
-    >
-      <div className="card">
-        <div className="card-body">
+
+      <div className="card row h-50">
+        <div className="col-md-4">
           <h2>{recipe.recipe.TranslatedRecipeName}</h2>
           <h3>Time to cook: {time_to_cook} minutes</h3>
           <h3>Diet Type: {diet_type}</h3>
@@ -65,11 +62,14 @@ const Recipe = (recipe) => {
               alt={recipe.recipe.TranslatedRecipeName}
             />
           </p>
-          <div className="row"></div>
         </div>
       </div>
-    </div>
+
   );
 };
+
+
+
+
 
 export default Recipe;
