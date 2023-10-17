@@ -5,13 +5,39 @@ const auth = require('../../middleware/auth');
 const { recipeAddRequestSchema } = require('../../dto/recipe');
 const { createNewRecipe, getAllRecipe, getTotalRecipeCount, getRecipeNameAutoComplete, updateRecipe } = require('../../service/recipe');
 
+
+/**
+ * @swagger
+ * /api/v1/recipes/:
+ *   get:
+ *      tags:
+ *          - recipes
+ *      description: Returns the count of recipes and list of recipes
+ *      parameters:
+ *       - name: limit
+ *         description: limit per page
+ *         in: header
+ *         type: int
+ *      responses:
+ *          200:
+ *             description: A json containing a message
+ *             schema:
+ *                  type: object
+ *                  properties:
+ *                          message:
+ *                              type: string
+ *          401:
+ *              description: Access Denied
+ */
+// name, ingredients, cuisine in query params
 router.get("/", async function(req, res, next) {
     try {
-        const limit = req.query.limit ? parseInt(req.query.limit, 10) : 2;
+        const limit = req.query.limit ? parseInt(req.query.limit, 10) : 10;
         const page = req.query.page ? parseInt(req.query.page, 10) : 1;
 
         const recipeData = await getAllRecipe(req.query, page, limit);
         const totalData = await getTotalRecipeCount();
+
         return res.status(200).json({
             data: recipeData,
             limit: limit,
@@ -51,7 +77,7 @@ router.post("/recipe", auth, async function(req, res, next) {
     }
 });
 
-router.put("/update", auth, async function(req, res, next) {
+router.put("/recipe", auth, async function(req, res, next) {
     try {
         const { error } = recipeAddRequestSchema.validate(req.body);
         if (error) {
@@ -66,4 +92,3 @@ router.put("/update", auth, async function(req, res, next) {
 });
 
 module.exports = router;
-

@@ -6,18 +6,18 @@ module.exports = async (filters, page, limit = 10) => {
     try {
         const dynamicFilters = {};
 
-        if (filters.ingredents) {
-            dynamicFilters.CleanedIngredients = { $in: filters.ingredents };
+        if (filters.ingredients) {
+            dynamicFilters.CleanedIngredients = { $in: filters.ingredients };
         }
 
-        if (filters.Cuisine) {
+        if (filters.cuisine) {
             dynamicFilters.Cuisine = { $eq: filters.cuisine };
         }
 
         if (filters.totaltime) {
             dynamicFilters.TotalTimeInMins = { $gte: filters.totaltime }
         }
-
+        console.log(" FITLERS ", dynamicFilters);
         const recipes = Recipe.find(dynamicFilters)
             .limit(limit * 1)
             .skip((page - 1) * limit)
