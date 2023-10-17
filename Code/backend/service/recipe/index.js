@@ -1,4 +1,4 @@
-const { AddNewRecipe, GetAllRecipes, GetTotalRecipeCount } = require('../../dao/recipes');
+const { AddNewRecipe, GetAllRecipes, GetTotalRecipeCount, getRecipeNameAutoComplete } = require('../../dao/recipes');
 const logger = require('../../helpers/logger')(module);
 
 module.exports.createNewRecipe = async (recipeData) => {
@@ -7,17 +7,17 @@ module.exports.createNewRecipe = async (recipeData) => {
         return recipe;
 
     } catch (error) {
-        logger.log('error', `Adding Order, error: ${error}`);
+        logger.log('error', `Adding Recipe, error: ${error}`);
         throw (error);
     }
 }
 
-module.exports.getAllRecipe = async (page, limit) => {
+module.exports.getAllRecipe = async (filters, page, limit) => {
     try {
-        return await GetAllRecipes(page, limit);
+        return await GetAllRecipes(filters, page, limit);
 
     } catch (error) {
-        logger.log('error', `Adding Order, error: ${error}`);
+        logger.log('error', `Getting Recipe, error: ${error}`);
         throw (error);
     }
 }
@@ -27,7 +27,20 @@ module.exports.getTotalRecipeCount = async () => {
         return await GetTotalRecipeCount();
 
     } catch (error) {
-        logger.log('error', `Adding Order, error: ${error}`);
+        logger.log('error', `Getting Total Records Of Recipe, error: ${error}`);
+        throw (error);
+    }
+}
+
+module.exports.getRecipeNameAutoComplete = async (query) => {
+    try {
+        const recipe = [];
+        (await getRecipeNameAutoComplete(query)).forEach(a => {
+            recipe.push(a.TranslatedRecipeName);
+        });
+        return recipe;
+    } catch (error) {
+        logger.log('error', `Getting Recipe Name Auto Complete , error: ${error}`);
         throw (error);
     }
 }
