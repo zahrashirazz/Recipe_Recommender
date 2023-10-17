@@ -1,4 +1,4 @@
-const { AddNewRecipe, GetAllRecipes, GetTotalRecipeCount, getRecipeNameAutoComplete } = require('../../dao/recipes');
+const { AddNewRecipe, GetAllRecipes, GetTotalRecipeCount, getRecipeNameAutoComplete, UpdateRecipe } = require('../../dao/recipes');
 const logger = require('../../helpers/logger')(module);
 
 module.exports.createNewRecipe = async (recipeData) => {
@@ -41,6 +41,17 @@ module.exports.getRecipeNameAutoComplete = async (query) => {
         return recipe;
     } catch (error) {
         logger.log('error', `Getting Recipe Name Auto Complete , error: ${error}`);
+        throw (error);
+    }
+}
+
+module.exports.updateRecipe = async (updateData) => {
+    try {
+        const recipe = await UpdateRecipe(updateData);
+        return recipe;
+
+    } catch (error) {
+        logger.log('error', `Adding Order, error: ${error}`);
         throw (error);
     }
 }
