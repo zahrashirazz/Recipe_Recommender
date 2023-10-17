@@ -51,24 +51,83 @@ router.get("/", async function(req, res, next) {
 
 });
 
-
+/**
+ * @swagger
+ * /api/v1/recipes/recipe/autocomplete/:query:
+ *   get:
+ *      tags:
+ *          - recipes
+ *      description: Returns suggestions for auto-completing in search bar
+ *      parameters:
+ *       - name: query
+ *         description: input entered by the user
+ *         in: path
+ *         type: string
+ *      responses:
+ *          200:
+ *             description: A json containing a message
+ *             schema:
+ *                  type: object
+ *                  properties:
+ *                          message:
+ *                              type: string
+ *          401:
+ *              description: Access Denied
+ */
+// query in path params
 router.get("/recipe/autocomplete/:query", async function(req, res, next) {
     try {
         const query = req.params.query;
         const recipes = await getRecipeNameAutoComplete(query);
         return res.status(200).json(recipes);
     } catch (error) {
-        logger.log('error', `Recipe Creation Error Occured ${error.message}`);
+        logger.log('error', `Recipe Creation Error Occurred ${error.message}`);
         return res.status(500).json({ message: error.message })
     }
 });
 
+/**
+ * @swagger
+ * /api/v1/recipes/recipe:
+ *   post:
+ *      tags:
+ *          - recipes
+ *      description: Adds new recipe to db
+ *      parameters:
+ *       - name: name
+ *         description: title for the recipe
+ *         in: header
+ *         type: string
+ *       - name: cuisine
+ *         description: cuisine of the recipe
+ *         in: header
+ *         type: string
+ *       - name: ingredients
+ *         description: ingredients for the recipe
+ *         in: header
+ *         type: list<string>
+ *       - name: time to cook
+ *         description: time to cook the recipe
+ *         in: header
+ *         type: int
+ *      responses:
+ *          200:
+ *             description: A json containing a message
+ *             schema:
+ *                  type: object
+ *                  properties:
+ *                          message:
+ *                              type: string
+ *          401:
+ *              description: Access Denied
+ */
+// name, ingredients, cuisine, time to cook in query params
 router.post("/recipe", auth, async function(req, res, next) {
     try {
-        //const { error } = recipeAddRequestSchema.validate(req.body);
-        /*if (error) {
+        const { error } = recipeAddRequestSchema.validate(req.body);
+        if (error) {
             return res.status(400).json({ message: error.details[0].message });
-        }*/
+        }
         const recipe = await createNewRecipe(req.body);
         return res.status(200).json({ message: "Success", recipe });
     } catch (error) {
@@ -77,6 +136,42 @@ router.post("/recipe", auth, async function(req, res, next) {
     }
 });
 
+/**
+ * @swagger
+ * /api/v1/recipes/recipe:
+ *   put:
+ *      tags:
+ *          - recipes
+ *      description: Modify a recipe in the db
+ *      parameters:
+ *       - name: name
+ *         description: title for the recipe
+ *         in: header
+ *         type: string
+ *       - name: cuisine
+ *         description: cuisine of the recipe
+ *         in: header
+ *         type: string
+ *       - name: ingredients
+ *         description: ingredients for the recipe
+ *         in: header
+ *         type: list<string>
+ *       - name: time to cook
+ *         description: time to cook the recipe
+ *         in: header
+ *         type: int
+ *      responses:
+ *          200:
+ *             description: A json containing a message
+ *             schema:
+ *                  type: object
+ *                  properties:
+ *                          message:
+ *                              type: string
+ *          401:
+ *              description: Access Denied
+ */
+// name, ingredients, cuisine, time to cook in query params
 router.put("/recipe", auth, async function(req, res, next) {
     try {
         const { error } = recipeAddRequestSchema.validate(req.body);
