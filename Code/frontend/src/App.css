@@ -24,8 +24,8 @@
 }
 
 body{
-  background-image: url('Images/background-image.jpg');
-  /* background-color: darkgray; */
+  /* background-image: url('Images/background-image.jpg');
+  background-color: darkgray; */
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
