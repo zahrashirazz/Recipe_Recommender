@@ -58,10 +58,12 @@ function loginForm(props) {
   };
 
   return (
-    <div>
+  
+      <div class='gradient-custom-2 flex-1' style={{backgroundSize:"100%"}}>
       <Header loginFlag={false} />
-      <section class="h-100 gradient-form container" >
-      <div className="row d-flex justify-content-center align-items-center h-100 gradient-custom-2">
+      
+      <section class="h-100 gradient-form container mt-5 p-5" style={{}} >
+      <div className="row d-flex justify-content-center align-items-center h-100">
       
     {/* lhs */}
       <div className='col-lg-6 d-flex align-items-center'>

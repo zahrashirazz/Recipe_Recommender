@@ -31,7 +31,17 @@ body{
 }
 
 
+/* styling for from inputs */
+input {
+  width:100%;
+  padding : 12px 20px;
+  margin : 8px;
 
+  box-sizing : border-box;
+  border: 2px solid rgb(165, 161, 161);
+  border-radius: 4px;
+
+}
 
 /* Styling for the container that is carrying the input form */
 .formOutercontainer{
@@ -45,51 +55,8 @@ body{
 
 }
 
-/* setting background color for in-form containers*/
-#FormContainer1, #FormContainer3,#FormContainer5 {
-
-  background-color : gray;
-
-}
-
-#FormContainer2, #FormContainer4 {
-
-  background-color : gray;
-
-}
 
 
-
-/* Styling for the side labels*/
-.sideLabel{
-
-    float: left;
-  
-    font-size : large;
-    font-weight : bold;
-  
-    margin : 0px 0;
-    margin-left : 5%;
-    margin-top : 40px;
-    color: white;
-
-  display : inline-block;
-}
-
-/* styling for from inputs */
-input {
-  width : 10cm;
-  padding : 12px 20px;
-  margin : 8px 0;
-  margin-left: 7%;
-
-  box-sizing : border-box;
-  border: 2px solid rgb(165, 161, 161);
-  border-radius: 4px;
-  
-  font-size: medium;
-
-}
 
 /* Styling for the list that is displayed after addItem button click */
 ul.addedIngredientList{
@@ -121,6 +88,20 @@ li.addedIngredient,li.recipe_ingredient_item{
   display:inline-table;
   
 }
+.custom-list {
+  list-style: none; /* Remove list bullet points */
+  padding: 0; /* Remove default padding */
+  display: inline;
+}
+
+.list-item {
+  background-color: #f0f0f0; /* Background color */
+  padding: 8px; /* Adjust padding as needed */
+  margin: 4px; /* Add margin between list items */
+  cursor: pointer; /* Change cursor on hover */
+  display:inline-table;
+  border-radius: 8px; 
+}
 
 
 li:hover{
@@ -145,31 +126,10 @@ button:hover{
   transform: scale(1.1);
 }
 
-input[type="checkbox"] {
-    display: inline-block;
-    width: 15px;
-    vertical-align: top;
-}
 
 
 
-/* Styling for the cusine selection part */
-select{
 
-  width: 20%;
-
-  padding: 12px 20px;
-  margin: 8px 0;
-  margin-left: 5%;
-
-  box-sizing: border-box;
-  border: 2px solid rgb(165, 161, 161);
-  border-radius: 4px;
- 
-  font-size: medium;
-  text-align: center;
-
-}
 
 
 /* styling for container that holds all the recipes*/

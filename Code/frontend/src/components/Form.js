@@ -48,13 +48,13 @@ class Form extends Component {
 
     // mapping each item to be displayed as a list item
     const list_items = items.map((item) => (
-      <li onMouseDown={this.removeHandler} id={item} class="addedIngredient">
+      <li onMouseDown={this.removeHandler} id={item} class="list-item">
         {" "}
         {item}
       </li>
     ));
 
-    return <ul class="addedIngredientList">{list_items}</ul>;
+    return <ul class="custom-list">{list_items}</ul>;
   };
 
   // fucntion to add ingredients to the inredients (set datastructure) in App's state
@@ -150,7 +150,7 @@ class Form extends Component {
           
           <div class='row'>
             <div className="col-sm-12 align-items-center  mb-4">
-              <label class="form-label d-flex flex-column align-items-center" style={{ color: 'white', fontWeight: 'bold' }}>Ingredient</label>
+              <label class="form-label" style={{ color: 'white', fontWeight: 'bold' }}>Add Ingredient</label>
                 <div class='row'><input type="text" id="ingredient" class='col-md-6'/>
                 <button onClick={this.addHandler} type="button" class='col-md-6' id="addButton" 
                 style={{color: 'white',fontWeight: 'bold',border:'1px solid white'}}>
@@ -159,14 +159,14 @@ class Form extends Component {
                 </div>
             </div>
 
-            <div className="col-lg-6 d-flex flex-column align-items-center  mb-4">
+            <div className="col-md-6 mb-4">
               <label class="form-label" style={{ color: 'white', fontWeight: 'bold' }}>Cuisine</label>
                 <input type="text" id="cuisine" />
             </div>
 
-            <div className="col-lg-6 align-items-center  mb-4">
+            <div className="col-md-6 align-items-center  mb-4">
               <label class="form-label" style={{ color: 'white', fontWeight: 'bold' }}>Time to cook</label><br></br>
-              <select name="time_to_cook" id="time_to_cook">
+              <select class="form-select" name="time_to_cook" id="time_to_cook" style={{padding : '12px 20px',borderRadius: '4px'}}>
                 <option value="15">15</option>
                 <option value="30">30</option>
                 <option value="45">45</option>
@@ -178,16 +178,16 @@ class Form extends Component {
 <div>
             <div className="col-lg-12 d-flex flex-column align-items-center row">
                 <div class='col-md-6'>
-                <label class="form-label d-flex flex-column align-items-center" style={{ color: 'white', fontWeight: 'bold' }}>Enter Email ID</label></div>
+                <label class="form-labelr" style={{ color: 'white', fontWeight: 'bold' }}>Enter Email</label></div>
                 <input type="text" id="email_id" />
-                <div class='col-md-6'>
+                <div class='col-md-6 pt-3'>
                 
                 <label class="form-label d-flex flex-column align-items-center" style={{ color: 'white', fontWeight: 'bold' }}><input type="checkbox" id="Send_email" name="email" /> Send me email</label></div>
                 
             </div>
 
-            <div className="col-lg-6 d-flex flex-column align-items-center">
-                <label class="">Added Items:</label>
+            <div className="col-lg-12 d-flex flex-column align-items-center mt-2">
+                <label class="d-flex flex-column align-items-center" style={{ color: 'white', fontWeight: 'bold' }}>Added Ingredients</label>
                 {this.printHander()}
             </div>
                 {/*
