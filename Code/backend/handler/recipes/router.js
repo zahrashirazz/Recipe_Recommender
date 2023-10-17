@@ -2,7 +2,7 @@ var express = require("express");
 var router = express.Router();
 const logger = require("../../helpers/logger")(module);
 const auth = require('../../middleware/auth');
-const { recipeAddRequestSchema } = require('../../dto/receipe');
+const { recipeAddRequestSchema } = require('../../dto/recipe');
 const { createNewRecipe, getAllRecipe, getTotalRecipeCount, getRecipeNameAutoComplete, } = require('../../service/recipe');
 
 router.get("/", async function(req, res, next) {
