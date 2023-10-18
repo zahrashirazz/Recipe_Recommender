@@ -1,0 +1,221 @@
+openapi: 3.0.3
+info:
+  title: Recipe Recommender - OpenAPI 3.0
+  description: |-
+    Recipe Recommender is an application that suggests recipes based on available ingredients. It aims to make cooking easier by providing recipes that match the ingredients you have at home.
+
+    Useful links:
+    - [Recipe Recommender Repository](https://github.com/Fall-2023-SE-Group-14/Recipe_Recommender)
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000/api/v1
+tags:
+  - name: recipe
+    description: Everything about Recipe
+  - name: user
+    description: Operations about user
+paths:
+  /recipes:
+    get:
+      tags:
+        - recipe
+      summary: Get all or filtered recipes in a paginated format
+      description: This API returns the count of recipes and a list of requested recipes.
+      operationId: getRecipe
+      parameters:
+        - name: limit
+          in: query
+          description: Total number of records in a single API response
+          required: false
+          schema:
+            type: integer
+            default: 10
+        - name: page
+          in: query
+          description: Page Number of the records to be fetched
+          required: false
+          schema:
+            type: integer
+            default: 1
+        - name: ingredients
+          in: query
+          description: Ingredients for search
+          required: false
+          schema:
+            type: string
+        - name: cuisine
+          in: query
+          description: Cuisine for search
+          required: false
+          schema:
+            type: string
+        - name: name
+          in: query
+          description: Recipe Name for search
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful retrieval of all recipe data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Recipe'
+        '400':
+          description: Invalid ID supplied
+        '404':
+          description: No Recipes found
+        '405':
+          description: Validation exception
+
+  /recipes/recipe/autocomplete/{query}:
+    get:
+      tags:
+        - recipe
+      summary: Auto-complete recipe name search
+      description: This API is used for auto-completing recipe name searches.
+      operationId: autoCompleteRecipe
+      parameters:
+        - name: query
+          in: path
+          description: Recipe Name to be searched
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: List of Matched Recipe Names
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+        '400':
+          description: Invalid Recipe Name
+
+  /recipes/recipe:
+    put:
+      tags:
+        - recipe
+      summary: Update Recipe Data
+      description: Update Recipe Data
+      operationId: updateRecipeData
+      requestBody:
+        description: Update a Recipe and share your unique taste with the world.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Recipe'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Recipe'
+        '400':
+          description: Invalid status value
+    post:
+      tags:
+        - recipe
+      summary: Add a new recipe
+      description: Add a new recipe
+      operationId: addRecipe
+      requestBody:
+        description: Create a new Recipe and share your unique taste with the world.
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Recipe'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Recipe'
+        '405':
+          description: Invalid input
+  /users/authorizeUser:
+    post:
+      tags:
+        - user
+      summary: Authorize the user with creds
+      description: Authorize the user with creds
+      operationId: authUser
+      requestBody:
+        description: Authorize the user with creds
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserLogin'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '405':
+          description: Invalid input
+
+components:
+  schemas:
+    Recipe:
+      type: object
+      properties:
+        TranslatedRecipeName:
+          type: string
+        TranslatedInstructions:
+          type: string
+        TotalTimeInMins:
+          type: integer
+        Cuisine:
+          type: string
+        URL:
+          type: string
+          format: uri
+        CleanedIngredients:
+          type: array
+          items:
+            type: string
+        ImageUrl:
+          type: string
+          format: uri
+        IngredentCount:
+          type: integer
+        Calories:
+          type: integer
+    User:
+      type: object
+      properties:
+        _id:
+          type: object
+          properties:
+            $oid:
+              type: string
+        credentials:
+          type: object
+          properties:
+            username:
+              type: string
+            password:
+              type: string
+        username:
+          type: string
+        savedRecipes:
+          type: array
+          items:
+            type: string
+    UserLogin:
+      type: object
+      properties:
+        username:
+          type: string
+        password:
+          type: string

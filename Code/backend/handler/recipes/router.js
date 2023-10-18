@@ -16,8 +16,24 @@ const { createNewRecipe, getAllRecipe, getTotalRecipeCount, getRecipeNameAutoCom
  *      parameters:
  *       - name: limit
  *         description: limit per page
- *         in: header
+ *         in: query
  *         type: int
+ *       - name: page
+ *         description: page number
+ *         in: query
+ *         type: int
+ *       - name: ingredients
+ *         description: ingredients for search
+ *         in: query
+ *         type: string
+ *       - name: cuisine
+ *         description: cuisine for search
+ *         in: query
+ *         type: string
+ *       - name: name
+ *         description: recipe name for search
+ *         in: query
+ *         type: string
  *      responses:
  *          200:
  *             description: A json containing a message
@@ -53,7 +69,7 @@ router.get("/", async function(req, res, next) {
 
 /**
  * @swagger
- * /api/v1/recipes/recipe/autocomplete/:query:
+ * /api/v1/recipes/recipe/autocomplete/{query}:
  *   get:
  *      tags:
  *          - recipes
