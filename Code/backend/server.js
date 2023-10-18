@@ -9,6 +9,7 @@ const cors = require("cors");
 const recipes = require("./api/recipes.route");
 const users = require("./api/userauth.route");
 const bodyParser = require("body-parser");
+const router = require('./handler/router');
 
 const app = express();
 
@@ -20,9 +21,7 @@ app.use(
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.json());
-//Result URL
-app.use("/api/v1/recipes", recipes);
-app.use("/api/v1/users", users);
+app.use(router);
 
 //Error thrown when page is not found
 app.use("*", (req, res) => res.status(404).json({ error: "not found" }));

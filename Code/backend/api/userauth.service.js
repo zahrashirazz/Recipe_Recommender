@@ -1,4 +1,4 @@
-const userAuthModel = require("../dao/userAuthModel");
+const userAuthModel = require("../dao/users/userAuthModel");
 
 class userAuthService {
   static async getAllUsers(req, res, next) {
