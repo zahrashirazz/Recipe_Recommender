@@ -1,1 +1,4 @@
-{"credentials":{"username":"hello", "password":"world"}, "savedRecipes":[]}
+{
+  "credentials": { "username": "hello", "password": "world" },
+  "savedRecipes": []
+}

@@ -25,9 +25,9 @@ jobs:
     - name: Run Prettier
       run:  |
         cd Code/backend
-        npm run format
+        npm run format:fix
 
     - name: Check code formatting
       run: |
         cd Code/backend
-        npm run check-format
+        npm run format

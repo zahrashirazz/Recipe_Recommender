@@ -7,8 +7,8 @@
   "scripts": {
     "test": "jest --detectOpenHandles --forceExit --coverage",
     "lint": "eslint 'dao/**.js'",
-    "format": "prettier --check ./dao",
-    "format:fix": "prettier --write ./dao"
+    "format": "prettier --check .",
+    "format:fix": "prettier --write ."
   },
   "keywords": [],
   "author": "",
@@ -44,6 +44,8 @@
   },
   "jest": {
     "testTimeout": 40000,
-    "coveragePathIgnorePatterns": ["<rootDir>/adapter/"]
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/adapter/"
+    ]
   }
 }

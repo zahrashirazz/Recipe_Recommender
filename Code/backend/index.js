@@ -1,14 +1,13 @@
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const router = require('./handler/router');
-const logger = require('./helpers/logger')(module);
-const mongoose = require('mongoose');
+const router = require("./handler/router");
+const logger = require("./helpers/logger")(module);
+const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const swaggerUi = require('swagger-ui-express');
-const swaggerJSDoc = require('swagger-jsdoc');
-const estabDbConnection = require('./helpers/dbConnect.js');
-
+const swaggerUi = require("swagger-ui-express");
+const swaggerJSDoc = require("swagger-jsdoc");
+const estabDbConnection = require("./helpers/dbConnect.js");
 
 dotenv.config();
 //DB port number
@@ -28,21 +27,27 @@ const swaggerOptions = {
   swaggerDefinition: {
     info: {
       version: "v1",
-      title: 'Recipe Recommender API',
-      description: 'This is a Software Engineering project',
+      title: "Recipe Recommender API",
+      description: "This is a Software Engineering project",
       contact: {
-        name: "SE Project Team 14 2023"
+        name: "SE Project Team 14 2023",
       },
     },
   },
-  apis: ["./handler/**/*.js"]
-}
+  apis: ["./handler/**/*.js"],
+};
 
 const swaggerDocs = swaggerJSDoc(swaggerOptions);
-app.use('/api-doc', swaggerUi.serve, swaggerUi.setup(swaggerDocs, { explorer: false, customSiteTitle: "Recipe Recommender + Api", customCss: '.swagger-ui .topbar {display:none}' }));
-app.use('/api', router);
-
-
+app.use(
+  "/api-doc",
+  swaggerUi.serve,
+  swaggerUi.setup(swaggerDocs, {
+    explorer: false,
+    customSiteTitle: "Recipe Recommender + Api",
+    customCss: ".swagger-ui .topbar {display:none}",
+  })
+);
+app.use("/api", router);
 
 estabDbConnection();
 
