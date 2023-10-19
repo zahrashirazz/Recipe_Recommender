@@ -21,8 +21,8 @@ module.exports.recipeAddRequestSchema = Joi.object({
     TranslatedInstructions: Joi.string().required(),
     TotalTimeInMins: Joi.number().required(),
     Cuisine: Joi.string().required(),
-    URL: Joi.string().uri().required(),
+    URL: Joi.string().uri(),
     CleanedIngredients: Joi.array().items(Joi.string()).required(),
     ImageUrl: Joi.string().uri().required(),
-    IngredentCount: Joi.number().required()
+    IngredientCount: Joi.number().required()
 });
