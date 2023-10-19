@@ -14,6 +14,7 @@ import {
 } from "react-router-dom";
 import login from "./components/login";
 import Footer from "./components/Footer";
+import HomePage from "./components/HomePage";
 // Main component of the project
 class App extends Component {
   // constructor for the App Component
@@ -156,8 +157,15 @@ class App extends Component {
           <Footer/>
           </Route>
 
+          <Route path="/homepage">
+          <Header loginFlag={this.state.loginFlag} />
+          <HomePage />
+          <Footer/>
+          </Route>
           
-          <Redirect exact from="/" to="login" />
+
+          
+          <Redirect exact from="/" to="homepage" />
         </Switch>
       </Router>
     );
