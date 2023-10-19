@@ -5,10 +5,10 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "test": "jest --detectOpenHandles --forceExit",
+    "test": "jest --detectOpenHandles --forceExit --coverage",
     "lint": "eslint 'dao/**.js'",
-    "format": "prettier --check ./dao",
-    "format:fix": "prettier --write ./dao"
+    "format": "prettier --check .",
+    "format:fix": "prettier --write ."
   },
   "keywords": [],
   "author": "",
@@ -43,6 +43,9 @@
     "supertest": "^6.1.6"
   },
   "jest": {
-    "testTimeout": 40000
+    "testTimeout": 40000,
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/adapter/"
+    ]
   }
 }

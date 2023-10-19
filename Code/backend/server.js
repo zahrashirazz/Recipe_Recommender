@@ -9,7 +9,7 @@ const cors = require("cors");
 const recipes = require("./api/recipes.route");
 const users = require("./api/userauth.route");
 const bodyParser = require("body-parser");
-const router = require('./handler/router');
+const router = require("./handler/router");
 
 const app = express();
 

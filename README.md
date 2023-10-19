@@ -12,7 +12,7 @@ https://github.com/thosaniparth/Recipe_Recommender/blob/28f9f89192f8c438e2b1a9e7
 [![GitHub stars](https://badgen.net/github/stars/thosaniparth/Recipe_Recommender)](https://badgen.net/github/stars/thosaniparth/Recipe_Recommender)
 ![Github closes issues](https://img.shields.io/github/issues-closed-raw/thosaniparth/Recipe_Recommender)
 [![Build Status](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/coverage.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender)
-[![codecov](https://codecov.io/gh/thosaniparth/Recipe_Recommender/branch/master/graph/badge.svg?token=M48I2E3PLL)](https://codecov.io/gh/thosaniparth/Recipe_Recommender)
+[![codecov](https://codecov.io/gh/Fall-2023-SE-Group-14/Recipe_Recommender/graph/badge.svg?token=0N0YTA4RDT)](https://codecov.io/gh/Fall-2023-SE-Group-14/Recipe_Recommender)
 [![Respost - Write comment to new Issue event](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Respost.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/Respost.yml)
 [![Check the source code](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/codeFormatter.yml/badge.svg)](https://github.com/thosaniparth/Recipe_Recommender/actions/workflows/codeFormatter.yml)
 ![GitHub contributors](https://img.shields.io/github/contributors/thosaniparth/Recipe_Recommender)
@@ -63,6 +63,9 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 - [Node.js v14.7.6](https://nodejs.org/en/download/)
 - [NPM v6.14.15](https://nodejs.org/en/download/)
 
+## Test Coverage Report
+![Sunburst Chart](https://codecov.io/gh/Fall-2023-SE-Group-14/Recipe_Recommender/graphs/sunburst.svg?token=0N0YTA4RDT)
+
 ## Project Setup Steps:
 
 ### Installation:
@@ -103,112 +106,112 @@ Source documentation can be found at: [Recipe Recommender Docs] https://github.c
 <table border="2" bordercolorlight="#b9dcff" bordercolordark="#006fdd">
 
   <tr style="background: #010203 ">
-    <td valign="left"> 
+    <td valign="left">
       <p style="color: #FF7A59"> Login Page
       </p>
-      <a href="./images/prev_stage1.jpg"> 
-        <img src="./images/Screen Shot 2021-12-04 at 5.12.44 PM.png" >      
+      <a href="./images/prev_stage1.jpg">
+        <img src="./images/Screen Shot 2021-12-04 at 5.12.44 PM.png" >
       </a>
     </td>
-    <td valign="left"> 
+    <td valign="left">
       <p style="color: #FF7A59"> Search Recipe
       </p>
       <a href="./images/current_stage1.png">
-        <img src="./images/current_stage1.png"> 
+        <img src="./images/current_stage1.png">
       </a>
     </td>
   </tr>
-  
-  <tr style="background: #010203;"> 
+
+  <tr style="background: #010203;">
     <td valign="left">
       <p style="color: #FF7A59"> Added time to cook and vegeterian filter
-      </p>  
+      </p>
       <a href="./images/Screen Shot 2021-12-04 at 5.13.08 PM.png">
-        <img src="./images/Screen Shot 2021-12-04 at 5.13.08 PM.png">    
+        <img src="./images/Screen Shot 2021-12-04 at 5.13.08 PM.png">
       </a>
     </td>
-    <td valign="left"> 
+    <td valign="left">
       <p style="color: #FF7A59"> Search by ingredients
       </p>
       <a href="./images/current_stage2.png">
-        <img src="./images/current_stage2.png">          
+        <img src="./images/current_stage2.png">
       </a>
     </td>
 
-  </tr> 
-  
-  <tr style="background: #010203;"> 
+  </tr>
+
+  <tr style="background: #010203;">
     <td valign="left">
      <p style="color: #FF7A59"> Add new recipe form
       </p>
      <a href="./images/Screen Shot 2021-12-04 at 5.12.59 PM.png">
-        <img src="./images/Screen Shot 2021-12-04 at 5.12.59 PM.png"> 
-      </a> 
-    </td> 
+        <img src="./images/Screen Shot 2021-12-04 at 5.12.59 PM.png">
+      </a>
+    </td>
     <td valign="left">
      <p style="color: #FF7A59"> View Recipes
       </p>
      <a href="./images/current_stage4.png">
-        <img src="./images/current_stage4.png"> 
-      </a> 
-    </td> 
-  </tr> 
-  
-   <tr style="background: #010203;"> 
+        <img src="./images/current_stage4.png">
+      </a>
+    </td>
+  </tr>
+
+   <tr style="background: #010203;">
     <td valign="left">
      <p style="color: #FF7A59"> View recipes with time to cook
       </p>
      <a href="./images/Screen Shot 2021-12-04 at 5.17.18 PM.png">
-        <img src="./images/Screen Shot 2021-12-04 at 5.17.18 PM.png"> 
-      </a> 
-    </td> 
+        <img src="./images/Screen Shot 2021-12-04 at 5.17.18 PM.png">
+      </a>
+    </td>
     <td valign="left">
      <p style="color: #FF7A59"> View Recipes with calorie information
       </p>
      <a href="./images/Screen Shot 2021-12-04 at 5.17.18 PM.png">
-        <img src="./images/Screen Shot 2021-12-04 at 5.17.18 PM.png"> 
-      </a> 
-    </td> 
+        <img src="./images/Screen Shot 2021-12-04 at 5.17.18 PM.png">
+      </a>
+    </td>
   </tr>
-   
+
    <tr style="background: #010203 ">
-    <td valign="left"> 
+    <td valign="left">
       <p style="color: #FF7A59"> View Recipes with diet-type information
       </p>
-      <a href="./images/diet_type.png"> 
-        <img src="./images/diet_type.png" >      
+      <a href="./images/diet_type.png">
+        <img src="./images/diet_type.png" >
       </a>
 <!--     </td>
   </tr>
    <tr style="background: #010203 "> -->
-    <td valign="left"> 
+    <td valign="left">
       <p style="color: #FF7A59"> Screenshot of recipe results receieved on email
       </p>
-      <a href="./images/recipes-email.jpeg"> 
-        <img src="./images/recipes-email.jpeg" >      
+      <a href="./images/recipes-email.jpeg">
+        <img src="./images/recipes-email.jpeg" >
       </a>
     </td>
   </tr>
    <tr style="background: #010203 ">
-    <td valign="left"> 
+    <td valign="left">
       <p style="color: #FF7A59"> Screenshot of users collection created in mongo
       </p>
-      <a href="./images/user-collection-db.png"> 
-        <img src="./images/user-collection-db.png" >      
+      <a href="./images/user-collection-db.png">
+        <img src="./images/user-collection-db.png" >
       </a>
     </td>
 <!--   </tr>
    </tr>
    <tr style="background: #010203 "> -->
-    <td valign="left"> 
+    <td valign="left">
       <p style="color: #FF7A59"> Screenshot of recipe collections in mongo
       </p>
-      <a href="./images/db-screenshot.jpeg"> 
-        <img src="./images/db-screenshot.jpeg" >      
+      <a href="./images/db-screenshot.jpeg">
+        <img src="./images/db-screenshot.jpeg" >
       </a>
     </td>
   </tr>
- 
+
  </table>
 
 ## Roadmap
@@ -268,7 +271,7 @@ Please see our [CONTRIBUTING.md](https://github.com/PvPatel-1001/Recipe_Recommen
     <td align="center"><a href="https://github.com/thosaniparth"><img src="https://avatars.githubusercontent.com/thosaniparth" width="75px;" alt=""/><br /><sub><b>Parth Thosani</b></sub></a><br /></td>
     <td align="center"><a href="https://github.com/freakNewton"><img src="https://avatars.githubusercontent.com/freakNewton" width="75px;" alt=""/><br /><sub><b>Nisarg Shah</b></sub></a><br /></td>
      <td align="center"><a href="https://github.com/sharathKV"><img src="https://avatars.githubusercontent.com/sharathKV" width="75px;" alt=""/><br /><sub><b>SharathKV</b></sub></a><br /></td>
-   
+
   </tr>
 </table>
 
