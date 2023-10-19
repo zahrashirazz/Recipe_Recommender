@@ -10,7 +10,7 @@ async function completeChatMessage(ingredients, cuisine, name) {
         "URL": "",
         "CleanedIngredients": [],
         "ImageUrl": "",
-        "IngredentCount": 1,
+        "IngredientCount": 1,
         "Calories": 0
     };
     let userMessage = "Generate a receipe "

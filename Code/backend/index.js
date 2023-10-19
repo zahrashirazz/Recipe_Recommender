@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 const dotenv = require("dotenv");
 const swaggerUi = require('swagger-ui-express');
 const swaggerJSDoc = require('swagger-jsdoc');
+const estabDbConnection = require('./helpers/dbConnect.js');
 
 
 dotenv.config();
@@ -42,22 +43,7 @@ app.use('/api-doc', swaggerUi.serve, swaggerUi.setup(swaggerDocs, { explorer: fa
 app.use('/api', router);
 
 
-/**
- * Establish Connection to MongoDB
- */
-const estabDbConnection = async () => {
-  try {
-    await mongoose.connect(process.env.RECIPES_DB_URI, {
-      maxPoolSize: 50,
-      wtimeoutMS: 2500,
-      useNewUrlParser: true,
-    });
-    logger.log('info', 'Mongo DB Connection Established');
-  } catch (error) {
-    console.log('ERROR DB CONNECTION MONGO', error);
-    logger.log('error', `Mongo DB Connection ERROR, ${JSON.stringify(error)}`);
-  }
-};
+
 estabDbConnection();
 
 //Error thrown when page is not found
