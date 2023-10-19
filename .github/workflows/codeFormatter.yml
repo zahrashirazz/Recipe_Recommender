@@ -22,8 +22,12 @@ jobs:
           cd Code/backend
           npm install
 
-    - name: Run Prettier on backend code
-      run: npm run format -- --dir "Code/backend"
+    - name: Run Prettier
+      run:  |
+        cd Code/backend
+        npm run format
 
-    - name: Check code formatting on backend code
-      run: npm run check-format -- --dir "Code/backend"
+    - name: Check code formatting
+      run: |
+        cd Code/backend
+        npm run check-format
