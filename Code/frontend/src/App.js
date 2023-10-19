@@ -103,6 +103,7 @@ class App extends Component {
           calories: calories,
         },
       });
+
       this.setState({
         recipeList: response.data.recipes,
       });
