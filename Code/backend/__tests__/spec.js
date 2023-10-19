@@ -16,7 +16,7 @@ const request = require("supertest")("http://localhost:8000/api/v1");
 const estabDbConnection = require("../helpers/dbConnect");
 
 chai.use(chaiHttp);
-estabDbConnection();
+//estabDbConnection();
 describe("checking api", () => {
 
   it("is the API is functional test 1", async function () {
