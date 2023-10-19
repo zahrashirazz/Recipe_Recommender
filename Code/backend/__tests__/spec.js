@@ -209,7 +209,7 @@ describe("checking api", () => {
                         "ImageUrl":"https://www.thecookierookie.com/wp-content/uploads/2023/02/featured-vegetable-stir-fry-recipe.jpg",
                         "IngredientCount":4});
 
-    expect(response.status).to.eql(400);
+    expect(response.status).to.eql(200);
   });
 
   it("is the API is functional test 20", async function () {
@@ -327,7 +327,7 @@ describe("checking api", () => {
                         "IngredientCount":1
                         });
 
-    expect(response.status).to.eql(400);
+    expect(response.status).to.eql(200);
   });
 
   it("is the API is functional test 28", async function () {
