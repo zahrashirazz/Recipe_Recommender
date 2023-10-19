@@ -344,4 +344,21 @@ describe("checking api", () => {
 
     expect(response.status).to.eql(400);
   });
+
+  it("valid password", async function () {
+    const response = await request
+      .post("/users/authorizeUser")
+      .send({ username: "hello", password: "world" });
+
+    expect(response.status).to.eql(200);
+  });
+
+  it("invalid password", async function () {
+    const response = await request
+      .post("/users/authorizeUser")
+      .send({ username: "hello", password: "wrong" });
+
+    expect(response.status).to.eql(500);
+  });
+
 });
