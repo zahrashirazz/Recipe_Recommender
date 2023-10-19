@@ -23,12 +23,40 @@
 
 }
 
-body{
-  /* background-image: url('Images/background-image.jpg');
-  background-color: darkgray; */
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+/* Navbar */
+.navbar-ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
 }
+
+.nav-item-right {
+  margin-left: auto; 
+}
+.headerStyles{
+  font-weight: bold;
+  color: white;
+  font-size: 1.5rem; 
+  display: flex;
+  align-items: center;
+  
+}
+
+.text-rose {
+  color: #dd3675; 
+}
+
+/* body{
+
+  background: #fccb90;
+  background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+  background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+
+  background-repeat: no-repeat;
+  background-size: 100% 100%; 
+} */
 
 
 /* styling for from inputs */
@@ -43,80 +71,34 @@ input {
 
 }
 
-/* Styling for the container that is carrying the input form */
-.formOutercontainer{
-  width : 90%;
-
-  margin-left : 5%;
-
-  border-radius : 10px;
-  border-color : black;
-  border-style : solid;
-
-}
 
 
 
 
-/* Styling for the list that is displayed after addItem button click */
-ul.addedIngredientList{
-
-  margin-left: 5%;
-  margin-bottom: 5%;
-  
-  display: inline;
-  height: fit-content;
-
-}
-
-/* Stylings to handle any list items in the entire page span*/
-
-li.addedIngredient,li.recipe_ingredient_item{
- 
-  padding: 12px 20px;
-
-  margin: 8px 0;
-  margin-left: 2%;
-
-  box-sizing: border-box;
-  background-color: Transparent;
-  border: 2px solid rgb(165, 161, 161);
-  border-radius: 4px;
-  color: white;
-  border-color: black;
-  font-size: medium;
-  display:inline-table;
-  
-}
 .custom-list {
-  list-style: none; /* Remove list bullet points */
-  padding: 0; /* Remove default padding */
+  list-style: none; 
+  padding: 0; 
   display: inline;
 }
 
 .list-item {
-  background-color: #f0f0f0; /* Background color */
-  padding: 8px; /* Adjust padding as needed */
-  margin: 4px; /* Add margin between list items */
-  cursor: pointer; /* Change cursor on hover */
+  background-color: #f0f0f0; 
+  padding: 8px;
+  margin: 4px;
+  cursor: pointer; 
   display:inline-table;
   border-radius: 8px; 
 }
 
 
 li:hover{
-
-  /*background-color:yellow;
-  color: white;*/
   opacity: 0.8;
-
 }
 
 
 /* stylings for button in general */
 button{
-
-  background-color:Transparent ;
+  background:transparent;
   transition: transform .5s ease;
 }
 
@@ -132,9 +114,9 @@ button:hover{
 
 
 
-/* styling for container that holds all the recipes*/
-#resultOuterContainer{
-  width: 90%;
+/* styling for container that holds all the recipes
+.resultOuterContainer{
+  width: 150%;
 
   margin-left: 5%;
   margin-top: 30px;
@@ -148,7 +130,7 @@ button:hover{
   border-style: solid;
   background-color: darkgrey;
   
-}
+} */
 .gradient-custom-2 {
   /* fallback for old browsers */
   background: #fccb90;
@@ -186,7 +168,7 @@ button:hover{
 } */
 
 /* Styling for the image in the results*/
-img{
+/* img{
 
   margin-top: 20px;
   margin-left: 40%;
@@ -198,78 +180,45 @@ img{
   border-color:cornflowerblue;
   border-style: solid;
 
-}
-
-/* Styling for the list that holds recipe ingredients*/
-ul.result_ingredients{
-
-  display:flow-root;
-
-}
-
-/* Styling for the individial list items in recipe ingredient list*/
-li.recipe_ingredient_item{
-
-  /*background-color: #AA0000;
-  color: white;*/
-
-  border: 2px solid rgb(165, 161, 161);
-  border-radius: 4px;
-  border-color: black;
-  /* background-color: brown; */
-  opacity: 0.5;
-  color: white;
-  font-size: medium;
-  border-width: initial;
-  transition: transform .5s ease;
-}
-
-li.recipe_ingredient_item: hover{
-transform: scale(1.1);
-}
+} */
 
 
 
-ul.result_instructions{
-
-  
-
-}
-
-/* Styling for the individial list items in recipe ingredient list*/
-li.translated_instruction_item{
 
 
-  
-}
-
-
-.navbar-ul {
+/* .navbar-ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
   height: 3rem;
+} */
+
+
+
+
+
+.containerA {
+ background-color:  #fff;
+ position: relative;
+ display: grid;
+ border-radius: 5px;
+ box-shadow: 0 15px 20px rgba(0, 0, 0, 0.356);
 }
 
-.nav-brand {
-  font-size: large;
-  font-weight: bold;
+ .h2 {
+  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #818189;
 }
 
-.navbar-li {
-  float: left;
-}
-
-.navbar-li, .navbar-li-right {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.navbar-li-right {
-  float: right;
-}
+ .p {
+  font-size: 0.9rem;
+ }
+ .container__text__timing {
+  display: flex;
+  margin: 20px 0 10px;
+   margin-right: 40px;
+  }

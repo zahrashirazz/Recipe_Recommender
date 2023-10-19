@@ -176,9 +176,9 @@ class Form extends Component {
           </div>
 
 <div>
-            <div className="col-lg-12 d-flex flex-column align-items-center row">
+            <div className="" style={{display:'none'}}>
                 <div class='col-md-6'>
-                <label class="form-labelr" style={{ color: 'white', fontWeight: 'bold' }}>Enter Email</label></div>
+                <label class="form-label" style={{ color: 'white', fontWeight: 'bold' }}>Enter Email</label></div>
                 <input type="text" id="email_id" />
                 <div class='col-md-6 pt-3'>
                 

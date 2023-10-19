@@ -9,6 +9,6 @@ const RecipeList = ({ recipes }) => {
   });
 
   // all the recipes are being returned in the form of a table
-  return <table id="resultOuterContainer"> {renderedRecipes}</table>;
+  return <p>{renderedRecipes}</p>;
 };
 export default RecipeList;

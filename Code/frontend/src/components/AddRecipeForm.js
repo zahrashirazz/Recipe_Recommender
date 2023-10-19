@@ -39,7 +39,7 @@ class Form extends Component {
 
     // returns jsx element
     return (
-      <div class=" container gradient-custom-2 mb-5 mt-5">
+      <div class=" container gradient-custom-2 mb-5 mt-5 border">
         <form class='row p-5' onSubmit={this.handleRecipeSubmit}>
 
         <div className="col-lg-6 d-flex flex-column align-items-center">
