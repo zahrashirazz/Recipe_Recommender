@@ -2,8 +2,6 @@ name: Style Checker and Prettify Code
 on:
   pull_request:
   push:
-    branches:
-    - master
 
 jobs:
   prettier:
