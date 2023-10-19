@@ -87,90 +87,36 @@ describe("checking api", () => {
 
     expect(response.status).to.eql(200);
     });
-/*
-  it("is the API is functional test 8", async function () {
-    const response = await request.get(
-      "/recipes?CleanedIngredients={salt, mango}"
-    );
+
+  it("is the API is functional test 11", async function () {
+    const response = await request.put("/recipes/recipe")
+                        .send({
+                        "TranslatedRecipeName":"Jay's Subji",
+                        "TranslatedInstructions":"Fry the veggies in oil and add salt and spices as reqd",
+                        "TotalTimeInMins":15,
+                        "Cuisine":"Indian",
+                        "CleanedIngredients": ["veggies","oil","spices","salt","extras"],
+                        "ImageUrl":"https://www.thecookierookie.com/wp-content/uploads/2023/02/featured-vegetable-stir-fry-recipe.jpg",
+                        "URL":"https://www.thecookierookie.com/wp-content/uploads/2023/02/featured-vegetable-stir-fry-recipe.jpg",
+                        "IngredientCount":4
+                        });
 
     expect(response.status).to.eql(200);
-  });
+    });
 
-  it("is the API is functional test 9", async function () {
-    const response = await request.get("/recipes?CleanedIngredients={}");
-
-    expect(response.status).to.eql(200);
-  });
-
-  it("is the API is fetching the filtered ingredient", async function () {
-    const response = await request.get("/recipes?CleanedIngredients=pear");
-
-    expect(response.body.filters.CleanedIngredients).to.eql("pear");
-  });
-
-  it("is the API is fetching calories", async function () {
-    const response = await request.get(
-      "/recipes?Cleaned-Ingredients=salt,mint,peanuts"
-    );
-
-    expect(response.body.calories).to.not.eql(0);
-  });
-
-  it("is the API is fetching calories", async function () {
-    const response = await request.get(
-      "/recipes?Cleaned-Ingredients=mAnGo,SaLT,pEanUTs"
-    );
-
-    expect(response.body.calories).to.not.eql(0);
-  });
-
-  it("is the email being sent to the recipent", async function () {
-    const response = await request.get(
-      "/recipes?Email='thosaniparth0@gmail.com',Flag=true,CleanedIngredients=mango"
-    );
+  it("is the API is functional test 12", async function () {
+    const response = await request.put("/recipes/recipe")
+                        .send({
+                        "TranslatedRecipeName":"Does not exist",
+                        "TranslatedInstructions":"No action",
+                        "TotalTimeInMins":15,
+                        "Cuisine":"None",
+                        "CleanedIngredients": ["none"],
+                        "ImageUrl":"https://www.thecookierookie.com/wp-content/uploads/2023/02/featured-vegetable-stir-fry-recipe.jpg",
+                        "URL":"https://www.thecookierookie.com/wp-content/uploads/2023/02/featured-vegetable-stir-fry-recipe.jpg",
+                        "IngredientCount":1
+                        });
 
     expect(response.status).to.eql(200);
-  });
-
-  it("is the API is fetching users", async function () {
-    const response = await request.get("/users/getAllUsers");
-
-    expect(response.status).to.eql(200);
-  });
-  it("is the API is authorizing users", async function () {
-    const response = await request
-      .post("/users/authorizeUser")
-      .send({ username: "hello", password: "world" });
-
-    expect(response.status).to.eql(200);
-  });
-  it("invalid username", async function () {
-    const response = await request
-      .post("/users/authorizeUser")
-      .send({ username: "hello1", password: "world" });
-
-    expect(response.status).to.eql(404);
-  });
-  it("invalid password", async function () {
-    const response = await request
-      .post("/users/authorizeUser")
-      .send({ username: "hello", password: "world1" });
-
-    expect(response.status).to.eql(500);
-  });
-  it("save recipe not working", async function () {
-    const response = await request
-      .post("/users/saveRecipe")
-      .send({ username: "hello", recipeID: "614f8fcc0f571ff03e10ba65" });
-
-    expect(response.status).to.eql(404);
-  });
-
-  it("invalid password", async function () {
-    const response = await request
-      .post("/users/authorizeUser")
-      .send({ username: "hello", password: "world12" });
-
-    expect(response.status).to.eql(500);
-  });*/
+    });
 });
