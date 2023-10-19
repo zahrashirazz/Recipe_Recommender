@@ -34,7 +34,7 @@ const Recipe = (recipe) => {
   ingredients_seperated = ingredients_seperated.map((ingredient) => (
     <li style={{textTransform:'capitalize',color: '#b44593',fontWeight:'250',listStyleType:'none'}} > {ingredient}</li>
   ));
-  <p>{translated_instruction}</p>;
+  <p style={{color: '#b44593',fontWeight:'250'}}>{translated_instruction}</p>;
 
   function saveRecipe() {
     console.log(recipe);
@@ -56,7 +56,7 @@ const Recipe = (recipe) => {
     <div className="row containerA" style={{background:'white' , borderRadius:'8px'}}  >
           <div className="row col-md-6 ">
             <div className='col-md-6'>
-              <img className='p-2'style={{width:'100%'}} src={recipe.recipe["image-url"]} alt={recipe.recipe.TranslatedRecipeName}/>
+              <img className='p-2'style={{width:'100%', height:'100%'}} src={recipe.recipe["image-url"]} alt={recipe.recipe.TranslatedRecipeName}/>
             </div>
 
             <div className='col-md-6 pt-3'>
@@ -74,20 +74,18 @@ const Recipe = (recipe) => {
             {/* <Link path='/recipeExpand'>Go to Recipe</Link> */}
           </div>
 
-          <div className="col-md-6">
+          < div className="col-md-6 expText">
             {isExpanded && (
               <div className=" pt-3">
-                <h3 style={{textTransform:'capitalize',color: '#b44593',fontWeight: 'bold'}}>Diet Type - 
-                <span style={{marginBottom:'5px'}}>{diet_type}</span></h3>
+                <h4 style={{textTransform:'capitalize',color: '#b44593'}}>Diet Type - 
+                <span style={{marginBottom:'5px'}}>{diet_type}</span></h4>
                 <p className="card.text">
-                  <h3 style={{textTransform:'capitalize',color: '#b44593'}}>Ingredients - </h3>
-                  <br />
-                  <ul class="result_ingredients"> <li>{ingredients_seperated}</li> </ul>
-                  <h3 style={{textTransform:'capitalize',color: '#b44593'}}>Calories - 
-                  <span style={{marginBottom:'5px',fontSize:'1rem'}}>{calories}</span></h3>
-                  <h3 style={{textTransform:'capitalize',color: '#b44593'}}>Instructions: </h3>
-                  <br />
-                  <span style={{marginBottom:'5px',fontSize:'1rem'}}><ol class=""> {translated_instruction} </ol></span>
+                  <h4 style={{textTransform:'capitalize',color: '#b44593'}}>Ingredients - </h4>
+                  <ul style={{listStyleType:'none'}}> <li>{ingredients_seperated}</li> </ul>
+                  <h4 style={{textTransform:'capitalize',color: '#b44593'}}>Calories - 
+                  <span style={{marginBottom:'5px'}}>{calories}</span></h4>
+                  <h4 style={{textTransform:'capitalize',color: '#b44593'}}>Instructions: </h4>
+                  <span style={{marginBottom:'5px'}}><ol classname="" > {translated_instruction} </ol></span>
                 </p></div>
             )}
           </div>
