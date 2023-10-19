@@ -17,15 +17,13 @@ jobs:
       with:
         node-version: '14'
 
-    - name: Change Directory to Backend
-      run: |
-          cd Code/backend
-
     - name: Install dependencies
-      run: npm install
+      run:  |
+          cd Code/backend
+          npm install
 
-    - name: Run Prettier
-      run: npm run format
+    - name: Run Prettier on backend code
+      run: npm run format -- --dir "Code/backend"
 
-    - name: Check code formatting
-      run: npm run check-format
+    - name: Check code formatting on backend code
+      run: npm run check-format -- --dir "Code/backend"
