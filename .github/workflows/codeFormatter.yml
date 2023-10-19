@@ -1,18 +1,31 @@
-name: Check the source code
+name: Prettier Formatting
+
 on:
   pull_request:
   push:
+
 jobs:
-  test:
-    name: Check the source code
+  prettier:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Install packages
-        run: |
-            cd Code/backend
-            npm install
-      - name: Code Formatter
-        run: |
-            cd Code/backend
-            npm run format
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Change Directory to Backend
+      run: |
+          cd Code/backend
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run Prettier
+      run: npm run format
+
+    - name: Check code formatting
+      run: npm run check-format
