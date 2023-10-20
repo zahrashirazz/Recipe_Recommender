@@ -91,7 +91,7 @@ This is an overview of the directory structure of the project repository:
 |-----|---------|
 |Video|2min video of new functionality, showing a significant delta from prior.| 
 |Workload is spread over the whole team (one team member is often Xtimes more productive than the others... 
-but nevertheless, here is a track record that everyone is contributing a lot)|evidence in GH| OK
+but nevertheless, here is a track record that everyone is contributing a lot)|evidence in GH| OK |
 |Number of commits|in GH|
 |Number of commits: by different people|in GH|
 |Issues reports: there are **many**|
