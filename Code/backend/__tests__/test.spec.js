@@ -9,7 +9,7 @@ let server = require("../index");
 let should = chai.should();
 const userAuthModel = require("../dao/userAuthModel");
 const recipesDAO = require("../dao/recipesDAO");
-const request = require("supertest")("http://localhost:5000/api/v1");
+const request = require("supertest")("http://localhost:8000/api/v1");
 // var util= require('util');
 // var encoder = new util.TextEncoder('utf-8');
 //
