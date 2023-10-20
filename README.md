@@ -38,7 +38,7 @@ Experience the joy of cooking with Recipe Recommender, and never wonder what to 
 This is an overview of the directory structure of the project repository:
 
 - **/src**: Contains the main source code for the project.
-- **/docs**: Documentation files, including READMEs, user manuals, and API documentation.
+- **/docs**: Documentation files, including READMEs, user manuals, API documentation, and SCORE CARD
 - **/tests**: Unit tests, integration tests, and test-related code.
 - **/data**: Datasets, data files, or data preprocessing scripts.
 - **/config**: Configuration files for the project.
