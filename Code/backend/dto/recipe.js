@@ -23,5 +23,5 @@ module.exports.recipeAddRequestSchema = Joi.object({
   URL: Joi.string().uri(),
   CleanedIngredients: Joi.array().items(Joi.string()).required(),
   ImageUrl: Joi.string().uri().required(),
-  IngredientCount: Joi.number().required(),
+  IngredientCount: Joi.number(),
 });

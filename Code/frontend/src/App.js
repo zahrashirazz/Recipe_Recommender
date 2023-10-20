@@ -13,6 +13,8 @@ import {
   Switch,
 } from "react-router-dom";
 import login from "./components/login";
+import Footer from "./components/Footer";
+import HomePage from "./components/HomePage";
 // Main component of the project
 class App extends Component {
   // constructor for the App Component
@@ -38,13 +40,12 @@ class App extends Component {
 
   handleRecipeSubmit = async (formDict) => {
     const addRecipeDetails = {
-      "Cleaned-Ingredients": formDict["recipe_ingredients"],
+      CleanedIngredients: formDict["recipe_ingredients"].split(","),
       Cuisine: formDict["recipe_cuisine"],
       TranslatedRecipeName: formDict["recipe_name"],
       TranslatedInstructions: formDict["recipe_instructions"],
       TotalTimeInMins: Number(formDict["recipe_time"]),
-
-      "image-url": formDict["recipe_url"],
+      ImageUrl: formDict["recipe_url"],
     };
     this.postRecipeDetails(addRecipeDetails);
   };
@@ -53,7 +54,7 @@ class App extends Component {
     try {
       console.log("inside app.js", addRecipeDetails);
       const response = await recipeDB.post(
-        "recipes/Addrecipes",
+        "recipes/recipe",
         addRecipeDetails
       );
       // this.setState({
@@ -103,9 +104,8 @@ class App extends Component {
           calories: calories,
         },
       });
-
       this.setState({
-        recipeList: response.data.recipes,
+        recipeList: response.data.data,
       });
     } catch (err) {
       console.log(err);
@@ -138,7 +138,7 @@ class App extends Component {
 
           <Route path="/home">
             <Header loginFlag={this.state.loginFlag} />
-            <AddRecipeForm sendRecipeFormData={this.handleRecipeSubmit} />
+
             <Form sendFormData={this.handleSubmit} />
             {/* <AddRecipeForm sendRecipeFormData={this.handleRecipeSubmit} /> */}
 
@@ -147,8 +147,24 @@ class App extends Component {
                   */}
 
             <RecipeList recipes={this.state.recipeList} />
+            <Footer />
           </Route>
-          <Redirect exact from="/" to="login" />
+
+          <Route path="/addRecipe">
+            <Header loginFlag={this.state.loginFlag} />
+            <AddRecipeForm sendRecipeFormData={this.handleRecipeSubmit} />
+            <Footer />
+          </Route>
+
+          <Route path="/homepage">
+            <Header loginFlag={this.state.loginFlag} />
+            <HomePage />
+            <Footer />
+          </Route>
+
+
+
+          <Redirect exact from="/" to="homepage" />
         </Switch>
       </Router>
     );

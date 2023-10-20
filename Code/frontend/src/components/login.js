@@ -58,39 +58,32 @@ function loginForm(props) {
   };
 
   return (
-    <div>
+  
+      <div class='gradient-custom-2 flex-1' style={{backgroundSize:"100%"}}>
       <Header loginFlag={false} />
+      
+      <section class="h-100 gradient-form container mt-5 p-5" style={{}} >
+      <div className="row d-flex justify-content-center align-items-center h-100">
+      
+    {/* lhs */}
+      <div className='col-lg-6 d-flex align-items-center'>
+        <form className='form-control row'>
+          
+          <div className='form-outline mb-4 col-md-12'>
+          <label class="form-label">Username</label><br></br>
+            <input type="text"  id="username" className='form-control'value={state.username} onChange={changeValue}/>
+          </div>
 
-      <div id="parent">
-        <form id="form_login">
-          <div>
-            <label>Username</label>
-            <input
-              type="text"
-              id="username"
-              value={state.username}
-              onChange={changeValue}
-            />
+          <div className='form-outline mb-4 col-md-12'>
+          <label class="form-label">Password</label><br></br>
+            <input type="password" id="password"className='form-control' value={state.password} onChange={changeValue}/>
           </div>
-          <div>
-            <label>Password</label>
-            <input
-              type="password"
-              id="password"
-              value={state.password}
-              onChange={changeValue}
-            />
+
+          <div class="text-center pt-1 mb-5 pb-1 col-md-12">
+            <button
+              className="btn btn-primary gradient-custom-2"
+              type="button" onClick={submitLogin}>Submit</button>
           </div>
-          <br />
-          <button
-            className="login-btn"
-            type="button"
-            id="submit-btn"
-            onClick={submitLogin}
-          >
-            Submit
-          </button>
-          <br />
           <br />
           {state.successMessage ? (
             <div style={{ color: "green" }}>{state.successMessage}</div>
@@ -100,7 +93,18 @@ function loginForm(props) {
           ) : null}
         </form>
       </div>
+    
+
+      {/* rhs
+      <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+        <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+          <h4 class="mb-4">Hello !</h4>
+          <image src='componentImages/chef.png'></image>
+        </div>
+      </div> */}
     </div>
+
+    </section></div>
   );
 }
 export default withRouter(loginForm);
