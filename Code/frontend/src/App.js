@@ -13,6 +13,8 @@ import {
   Switch,
 } from "react-router-dom";
 import login from "./components/login";
+import Footer from "./components/Footer";
+import HomePage from "./components/HomePage";
 // Main component of the project
 class App extends Component {
   // constructor for the App Component
@@ -138,7 +140,7 @@ class App extends Component {
 
           <Route path="/home">
             <Header loginFlag={this.state.loginFlag} />
-            <AddRecipeForm sendRecipeFormData={this.handleRecipeSubmit} />
+            
             <Form sendFormData={this.handleSubmit} />
             {/* <AddRecipeForm sendRecipeFormData={this.handleRecipeSubmit} /> */}
 
@@ -147,8 +149,24 @@ class App extends Component {
                   */}
 
             <RecipeList recipes={this.state.recipeList} />
+            <Footer/>
           </Route>
-          <Redirect exact from="/" to="login" />
+
+          <Route path="/addRecipe">
+          <Header loginFlag={this.state.loginFlag} />
+          <AddRecipeForm sendRecipeFormData={this.handleRecipeSubmit} />
+          <Footer/>
+          </Route>
+
+          <Route path="/homepage">
+          <Header loginFlag={this.state.loginFlag} />
+          <HomePage />
+          <Footer/>
+          </Route>
+          
+
+          
+          <Redirect exact from="/" to="homepage" />
         </Switch>
       </Router>
     );
