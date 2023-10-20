@@ -4,24 +4,10 @@
 
 _Before you begin:_
 
-Have you read the code of conduct and looked at the license details?
+1. Please read CODE_OF_CONDUCT.md
 If you want to raise an issue, first, please do check out the existing issues to see if we accept contributions for your type of issue.
 There is a good possibility that we already have an issue open for you to solve.
 
-<br></br>
-
-### Table of Contents
-
-| S.No. | Section                                                                                         |
-| ----- | ----------------------------------------------------------------------------------------------- |
-| 1     | [Welcome!](#welcome!)                                                                           |
-| 2     | [How to Contribute?](#How-to-Contribute)                                                        |
-| 3     | [More things to consider with a PR](#Some-other-things-to-consider-when-merging-a-pull-request) |
-| 4     | [Where to Contribute?](#Where-to-Contribute)                                                    |
-| 5     | [Setting up a development environment](#Setting-up-a-development-environment)                   |
-| 6     | [Credit](#Credit-for-the-CONTRIBUTING-file)                                                     |
-
-<br></br>
 
 ### Welcome!
 

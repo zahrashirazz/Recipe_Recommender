@@ -2,20 +2,6 @@
 
 <br></br>
 
-### Table of Contents
-
-| S.No. | Section                                                       |
-| ----- | ------------------------------------------------------------- |
-| 1     | [Our Pledge](#Our-Pledge)                                     |
-| 2     | [Our Standards](#Our-Standards)                               |
-| 3     | [Enforcement Responsibilities](#Enforcement-Responsibilities) |
-| 4     | [Scope](#Scope)                                               |
-| 5     | [Enforcement](#Enforcement)                                   |
-| 6     | [Enforcement Guidelines](#Enforcement-Guidelines)             |
-| 7     | [Attribution](#Attribution)                                   |
-
-<br></br>
-
 ## Our Pledge
 
 We as members, contributors, and leaders pledge to make participation in our
